@@ -3,4 +3,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 40px 0;
+
+  @include r(1200) {
+    padding: 20px 0;
+  }
 }

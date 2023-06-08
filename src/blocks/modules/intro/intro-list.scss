@@ -5,11 +5,22 @@
   margin-top: -11px;
   row-gap: rem(18);
 
+  @include r(1200) {
+    margin-top: 0;
+    margin-right: 0;
+    row-gap: 27px;
+  }
+
   &__link {
     font-weight: 700;
     font-size: 40px;
     line-height: 40px;
     color: $gray-light;
+
+    @include r(1200) {
+      font-size: 28px;
+      line-height: 22px;
+    }
 
     &:hover {
       color: $red;

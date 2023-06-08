@@ -10,6 +10,10 @@
   &--intro {
     display: flex;
     height: calc(100vh - 119px);
+
+    @include r(1200) {
+      height: auto;
+    }
   }
   &--relative {
     position: relative;

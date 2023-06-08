@@ -1,5 +1,5 @@
 .columns {
-  gap: rem(20);
+  column-gap: rem(20);
   display: grid;
   grid-auto-flow: dense;
   grid-template-rows: minmax(0, 1fr);
@@ -7,7 +7,8 @@
   width: 100%;
 
   @include r(1200) {
-    //gap: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: rem(8);
   }
 
   &__col {
@@ -87,5 +88,18 @@
     &--12 {
       grid-column: span 12;
     }
+
+    &--mob-1 {
+      @include r(1200) {
+        grid-column: span 1;
+      }
+    }
+
+    &--mob-2 {
+      @include r(1200) {
+        grid-column: span 2;
+      }
+    }
+
   }
 }

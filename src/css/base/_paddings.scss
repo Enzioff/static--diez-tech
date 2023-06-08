@@ -1,291 +1,357 @@
 .pt {
-    &-25 {
-        padding-top: 25px;
-    }
+  &-25 {
+    padding-top: 25px;
+  }
 }
 
 .ptm {
-    &-1 {
-        @include r(1200) {
-            padding-top: rem(1);
-        }
+  &-1 {
+    @include r(1200) {
+      padding-top: rem(1);
     }
-    &-2 {
-        @include r(1200) {
-            padding-top: rem(2);
-        }
+  }
+
+  &-2 {
+    @include r(1200) {
+      padding-top: rem(2);
     }
-    &-3 {
-        @include r(1200) {
-            padding-top: rem(3);
-        }
+  }
+
+  &-3 {
+    @include r(1200) {
+      padding-top: rem(3);
     }
-    &-4 {
-        @include r(1200) {
-            padding-top: rem(4);
-        }
+  }
+
+  &-4 {
+    @include r(1200) {
+      padding-top: rem(4);
     }
-    &-5 {
-        @include r(1200) {
-            padding-top: rem(5);
-        }
+  }
+
+  &-5 {
+    @include r(1200) {
+      padding-top: rem(5);
     }
-    &-6 {
-        @include r(1200) {
-            padding-top: rem(6);
-        }
+  }
+
+  &-6 {
+    @include r(1200) {
+      padding-top: rem(6);
     }
-    &-7 {
-        @include r(1200) {
-            padding-top: rem(7);
-        }
+  }
+
+  &-7 {
+    @include r(1200) {
+      padding-top: rem(7);
     }
-    &-8 {
-        @include r(1200) {
-            padding-top: rem(8);
-        }
+  }
+
+  &-8 {
+    @include r(1200) {
+      padding-top: rem(8);
     }
-    &-9 {
-        @include r(1200) {
-            padding-top: rem(9);
-        }
+  }
+
+  &-9 {
+    @include r(1200) {
+      padding-top: rem(9);
     }
-    &-10 {
-        @include r(1200) {
-            padding-top: rem(10);
-        }
+  }
+
+  &-10 {
+    @include r(1200) {
+      padding-top: rem(10);
     }
-    &-15 {
-        @include r(1200) {
-            padding-top: rem(15);
-        }
+  }
+
+  &-15 {
+    @include r(1200) {
+      padding-top: rem(15);
     }
-    &-20 {
-        @include r(1200) {
-            padding-top: rem(20);
-        }
+  }
+
+  &-18 {
+    @include r(1200) {
+      padding-top: rem(18);
     }
-    &-25 {
-        @include r(1200) {
-            padding-top: rem(25);
-        }
+  }
+
+  &-20 {
+    @include r(1200) {
+      padding-top: rem(20);
     }
-    &-30 {
-        @include r(1200) {
-            padding-top: rem(30);
-        }
+  }
+
+  &-25 {
+    @include r(1200) {
+      padding-top: rem(25);
     }
-    &-35 {
-        @include r(1200) {
-            padding-top: rem(35);
-        }
+  }
+
+  &-30 {
+    @include r(1200) {
+      padding-top: rem(30);
     }
-    &-40 {
-        @include r(1200) {
-            padding-top: rem(40);
-        }
+  }
+
+  &-35 {
+    @include r(1200) {
+      padding-top: rem(35);
     }
-    &-45 {
-        @include r(1200) {
-            padding-top: rem(45);
-        }
+  }
+
+  &-40 {
+    @include r(1200) {
+      padding-top: rem(40);
     }
-    &-50 {
-        @include r(1200) {
-            padding-top: rem(50);
-        }
+  }
+
+  &-45 {
+    @include r(1200) {
+      padding-top: rem(45);
     }
-    &-55 {
-        @include r(1200) {
-            padding-top: rem(55);
-        }
+  }
+
+  &-50 {
+    @include r(1200) {
+      padding-top: rem(50);
     }
-    &-60 {
-        @include r(1200) {
-            padding-top: rem(60);
-        }
+  }
+
+  &-55 {
+    @include r(1200) {
+      padding-top: rem(55);
     }
-    &-65 {
-        @include r(1200) {
-            padding-top: rem(65);
-        }
+  }
+
+  &-60 {
+    @include r(1200) {
+      padding-top: rem(60);
     }
-    &-70 {
-        @include r(1200) {
-            padding-top: rem(70);
-        }
+  }
+
+  &-65 {
+    @include r(1200) {
+      padding-top: rem(65);
     }
-    &-75 {
-        @include r(1200) {
-            padding-top: rem(75);
-        }
+  }
+
+  &-70 {
+    @include r(1200) {
+      padding-top: rem(70);
     }
-    &-80 {
-        @include r(1200) {
-            padding-top: rem(80);
-        }
+  }
+
+  &-75 {
+    @include r(1200) {
+      padding-top: rem(75);
     }
-    &-85 {
-        @include r(1200) {
-            padding-top: rem(85);
-        }
+  }
+
+  &-80 {
+    @include r(1200) {
+      padding-top: rem(80);
     }
-    &-90 {
-        @include r(1200) {
-            padding-top: rem(90);
-        }
+  }
+
+  &-85 {
+    @include r(1200) {
+      padding-top: rem(85);
     }
-    &-95 {
-        @include r(1200) {
-            padding-top: rem(95);
-        }
+  }
+
+  &-90 {
+    @include r(1200) {
+      padding-top: rem(90);
     }
-    &-100 {
-        @include r(1200) {
-            padding-top: rem(100);
-        }
+  }
+
+  &-95 {
+    @include r(1200) {
+      padding-top: rem(95);
     }
+  }
+
+  &-100 {
+    @include r(1200) {
+      padding-top: rem(100);
+    }
+  }
 }
 
 .pbm {
-    &-1 {
-        @include r(1200) {
-            padding-bottom: rem(1);
-        }
+  &-1 {
+    @include r(1200) {
+      padding-bottom: rem(1);
     }
-    &-2 {
-        @include r(1200) {
-            padding-bottom: rem(2);
-        }
+  }
+
+  &-2 {
+    @include r(1200) {
+      padding-bottom: rem(2);
     }
-    &-3 {
-        @include r(1200) {
-            padding-bottom: rem(3);
-        }
+  }
+
+  &-3 {
+    @include r(1200) {
+      padding-bottom: rem(3);
     }
-    &-4 {
-        @include r(1200) {
-            padding-bottom: rem(4);
-        }
+  }
+
+  &-4 {
+    @include r(1200) {
+      padding-bottom: rem(4);
     }
-    &-5 {
-        @include r(1200) {
-            padding-bottom: rem(5);
-        }
+  }
+
+  &-5 {
+    @include r(1200) {
+      padding-bottom: rem(5);
     }
-    &-6 {
-        @include r(1200) {
-            padding-bottom: rem(6);
-        }
+  }
+
+  &-6 {
+    @include r(1200) {
+      padding-bottom: rem(6);
     }
-    &-7 {
-        @include r(1200) {
-            padding-bottom: rem(7);
-        }
+  }
+
+  &-7 {
+    @include r(1200) {
+      padding-bottom: rem(7);
     }
-    &-8 {
-        @include r(1200) {
-            padding-bottom: rem(8);
-        }
+  }
+
+  &-8 {
+    @include r(1200) {
+      padding-bottom: rem(8);
     }
-    &-9 {
-        @include r(1200) {
-            padding-bottom: rem(9);
-        }
+  }
+
+  &-9 {
+    @include r(1200) {
+      padding-bottom: rem(9);
     }
-    &-10 {
-        @include r(1200) {
-            padding-bottom: rem(10);
-        }
+  }
+
+  &-10 {
+    @include r(1200) {
+      padding-bottom: rem(10);
     }
-    &-15 {
-        @include r(1200) {
-            padding-bottom: rem(15);
-        }
+  }
+
+  &-15 {
+    @include r(1200) {
+      padding-bottom: rem(15);
     }
-    &-20 {
-        @include r(1200) {
-            padding-bottom: rem(20);
-        }
+  }
+
+  &-20 {
+    @include r(1200) {
+      padding-bottom: rem(20);
     }
-    &-25 {
-        @include r(1200) {
-            padding-bottom: rem(25);
-        }
+  }
+
+  &-25 {
+    @include r(1200) {
+      padding-bottom: rem(25);
     }
-    &-30 {
-        @include r(1200) {
-            padding-bottom: rem(30);
-        }
+  }
+
+  &-30 {
+    @include r(1200) {
+      padding-bottom: rem(30);
     }
-    &-35 {
-        @include r(1200) {
-            padding-bottom: rem(35);
-        }
+  }
+
+  &-35 {
+    @include r(1200) {
+      padding-bottom: rem(35);
     }
-    &-40 {
-        @include r(1200) {
-            padding-bottom: rem(40);
-        }
+  }
+
+  &-40 {
+    @include r(1200) {
+      padding-bottom: rem(40);
     }
-    &-45 {
-        @include r(1200) {
-            padding-bottom: rem(45);
-        }
+  }
+
+  &-45 {
+    @include r(1200) {
+      padding-bottom: rem(45);
     }
-    &-50 {
-        @include r(1200) {
-            padding-bottom: rem(50);
-        }
+  }
+
+  &-50 {
+    @include r(1200) {
+      padding-bottom: rem(50);
     }
-    &-55 {
-        @include r(1200) {
-            padding-bottom: rem(55);
-        }
+  }
+
+  &-55 {
+    @include r(1200) {
+      padding-bottom: rem(55);
     }
-    &-60 {
-        @include r(1200) {
-            padding-bottom: rem(60);
-        }
+  }
+
+  &-60 {
+    @include r(1200) {
+      padding-bottom: rem(60);
     }
-    &-65 {
-        @include r(1200) {
-            padding-bottom: rem(65);
-        }
+  }
+
+  &-65 {
+    @include r(1200) {
+      padding-bottom: rem(65);
     }
-    &-70 {
-        @include r(1200) {
-            padding-bottom: rem(70);
-        }
+  }
+
+  &-70 {
+    @include r(1200) {
+      padding-bottom: rem(70);
     }
-    &-75 {
-        @include r(1200) {
-            padding-bottom: rem(75);
-        }
+  }
+
+  &-72 {
+    @include r(1200) {
+      padding-bottom: rem(72);
     }
-    &-80 {
-        @include r(1200) {
-            padding-bottom: rem(80);
-        }
+  }
+
+  &-75 {
+    @include r(1200) {
+      padding-bottom: rem(75);
     }
-    &-85 {
-        @include r(1200) {
-            padding-bottom: rem(85);
-        }
+  }
+
+  &-80 {
+    @include r(1200) {
+      padding-bottom: rem(80);
     }
-    &-90 {
-        @include r(1200) {
-            padding-bottom: rem(90);
-        }
+  }
+
+  &-85 {
+    @include r(1200) {
+      padding-bottom: rem(85);
     }
-    &-95 {
-        @include r(1200) {
-            padding-bottom: rem(95);
-        }
+  }
+
+  &-90 {
+    @include r(1200) {
+      padding-bottom: rem(90);
     }
-    &-100 {
-        @include r(1200) {
-            padding-bottom: rem(100);
-        }
+  }
+
+  &-95 {
+    @include r(1200) {
+      padding-bottom: rem(95);
     }
+  }
+
+  &-100 {
+    @include r(1200) {
+      padding-bottom: rem(100);
+    }
+  }
 }

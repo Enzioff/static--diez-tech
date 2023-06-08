@@ -2,6 +2,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+
+  &--mob-column {
+    @include r(1200) {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 30px;
+    }
+  }
 
   &__tabs {
     display: flex;
@@ -28,6 +37,10 @@
     font-size: 94px;
     color: $red;
 
+    @include r(1200) {
+      font-size: 40px;
+    }
+
     &:hover {
       opacity: 1;
     }
@@ -37,6 +50,11 @@
       width: rem(48);
       height: rem(66);
       fill: $red;
+
+      @include r(1200) {
+        width: 22px;
+        height: 30px;
+      }
     }
   }
 
@@ -46,6 +64,12 @@
     font-size: 14px;
     line-height: 20px;
     color: $black;
+
+    @include r(1200) {
+      max-width: 100%;
+      line-height: 16px;
+    }
+
     &--light {
       color: $light;
     }
@@ -53,6 +77,11 @@
       max-width: 376px;
       font-size: 16px;
       line-height: 22px;
+
+      @include r(1200) {
+        font-size: 14px;
+        line-height: 16px;
+      }
     }
   }
 
@@ -66,6 +95,11 @@
     text-decoration: underline;
     text-transform: uppercase;
     color: $red;
+
+    @include r(1200) {
+      margin-top: 11px;
+    }
+
     &:hover {
       opacity: .7;
     }

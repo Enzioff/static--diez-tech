@@ -1,18 +1,21 @@
 import { Navigation, Pagination } from "swiper";
 
-const images = document.querySelector('[data-images]')
+const images = document.querySelector("[data-images]");
 
 export default function(el) {
 	const data = {
 		modules: [Navigation, Pagination],
-		slidesPerView: 'auto',
+		slidesPerView: 1,
 		spaceBetween: 20,
 		slideVisibleClass: "slider__item--visible",
 		breakpoints: {
 			1200: {
-				slidesPerView: 'auto',
+				slidesPerView: 3,
+			},
+			768: {
+				slidesPerView: 2,
 			}
-		},
+		}
 	};
 	
 	try {

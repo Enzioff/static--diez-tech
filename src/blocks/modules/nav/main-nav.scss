@@ -4,6 +4,10 @@
   margin-top: auto;
   width: 100%;
 
+  @include r(1200) {
+    display: none;
+  }
+
   &__list {
     display: flex;
     align-items: center;

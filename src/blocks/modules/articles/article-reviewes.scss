@@ -7,24 +7,39 @@
   height: 100%;
   border: 1px solid #E1DCDC;
 
+  @include r(1200) {
+    padding: 30px 16px;
+    height: auto;
+    min-height: initial;
+  }
+
   &__title {
     margin-bottom: 24px;
     font-weight: 700;
     font-size: 28px;
     line-height: 22px;
     color: $gray;
+    @include r(1200) {
+      font-size: 26px;
+      line-height: 1;
+    }
   }
 
   &__text {
     font-family: $font-second;
-    margin-bottom: 22px;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
     color: $dark;
+
+    @include r(1200) {
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 
   &__video {
+    margin-top: 22px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -3,6 +3,10 @@
   font-family: $font-second;
   color: $light;
 
+  @include r(1200) {
+    margin: 0;
+  }
+
   &--single {
     margin-top: 36px;
     max-width: 266px;
@@ -19,6 +23,10 @@
     .address__list {
       align-items: flex-end;
       row-gap: 12px;
+
+      @include r(1200) {
+        align-items: flex-start;
+      }
     }
   }
 
@@ -26,12 +34,21 @@
     display: flex;
     flex-direction: column;
     row-gap: 30px;
+
+    @include r(1200) {
+      row-gap: 16px;
+    }
   }
 
   &__item {
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
+
+    @include r(1200) {
+      font-size: 14px;
+      line-height: 16px;
+    }
 
     .address__link {
       transition: .2s linear;

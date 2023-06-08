@@ -1,4 +1,12 @@
 .grid-about {
   display: grid;
   grid-template-columns: repeat(4, minmax(calc(100% / 4), 1fr));
+
+  @include r(1200) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include r(580) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

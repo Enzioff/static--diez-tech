@@ -33,7 +33,7 @@ class App {
 			};
 			
 			const changeStateOfSlider = (width) => {
-				if (width <= 572) {
+				if (width <= 1200) {
 					if (typeof slider !== "undefined") {
 						slider.destroy(true, true);
 						slider = undefined;

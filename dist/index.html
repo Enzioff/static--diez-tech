@@ -27,19 +27,33 @@
                 <a href="tel:+74012751750" class="header-feedback__phone">+7 (4012) 751 750</a>
                 <a href="#" class="button button--radius">Хочу проект</a>
             </div>
+            <div class="burger">
+                <span class="burger__item"></span>
+            </div>
         </div>
     </div>
 </header>
 <main class="main">
-    <section class="section section--intro section--light pt-25">
+    <section class="section section--intro section--light pt-25 ptm-5 pbm-72">
         <div class="container">
             <div class="intro" id="intro">
                 <div class="intro__wrapper">
-                    <div class="intro__top mb-111">
+                    <div class="intro__top mb-111 mbm-0">
                         <h1 class="intro__title">
                             #Diez
                             <span>Tech</span>
                         </h1>
+                        <div class="intro__slogan mbm-27">
+                            <p class="intro__text">
+                                Страсть к технологиям, опыт, умение слушать<br>
+                                и понимать цели клиента позволяют находить<br>
+                                лучшие пути решения его задач.Наши продукты<br>
+                                влияют на сотни тысяч людей.
+                            </p>
+                            <picture class="intro__picture">
+                                <img src="./assets/images/header-img.jpg" alt="">
+                            </picture>
+                        </div>
                         <ul class="intro-list">
                             <li class="intro-list__item">
                                 <a href="#" class="intro-list__link">Сайты/Приложения</a>
@@ -142,9 +156,9 @@
             </div>
         </div>
     </section>
-    <section class="section section--relative section--dark pt-100 pb-100">
-        <div class="container">
-            <div class="section-header mb-60" data-tabs-container data-tabs-intro>
+    <section class="section section--relative section--dark pt-100 ptm-55 pbm-55 pb-100">
+        <div class="container container--full">
+            <div class="section-header mb-60 mbm-26" data-tabs-container data-tabs-intro>
                 <div class="section-header__tabs" data-tabs>
                     <h2 class="title tab-active" data-tab="0">
                         <svg class="title__icon">
@@ -152,14 +166,14 @@
                         </svg>
                         Мы Умеем
                     </h2>
-                    <h2 class="title" data-tab="1">
+                    <h2 class="title mob-hidden" data-tab="1">
                         <svg class="title__icon">
                             <use xlink:href="./assets/sprite/sprite.svg#icon-title-sharp"></use>
                         </svg>
                         Отраслевой опыт
                     </h2>
                 </div>
-                <div class="toolbox">
+                <div class="toolbox mob-hidden">
                     <div class="toolbox__track" data-track>
                         <button class="button button--circle button--circle--light">
                           <span>
@@ -180,13 +194,13 @@
                     </div>
                 </div>
             </div>
-            <div class="slider" data-current-slide="0">
+            <div class="slider mbm-80" data-current-slide="0">
                 <div class="slider__toolbox" data-slider="intro">
                     <div class="swiper" data-slide>
-                        <div class="swiper-wrapper mb-a" data-tabs-container>
+                        <div class="swiper-wrapper mbm-40 mb-a" data-tabs-container>
                             <div class="swiper-slide slider__item">
                                 <h3 class="slider-title">Разработка сайтов</h3>
-                                <ul class="list" data-tabs data-tabs-slider>
+                                <ul class="list mbm-50" data-tabs data-tabs-slider>
                                     <li class="list__item tab-active" data-tab>Личный кабинет (B2B / B2C)</li>
                                     <li class="list__item" data-tab>B2B порталы</li>
                                     <li class="list__item" data-tab>Маркетплейс (E-COM)</li>
@@ -266,7 +280,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slider-images" data-image-box>
+                <div class="slider-images mbm-40" data-image-box>
                     <div class="slider-images__item" data-image-item>
                         <picture class="slider-images__picture slider-images__picture--active">
                             <img src="./assets/images/slider-img.jpg" alt="">
@@ -352,13 +366,25 @@
                         </picture>
                     </div>
                 </div>
+                <button class="slider__button-show button button--red button--radius">Показать</button>
             </div>
-            <div class="slider" data-current-slide="1">
-                <div class="slider__toolbox" data-slider="intro">
+            <div class="slider slider--experience" data-current-slide="1">
+                <h2 class="title title--small mbm-26" data-tab="1">
+                    <svg class="title__icon">
+                        <use xlink:href="./assets/sprite/sprite.svg#icon-title-sharp"></use>
+                    </svg>
+                    Отраслевой опыт
+                </h2>
+                <div class="slider__toolbox mbm-40" data-mobile data-slider="intro">
                     <div class="swiper" data-slide>
                         <div class="swiper-wrapper mb-a" data-tabs-container>
                             <div class="swiper-slide slider__item">
-                                <h3 class="slider-title">Разработка сайтов</h3>
+                                <a href="#" class="slider-title">
+                                    Производственные предприятия
+                                    <svg class="icon-arrow">
+                                        <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
+                                    </svg>
+                                </a>
                                 <ul class="list" data-tabs data-tabs-slider>
                                     <li class="list__item tab-active" data-tab>Личный кабинет (B2B / B2C)</li>
                                     <li class="list__item" data-tab>B2B порталы</li>
@@ -371,14 +397,24 @@
                                 </ul>
                             </div>
                             <div class="swiper-slide slider__item">
-                                <h3 class="slider-title">Мобильные приложения</h3>
+                                <a href="#" class="slider-title">
+                                    Cтроительство
+                                    <svg class="icon-arrow">
+                                        <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
+                                    </svg>
+                                </a>
                                 <ul class="list" data-tabs data-tabs-slider>
                                     <li class="list__item" data-tab>Системы лояльности</li>
                                     <li class="list__item" data-tab>Приложения для торговли (E-COM)</li>
                                 </ul>
                             </div>
                             <div class="swiper-slide slider__item">
-                                <h3 class="slider-title">Bitrix24</h3>
+                                <a href="#" class="slider-title">
+                                    Гос.организации
+                                    <svg class="icon-arrow">
+                                        <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
+                                    </svg>
+                                </a>
                                 <ul class="list" data-tabs data-tabs-slider>
                                     <li class="list__item" data-tab>Внутренние корпоративные порталы</li>
                                     <li class="list__item" data-tab>Единое информационное пространство (Интранет)</li>
@@ -389,7 +425,12 @@
                                 </ul>
                             </div>
                             <div class="swiper-slide slider__item">
-                                <h3 class="slider-title">1С (услуги + продажа лицензий в рамках ИМ)</h3>
+                                <a href="#" class="slider-title">
+                                    Оптовая и розничная
+                                    <svg class="icon-arrow">
+                                        <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
+                                    </svg>
+                                </a>
                                 <ul class="list" data-tabs data-tabs-slider>
                                     <li class="list__item" data-tab>Автоматизация торгового учета</li>
                                     <li class="list__item" data-tab>Автоматизация розничного учета</li>
@@ -402,14 +443,58 @@
                                 </ul>
                             </div>
                             <div class="swiper-slide slider__item">
-                                <h3 class="slider-title">Продажа лицензий</h3>
+                                <a href="#" class="slider-title">
+                                    Транспорт и логистика торговля
+                                    <svg class="icon-arrow">
+                                        <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
+                                    </svg>
+                                </a>
                                 <ul class="list" data-tabs data-tabs-slider>
                                     <li class="list__item" data-tab>CRM (Битрикс24)</li>
                                     <li class="list__item" data-tab>CMS (БУС)</li>
                                 </ul>
                             </div>
                             <div class="swiper-slide slider__item">
-                                <h3 class="slider-title">Комплексный digital-marketing</h3>
+                                <a href="#" class="slider-title">
+                                    Фармацевтика
+                                    <svg class="icon-arrow">
+                                        <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
+                                    </svg>
+                                </a>
+                                <ul class="list" data-tabs data-tabs-slider>
+                                    <li class="list__item" data-tab>Контекстная реклама</li>
+                                    <li class="list__item" data-tab>Медийная реклама</li>
+                                    <li class="list__item" data-tab>Таргетированная реклама</li>
+                                    <li class="list__item" data-tab>Управление репутацией в Интернете</li>
+                                    <li class="list__item" data-tab>SEO (Продвижение в поисковых системах)</li>
+                                    <li class="list__item" data-tab>Айдентика</li>
+                                    <li class="list__item" data-tab>Брендинг</li>
+                                </ul>
+                            </div>
+                            <div class="swiper-slide slider__item">
+                                <a href="#" class="slider-title">
+                                    Химическая промышленность
+                                    <svg class="icon-arrow">
+                                        <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
+                                    </svg>
+                                </a>
+                                <ul class="list" data-tabs data-tabs-slider>
+                                    <li class="list__item" data-tab>Контекстная реклама</li>
+                                    <li class="list__item" data-tab>Медийная реклама</li>
+                                    <li class="list__item" data-tab>Таргетированная реклама</li>
+                                    <li class="list__item" data-tab>Управление репутацией в Интернете</li>
+                                    <li class="list__item" data-tab>SEO (Продвижение в поисковых системах)</li>
+                                    <li class="list__item" data-tab>Айдентика</li>
+                                    <li class="list__item" data-tab>Брендинг</li>
+                                </ul>
+                            </div>
+                            <div class="swiper-slide slider__item">
+                                <a href="#" class="slider-title">
+                                    Инжиниринг
+                                    <svg class="icon-arrow">
+                                        <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
+                                    </svg>
+                                </a>
                                 <ul class="list" data-tabs data-tabs-slider>
                                     <li class="list__item" data-tab>Контекстная реклама</li>
                                     <li class="list__item" data-tab>Медийная реклама</li>
@@ -525,14 +610,15 @@
                         </picture>
                     </div>
                 </div>
+                <button class="slider__button-show button button--red button--radius">Смотреть остальное</button>
             </div>
         </div>
     </section>
-    <section class="section section--light pt-100 pb-100">
+    <section class="section section--light pt-100 ptm-55 pbm-55 pb-100">
         <div class="container">
-            <div class="section-header mb-60">
+            <div class="section-header mb-60 mbm-40">
                 <div class="columns">
-                    <div class="columns__col columns__col--6">
+                    <div class="columns__col columns__col--6 columns__col--mob-2 mbm-18">
                         <h2 class="title">
                             <svg class="title__icon">
                                 <use xlink:href="./assets/sprite/sprite.svg#icon-title-sharp"></use>
@@ -540,7 +626,7 @@
                             о нас
                         </h2>
                     </div>
-                    <div class="columns__col columns__col--3">
+                    <div class="columns__col columns__col--3 columns__col--mob-2 mbm-6">
                         <p class="section-header__text">
                             #Dieztech занимается созданием инструментов коммуникации среднего и крупного бизнеса со
                             своими
@@ -550,7 +636,7 @@
                             пути решения его задач.
                         </p>
                     </div>
-                    <div class="columns__col columns__col--3">
+                    <div class="columns__col columns__col--3 columns__col--mob-2">
                         <p class="section-header__text">
                             Наши продукты влияют на сотни тысяч людей. Это
                             требует от нас ответственности, готовности решения
@@ -591,7 +677,7 @@
             </div>
         </div>
     </section>
-    <section class="section section--dark pt-100 pb-100">
+    <section class="section section--dark pt-100 ptm-55 pbm-55 pb-100">
         <div class="container">
             <div class="section-header mb-60">
                 <h2 class="title tab-active">
@@ -600,19 +686,17 @@
                     </svg>
                     Клиенты
                 </h2>
-                <div class="toolbox">
-                    <button class="button button--circle button--circle--light">
-        <span>
-          Посмотреть<br> всех клиентов
-          <svg class="button__icon">
-            <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-top-right"></use>
-          </svg>
-        </span>
-                    </button>
-                </div>
+                <button class="button mob-hidden button--circle button--circle--light">
+                    <span>
+                      Посмотреть<br> всех клиентов
+                      <svg class="button__icon">
+                        <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-top-right"></use>
+                      </svg>
+                    </span>
+                </button>
             </div>
         </div>
-        <div class="clients" data-clients>
+        <div class="clients mbm-40" data-clients>
             <div class="clients__track" data-client-track>
                 <div class="clients__box" data-box>
                     <div class="clients__item" data-client>
@@ -648,10 +732,11 @@
                 </div>
             </div>
         </div>
+        <button class="button button--left button--red button--radius desktop-hidden">Посмотреть всех</button>
     </section>
-    <section class="section section--light pt-100 pb-100">
+    <section class="section section--light pt-100 ptm-55 pbm-55 pb-100">
         <div class="container">
-            <div class="slider slider--column mb-60" data-slider="reviews">
+            <div class="slider slider--column mb-60 mbm-40" data-slider="reviews">
                 <div class="section-header mb-60">
                     <h2 class="title tab-active">
                         <svg class="title__icon">
@@ -666,7 +751,7 @@
                                     <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
                                 </svg>
                             </div>
-                            <div class="slider__pagination" data-pagination></div>
+                            <div class="slider__pagination slider__pagination--big" data-pagination></div>
                             <div class="swiper-button-next slider__button slider__button--next" data-button-next>
                                 <svg class="slider__icon">
                                     <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
@@ -675,7 +760,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper mb-60" data-slide>
+                <div class="swiper mb-60 mbm-0" data-slide>
                     <div class="swiper-wrapper">
                         <div class="swiper-slide w-476">
                             <div class="article-reviews">
@@ -703,9 +788,6 @@
                                     мониторингом ценовых предложений, анализом портфолио и технических и материальных
                                     ресурсов подрядчиков.
                                 </p>
-                                <div class="article-reviews__video">
-
-                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide w-476">
@@ -720,9 +802,6 @@
                                     мониторингом ценовых предложений, анализом портфолио и технических и материальных
                                     ресурсов подрядчиков.
                                 </p>
-                                <div class="article-reviews__video">
-
-                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide w-476">
@@ -737,82 +816,11 @@
                                     мониторингом ценовых предложений, анализом портфолио и технических и материальных
                                     ресурсов подрядчиков.
                                 </p>
-                                <div class="article-reviews__video">
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide w-476">
-                            <div class="article-reviews">
-                                <h3 class="article-reviews__title">Рябинков Артем</h3>
-                                <p class="article-reviews__text">
-                                    При выборе подрядчика было учтено множество факторов. Начиная от рекомендаций самого
-                                    Битрикс, изучения портфолио различных судий и заканчивая мониторингом ценовых
-                                    предложений, анализом портфолио и технических и материальных ресурсов
-                                    подрядчиков.При выборе подрядчика было учтено множество факторов. Начиная от
-                                    рекомендаций самого Битрикс, изучения портфолио различных судий и заканчивая
-                                    мониторингом ценовых предложений, анализом портфолио и технических и материальных
-                                    ресурсов подрядчиков.
-                                </p>
-                                <div class="article-reviews__video">
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide w-476">
-                            <div class="article-reviews">
-                                <h3 class="article-reviews__title">Рябинков Артем</h3>
-                                <p class="article-reviews__text">
-                                    При выборе подрядчика было учтено множество факторов. Начиная от рекомендаций самого
-                                    Битрикс, изучения портфолио различных судий и заканчивая мониторингом ценовых
-                                    предложений, анализом портфолио и технических и материальных ресурсов
-                                    подрядчиков.При выборе подрядчика было учтено множество факторов. Начиная от
-                                    рекомендаций самого Битрикс, изучения портфолио различных судий и заканчивая
-                                    мониторингом ценовых предложений, анализом портфолио и технических и материальных
-                                    ресурсов подрядчиков.
-                                </p>
-                                <div class="article-reviews__video">
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide w-476">
-                            <div class="article-reviews">
-                                <h3 class="article-reviews__title">Рябинков Артем</h3>
-                                <p class="article-reviews__text">
-                                    При выборе подрядчика было учтено множество факторов. Начиная от рекомендаций самого
-                                    Битрикс, изучения портфолио различных судий и заканчивая мониторингом ценовых
-                                    предложений, анализом портфолио и технических и материальных ресурсов
-                                    подрядчиков.При выборе подрядчика было учтено множество факторов. Начиная от
-                                    рекомендаций самого Битрикс, изучения портфолио различных судий и заканчивая
-                                    мониторингом ценовых предложений, анализом портфолио и технических и материальных
-                                    ресурсов подрядчиков.
-                                </p>
-                                <div class="article-reviews__video">
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide w-476">
-                            <div class="article-reviews">
-                                <h3 class="article-reviews__title">Рябинков Артем</h3>
-                                <p class="article-reviews__text">
-                                    При выборе подрядчика было учтено множество факторов. Начиная от рекомендаций самого
-                                    Битрикс, изучения портфолио различных судий и заканчивая мониторингом ценовых
-                                    предложений, анализом портфолио и технических и материальных ресурсов
-                                    подрядчиков.При выборе подрядчика было учтено множество факторов. Начиная от
-                                    рекомендаций самого Битрикс, изучения портфолио различных судий и заканчивая
-                                    мониторингом ценовых предложений, анализом портфолио и технических и материальных
-                                    ресурсов подрядчиков.
-                                </p>
-                                <div class="article-reviews__video">
-
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class="button button--circle centered">
+                <button class="button button--circle centered mob-hidden">
                     <span>
                         Смотреть<br> все отзывы
                         <svg class="button__icon">
@@ -821,11 +829,12 @@
                     </span>
                 </button>
             </div>
+            <button class="button button--left button--red button--radius desktop-hidden">Смотреть все отзывы</button>
         </div>
     </section>
-    <section class="section section--dark pt-100 pb-100">
+    <section class="section section--dark pt-100 ptm-55 pbm-55 pb-100">
         <div class="container">
-            <div class="section-header mb-60">
+            <div class="section-header section-header--mob-column mb-60 mbm-30">
                 <h2 class="title tab-active">
                     <svg class="title__icon">
                         <use xlink:href="./assets/sprite/sprite.svg#icon-title-sharp"></use>
@@ -838,7 +847,7 @@
                 </p>
             </div>
             <div class="columns">
-                <div class="columns__col columns__col--3">
+                <div class="columns__col columns__col--3 columns__col--mob-2 mbm-30">
                     <div class="address">
                         <ul class="address__list">
                             <li class="address__item">
@@ -853,8 +862,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="columns__col columns__col--1"></div>
-                <div class="columns__col columns__col--8">
+                <div class="columns__col columns__col--1 mob-hidden"></div>
+                <div class="columns__col columns__col--8 columns__col--mob-2">
                     <form class="feedback-form">
                         <div class="feedback-form__info">
                             <fieldset class="feedback-form__wrapper feedback-form__wrapper--grid">
@@ -900,9 +909,9 @@
             </div>
         </div>
     </section>
-    <section class="section section--light pt-100 pb-100">
+    <section class="section section--light pt-100 ptm-55 pbm-55 pb-100">
         <div class="container">
-            <div class="section-header mb-50">
+            <div class="section-header section-header--mob-column mb-50">
                 <h2 class="title tab-active">
                     <svg class="title__icon">
                         <use xlink:href="./assets/sprite/sprite.svg#icon-title-sharp"></use>
@@ -913,7 +922,7 @@
                     Лайфхаки, инструменты, инструкции для самостоятельного продвижения. Пользуйтесь
                     и не забудьте подписаться.
                 </p>
-                <button class="button button--circle">
+                <button class="button button--circle mob-hidden">
                   <span>
                     Читать <br> все посты
                     <svg class="button__icon">
@@ -922,43 +931,54 @@
                   </span>
                 </button>
             </div>
-            <div class="blog">
-                <a href="#" class="article-blog">
-                    <picture class="article-blog__picture">
-                        <img src="./assets/images/blog-1.png" alt="">
-                    </picture>
-                    <time class="article-blog__date" datetime="08.01.2023">8 января 2023</time>
-                    <h3 class="article-blog__title">
-                        Структура идеальной ретроспективы.
-                    </h3>
-                </a>
-                <a href="#" class="article-blog">
-                    <picture class="article-blog__picture">
-                        <img src="./assets/images/blog-3.png" alt="">
-                    </picture>
-                    <time class="article-blog__date" datetime="12.12.2023">12 декабря 2023</time>
-                    <h3 class="article-blog__title">
-                        Как мотивировать команду:
-                        основные правила и принципы.
-                    </h3>
-                </a>
-                <a href="#" class="article-blog">
-                    <picture class="article-blog__picture">
-                        <img src="./assets/images/blog-2.png" alt="">
-                    </picture>
-                    <time class="article-blog__date" datetime="23.06.2023">23 июня 2023</time>
-                    <h3 class="article-blog__title">
-                        Как проводить качественные исследования: интервью, UX-тестирование и фокус-группы.
-                    </h3>
-                </a>
+            <div class="slider slider--blog mbm-40" data-slider="blog">
+                <div class="swiper" data-slide>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" class="article-blog">
+                                <picture class="article-blog__picture">
+                                    <img src="./assets/images/blog-1.png" alt="">
+                                </picture>
+                                <time class="article-blog__date" datetime="08.01.2023">8 января 2023</time>
+                                <h3 class="article-blog__title">
+                                    Структура идеальной ретроспективы.
+                                </h3>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="article-blog">
+                                <picture class="article-blog__picture">
+                                    <img src="./assets/images/blog-3.png" alt="">
+                                </picture>
+                                <time class="article-blog__date" datetime="12.12.2023">12 декабря 2023</time>
+                                <h3 class="article-blog__title">
+                                    Как мотивировать команду:
+                                    основные правила и принципы.
+                                </h3>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="article-blog">
+                                <picture class="article-blog__picture">
+                                    <img src="./assets/images/blog-2.png" alt="">
+                                </picture>
+                                <time class="article-blog__date" datetime="23.06.2023">23 июня 2023</time>
+                                <h3 class="article-blog__title">
+                                    Как проводить качественные исследования: интервью, UX-тестирование и фокус-группы.
+                                </h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <button class="button button--left button--red button--radius desktop-hidden">Читать все посты</button>
         </div>
     </section>
 </main>
 <footer class="footer">
     <div class="container">
         <div class="columns">
-            <div class="columns__col columns__col--3">
+            <div class="columns__col columns__col--3 columns__col--mob-2">
                 <a href="#intro" class="logo logo--big">
                     <img src="./assets/images/icon-logo.svg" alt="Логотип 'Diez-Tech'">
                 </a>
@@ -968,8 +988,8 @@
                     </p>
                 </div>
             </div>
-            <div class="columns__col columns__col--1"></div>
-            <div class="columns__col columns__col--8">
+            <div class="columns__col columns__col--1 mob-hidden"></div>
+            <div class="columns__col columns__col--8 columns__col--mob-2">
                 <div class="footer__wrapper">
                     <nav class="nav-footer">
                         <h3 class="nav-footer__title">#Меню</h3>

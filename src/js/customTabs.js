@@ -36,15 +36,3 @@ sliders.forEach(slider => {
 		});
 	});
 });
-
-// tabs.forEach((tab, tabID) => {
-// 	pictures.forEach((picture, pictureID, picturesArray) => {
-// 		tab.addEventListener('click', ()=> {
-// 			if (tabID === pictureID) {
-// 				console.log(tabID, pictureID);
-// 				picturesArray.forEach(pic => pic.classList.remove('slider-images__picture--active'))
-// 				picture.classList.add('slider-images__picture--active')
-// 			}
-// 		})
-// 	})
-// })

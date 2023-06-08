@@ -5,6 +5,12 @@
   flex-direction: column;
   row-gap: rem(20);
 
+  @include r(1200) {
+    padding-top: 34px;
+    padding-bottom: 54px;
+    row-gap: 10px;
+  }
+
   &::before {
     position: absolute;
     top: 0;
@@ -15,6 +21,10 @@
     height: 1px;
     background-color: #E1DCDC;
     transform: translateX(-50%);
+
+    @include r(1200) {
+      width: 100%;
+    }
   }
 
   &::after {
@@ -26,6 +36,10 @@
     width: 1px;
     height: 90%;
     background-color: #E1DCDC;
+
+    @include r(1200) {
+      display: none;
+    }
   }
 
   &--first {
@@ -33,6 +47,10 @@
       width: 90%;
       left: 0;
       transform: none;
+
+      @include r(1200) {
+        width: 100%;
+      }
     }
   }
 
@@ -42,6 +60,9 @@
       right: 0;
       left: inherit;
       transform: none;
+      @include r(1200) {
+        width: 100%;
+      }
     }
 
     &::after {
@@ -61,5 +82,13 @@
     font-size: 16px;
     line-height: 22px;
     color: $gray;
+
+    @include r(1200) {
+      font-size: 14px;
+      line-height: 16px;
+      br {
+        display: none;
+      }
+    }
   }
 }

@@ -1,0 +1,36 @@
+.burger {
+  position: relative;
+  display: none;
+  width: 22px;
+  height: 14px;
+  cursor: pointer;
+
+  @include r(1200) {
+    display: flex;
+  }
+
+  &::before,
+  &::after,
+  &__item {
+    position: absolute;
+    left: 0;
+    content: '';
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #202020;
+    border-radius: 50px;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    top: 12px;
+  }
+
+  &__item {
+    top: 6px;
+  }
+}

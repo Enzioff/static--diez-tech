@@ -7,10 +7,31 @@
   color: $red;
   text-transform: uppercase;
 
+  @include r(1200) {
+    column-gap: 8px;
+    font-size: 40px;
+  }
+
   &__icon {
     display: flex;
     width: rem(48);
     height: rem(66);
     fill: $red;
+
+    @include r(1200) {
+      width: 22px;
+      height: 30px;
+    }
+  }
+
+  &--small {
+    font-size: 28px;
+
+    .title__icon {
+      display: flex;
+      width: rem(16);
+      height: rem(22);
+      fill: $red;
+    }
   }
 }

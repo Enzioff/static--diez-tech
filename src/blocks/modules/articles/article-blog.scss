@@ -2,10 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100% / 3);
 
   &:hover {
-    opacity: .7;
+   .article-blog__title {
+     color: $red;
+   }
   }
 
   &__picture {
@@ -13,6 +14,10 @@
     width: 100%;
     height: 520px;
     background-color: $gray-light;
+
+    @include r(768) {
+      height: 370px;
+    }
 
     img {
       display: block;
@@ -43,5 +48,6 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: .2s linear;
   }
 }

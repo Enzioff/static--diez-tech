@@ -7,6 +7,13 @@
     display: flex;
     justify-content: space-between;
     padding-top: 18px;
+
+    @include r(1200) {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: rem(40);
+      padding-top: 40px;
+    }
   }
 
   &__info {
@@ -14,5 +21,17 @@
     flex-direction: column;
     row-gap: 12px;
     align-items: flex-end;
+
+    @include r(1200) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      width: 100%;
+      align-items: flex-start;
+    }
+
+    .address__item {
+      font-size: 18px;
+      line-height: 21px;
+    }
   }
 }
