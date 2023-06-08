@@ -1,0 +1,57 @@
+.clients {
+  display: flex;
+  width: 100%;
+
+  &:hover {
+    .clients__box {
+      animation-play-state: paused;
+    }
+  }
+
+  &__track {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  &__box {
+    display: flex;
+    animation: 20s infinite linear forwards;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding-left: 65px;
+    padding-right: 65px;
+    height: 161px;
+    border: 1px solid $gray;
+    border-left: none;
+
+    &:first-child {
+      border-left: 1px solid $gray;
+    }
+
+    &:hover {
+      .clients__picture {
+          filter: none;
+      }
+    }
+  }
+
+  &__picture {
+    filter: grayscale(100%) brightness(5);
+    transition: .2s linear;
+  }
+}
+
+@keyframes slideSponsors {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

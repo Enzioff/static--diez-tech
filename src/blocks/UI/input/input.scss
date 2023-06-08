@@ -1,0 +1,40 @@
+.input {
+  display: flex;
+  padding: 14px 0;
+  width: 100%;
+  font-family: $font-second;
+  transition: .2s linear;
+
+  &--form {
+    border-bottom: 1px solid $gray;
+    height: 50px;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:placeholder-shown {
+      & ~ span {
+        top: 50%;
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      border-color: $light;
+    }
+
+    &:focus,
+    &:active {
+      border-color: $light;
+      & ~ span {
+        top: 0;
+        opacity: 0;
+      }
+    }
+  }
+
+  &--area {
+    resize: auto;
+  }
+}

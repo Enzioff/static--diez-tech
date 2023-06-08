@@ -1,0 +1,37 @@
+.article-reviews {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px;
+  max-width: 476px;
+  min-height: 392px;
+  height: 100%;
+  border: 1px solid #E1DCDC;
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 22px;
+    color: $gray;
+  }
+
+  &__text {
+    font-family: $font-second;
+    margin-bottom: 22px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $dark;
+  }
+
+  &__video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    iframe {
+      width: 100%;
+      aspect-ratio: 16/9;
+    }
+  }
+}

@@ -13,7 +13,7 @@ module.exports = [
         template: "./src/index.html",
         filename: "index.html",
         inject: "body",
-        title: "Dranik",
+        title: "Веб-студия DIEZ Tech Калининград.",
         head,
         sectionHeader,
         sectionFooter,

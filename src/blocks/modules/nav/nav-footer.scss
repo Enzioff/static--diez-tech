@@ -1,0 +1,29 @@
+.nav-footer {
+  color: $light;
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    column-gap: 80px;
+    flex-wrap: wrap;
+    max-height: 100px;
+  }
+
+  &__link {
+    font-family: $font-second;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    &:hover {
+      color: $red;
+    }
+  }
+}

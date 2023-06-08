@@ -1,0 +1,43 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+  margin-left: -30px;
+  font-family: $font-second;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: rem(20);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    cursor: pointer;
+    transition: .2s linear;
+    color: $light;
+
+    &:hover {
+      padding-left: 10px;
+      color: $red;
+      &::before {
+        border-color: $red;
+      }
+    }
+
+    &::before {
+      content: '';
+      display: flex;
+      width: 12px;
+      border: 1px solid #6D6D6D;
+      transition: .2s linear;
+    }
+  }
+
+  .tab-active {
+    padding-left: 10px;
+    color: $red;
+    &::before {
+      border-color: $red;
+    }
+  }
+}

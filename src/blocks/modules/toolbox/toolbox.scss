@@ -1,0 +1,18 @@
+.toolbox {
+  width: rem(130);
+  border-radius: 50%;
+  overflow: hidden;
+  //border: 1px solid $gray-light;
+
+  &__track {
+    display: flex;
+    align-items: center;
+    transform: translateX(-130px);
+    transition: .2s linear;
+
+    .button {
+      flex-shrink: 0;
+      //border: none;
+    }
+  }
+}

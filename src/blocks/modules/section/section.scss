@@ -1,3 +1,18 @@
 .section {
-    
+  &--light {
+    background-color: $flash;
+  }
+
+  &--dark {
+    background-color: $black;
+  }
+
+  &--intro {
+    display: flex;
+    height: calc(100vh - 119px);
+  }
+  &--relative {
+    position: relative;
+    z-index: 1;
+  }
 }

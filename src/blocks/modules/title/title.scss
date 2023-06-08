@@ -1,3 +1,16 @@
 .title {
-    
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
+  font-weight: 700;
+  font-size: 94px;
+  color: $red;
+  text-transform: uppercase;
+
+  &__icon {
+    display: flex;
+    width: rem(48);
+    height: rem(66);
+    fill: $red;
+  }
 }

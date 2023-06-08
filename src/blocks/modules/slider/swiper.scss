@@ -1,0 +1,19 @@
+.swiper {
+  display: flex !important;
+  flex-direction: column;
+  overflow: visible !important;
+  height: 100%;
+
+  &-wrapper {
+    align-items: stretch;
+  }
+
+  &-slide {
+    transition: .2s linear;
+    height: auto !important;
+  }
+
+  &-pagination-current {
+    color: $light;
+  }
+}

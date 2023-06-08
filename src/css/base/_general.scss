@@ -24,6 +24,9 @@ button {
     &-3 {
         z-index: 3;
     }
+    &-4 {
+        z-index: 4;
+    }
 }
 
 .mob-hidden {
@@ -98,4 +101,8 @@ button {
 .centered {
     margin-left: auto;
     margin-right: auto;
+}
+
+.hidden {
+    display: none !important;
 }

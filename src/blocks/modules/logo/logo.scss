@@ -1,0 +1,16 @@
+.logo {
+  display: flex;
+  padding-top: 3px;
+  transition: .2s linear;
+
+  &--big {
+    width: 208px;
+    height: 45px;
+  }
+
+  &--nav {
+    padding: 0;
+    max-width: rem(130);
+    max-height: rem(28);
+  }
+}

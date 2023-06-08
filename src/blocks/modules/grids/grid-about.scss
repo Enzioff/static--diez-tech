@@ -1,0 +1,4 @@
+.grid-about {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(calc(100% / 4), 1fr));
+}

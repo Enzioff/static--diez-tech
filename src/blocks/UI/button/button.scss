@@ -1,0 +1,81 @@
+.button {
+  position: relative;
+  font-family: $font-second;
+  font-weight: 400;
+  font-size: rem(14);
+  color: $dark;
+  cursor: pointer;
+
+  &__icon {
+    position: absolute;
+    top: 27%;
+    right: -11px;
+    display: flex;
+    width: 8px;
+    height: 8px;
+    fill: $dark;
+  }
+
+  &--radius {
+    padding: rem(13) rem(24) rem(12);
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: rem(50);
+    color: $light;
+    background-color: $dark;
+
+    &:hover {
+      background-color: $red;
+    }
+  }
+
+  &--circle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    padding: 20px 10px;
+    border: 1px solid $gray-light;
+    border-radius: 50%;
+    overflow: hidden;
+    &::before {
+      position: absolute;
+      content: '';
+      display: flex;
+      width: 100%;
+      height: 100%;
+      clip-path: circle(25% at 105% 105%);
+      background-color: $red;
+      border-color: $red;
+      transition: .4s linear;
+    }
+
+    span {
+      position: relative;
+    }
+    &:hover {
+      border-color: $red;
+      color: $light;
+
+      &::before {
+        clip-path: circle(100%);
+      }
+      .button__icon {
+        fill: $light;
+      }
+    }
+
+    &--light {
+      color: $light;
+      .button__icon {
+        fill: $light;
+      }
+    }
+  }
+
+  &--square {
+
+  }
+}

@@ -1,15 +1,59 @@
+// Main
 @import "modules/body/body";
-@import "modules/breadcrumbs/breadcrumbs";
-@import "modules/button/button";
 @import "modules/columns/columns";
 @import "modules/container/container";
 @import "modules/editor/editor";
-@import "modules/form/form";
-@import "modules/input/input";
 @import "modules/main/main";
-@import "modules/section/section";
 @import "modules/title/title";
+@import "modules/logo/logo";
+@import "modules/footer/footer";
 
-@include r(1200) {
-    
-}
+@import "modules/section/section";
+@import "modules/section/section-header";
+
+@import "modules/toolbox/toolbox";
+
+@import "modules/clients/clients";
+
+@import "modules/blog/blog";
+
+
+// UI
+@import "UI/button/button";
+@import "UI/slash/slash";
+@import "UI/animate/animate";
+@import "UI/input/input";
+
+// Grids
+@import "modules/grids/grid-about";
+
+// Articles
+@import "modules/articles/article-about";
+@import "modules/articles/article-reviewes";
+@import "modules/articles/article-blog";
+
+// Header
+@import "modules/header/header";
+@import "modules/header/header-feedback";
+
+// Form
+@import "modules/form/feedback-form";
+
+@import "modules/address/address";
+
+@import "modules/intro/intro";
+@import "modules/intro/intro-list";
+
+@import "modules/nav/main-nav";
+@import "modules/nav/nav-footer";
+@import "modules/nav/nav-dropdown";
+
+@import "modules/social/social";
+
+@import "modules/list/list";
+
+@import "modules/copyright/copyright";
+
+// Slider
+@import "modules/slider/slider";
+@import "modules/slider/swiper";

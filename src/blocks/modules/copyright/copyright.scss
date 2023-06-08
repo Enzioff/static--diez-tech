@@ -1,0 +1,20 @@
+.copyright {
+  border-top: 1px solid rgba(102, 102, 102, 0.3);
+  background-color: $black;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    width: 100%;
+  }
+
+  &__text {
+    font-family: $font-second;
+    color: $gray;
+    a {
+      color: $red;
+    }
+  }
+}

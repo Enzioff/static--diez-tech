@@ -1,0 +1,43 @@
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  color: $light;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+  }
+
+  &__wrapper {
+    &--grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 60px 20px;
+    }
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__text {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    opacity: 0;
+    font-family: $font-second;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $gray;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: .2s linear;
+
+    sup {
+      color: $red;
+    }
+  }
+}

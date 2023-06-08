@@ -1,0 +1,73 @@
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+
+    .title {
+      font-size: 64px;
+      color: $gray;
+      transition: .2s linear;
+      cursor: pointer;
+      &:hover {
+        opacity: .7;
+      }
+      .title__icon {
+        width: 34px;
+        height: 44px;
+        fill: $gray;
+      }
+    }
+  }
+
+  .tab-active {
+    font-size: 94px;
+    color: $red;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    .title__icon {
+      display: flex;
+      width: rem(48);
+      height: rem(66);
+      fill: $red;
+    }
+  }
+
+  &__text {
+    max-width: 259px;
+    font-family: $font-second;
+    font-size: 14px;
+    line-height: 20px;
+    color: $black;
+    &--light {
+      color: $light;
+    }
+    &--medium {
+      max-width: 376px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  &__link {
+    font-family: $font-main;
+    display: block;
+    margin-top: 5px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: $red;
+    &:hover {
+      opacity: .7;
+    }
+  }
+}

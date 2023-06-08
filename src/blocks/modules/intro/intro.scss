@@ -1,0 +1,66 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &__top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+  }
+  &__bottom {
+    display: flex;
+    align-items: flex-end;
+    column-gap: rem(37);
+    z-index: 0;
+  }
+  &__title {
+    position: relative;
+    margin-right: rem(132);
+    font-weight: 700;
+    font-size: 240px;
+    line-height: 240px;
+    letter-spacing: 9px;
+    color: $dark;
+    span {
+      position: absolute;
+      right: -217px;
+      bottom: -211px;
+      content: "Tech";
+      color: $red;
+    }
+  }
+
+  &__text {
+    margin-bottom: rem(3);
+    flex-shrink: 0;
+    width: rem(360);
+    font-family: $font-second;
+    font-size: 14px;
+    line-height: 20px;
+    color: $gray;
+  }
+
+  &__picture {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-shrink: 0;
+    width: 1148px;
+    height: rem(300);
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    bottom: -36px;
+    right: 147px;
+  }
+}

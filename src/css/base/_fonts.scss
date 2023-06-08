@@ -1,1 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../assets/fonts/BebasNeueBold.ttf') format('truetype'),
+  url('../assets/fonts/BebasNeueBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../assets/fonts/bebasneuecyrillic.ttf') format('truetype'),
+  url('../assets/fonts/BebasNeueRegular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../assets/fonts/BebasNeueBook.ttf') format('truetype'),
+  url('../assets/fonts/BebasNeueBook.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../assets/fonts/BebasNeueLight.ttf') format('truetype'),
+  url('../assets/fonts/BebasNeueLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../assets/fonts/BebasNeueThin.ttf') format('truetype'),
+  url('../assets/fonts/BebasNeueThin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}

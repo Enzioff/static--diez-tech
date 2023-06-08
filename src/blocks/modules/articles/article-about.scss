@@ -1,0 +1,65 @@
+.article-about {
+  position: relative;
+  display: flex;
+  padding: 60px 40px;
+  flex-direction: column;
+  row-gap: rem(20);
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    content: '';
+    display: block;
+    width: 85%;
+    height: 1px;
+    background-color: #E1DCDC;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: '';
+    display: block;
+    width: 1px;
+    height: 90%;
+    background-color: #E1DCDC;
+  }
+
+  &--first {
+    &::before {
+      width: 90%;
+      left: 0;
+      transform: none;
+    }
+  }
+
+  &--last {
+    &::before {
+      width: 90%;
+      right: 0;
+      left: inherit;
+      transform: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 40px;
+    color: $red;
+  }
+
+  &__text {
+    font-family: $font-second;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $gray;
+  }
+}
