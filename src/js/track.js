@@ -19,6 +19,8 @@ function cloneToStrat() {
 	track.prepend(clone);
 }
 
+cloneToEnd()
+
 
 
 
