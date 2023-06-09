@@ -19,11 +19,6 @@ function cloneToStrat() {
 	track.prepend(clone);
 }
 
-cloneToEnd()
-
-
-
-
 function startScrolling() {
 	interval = setInterval(function() {
 		if (track.clientWidth < container.clientWidth + 300) {
@@ -93,5 +88,7 @@ container.addEventListener("mousemove", handleMouseMove);
 container.addEventListener("mouseup", handleMouseUp);
 container.addEventListener("mouseenter", stopScrolling);
 container.addEventListener("mouseleave", startScrolling);
+container.addEventListener("touchstart", stopScrolling);
+container.addEventListener("touchcancel", startScrolling);
 
 startScrolling();
