@@ -24,7 +24,7 @@
       align-items: flex-end;
       row-gap: 12px;
 
-      @include r(1200) {
+      @include r(576) {
         align-items: flex-start;
       }
     }

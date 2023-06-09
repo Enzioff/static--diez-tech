@@ -1,5 +1,8 @@
 .nav-footer {
   color: $light;
+  @include r(576) {
+    width: 100%;
+  }
   &__title {
     margin-bottom: 20px;
     font-weight: 700;

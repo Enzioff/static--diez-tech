@@ -8,7 +8,7 @@
     justify-content: space-between;
     padding-top: 18px;
 
-    @include r(1200) {
+    @include r(576) {
       flex-direction: column;
       align-items: flex-start;
       row-gap: rem(40);
@@ -22,7 +22,7 @@
     row-gap: 12px;
     align-items: flex-end;
 
-    @include r(1200) {
+    @include r(576) {
       flex-direction: row-reverse;
       justify-content: space-between;
       width: 100%;

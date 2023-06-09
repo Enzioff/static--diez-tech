@@ -4,6 +4,7 @@
   width: 22px;
   height: 14px;
   cursor: pointer;
+  transition: .2s linear;
 
   @include r(1200) {
     display: flex;
@@ -24,13 +25,32 @@
 
   &::before {
     top: 0;
+    transition: top .2s .2s linear, transform .2s 0s linear;
   }
 
   &::after {
     top: 12px;
+    transition: top .2s .2s linear, transform .2s 0s linear;
   }
 
   &__item {
     top: 6px;
+    transition: opacity .2s .2s linear;
+  }
+
+  &--active {
+    &::before {
+      top: 6px;
+      transform: rotate(45deg);
+      transition: top .2s 0s linear, transform .2s .3s linear;
+    }
+    .burger__item {
+      opacity: 0;
+    }
+    &::after {
+      top: 6px;
+      transform: rotate(-45deg);
+      transition: top .2s 0s linear, transform .2s .3s linear;
+    }
   }
 }
