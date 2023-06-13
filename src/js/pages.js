@@ -20,13 +20,23 @@ module.exports = [
         temp
     }),
     new HtmlWebpackPlugin({
-        template: "./src/pages/page.html",
-        filename: "page.html",
+        template: "./src/pages/services-detail.html",
+        filename: "services-detail.html",
         inject: "body",
-        title: "Title child page | Dranik",
+        title: "Интернет-магазин | Diez Tech",
         head,
         sectionHeader,
         sectionFooter,
         temp
-    })
+    }),
+	new HtmlWebpackPlugin({
+		template: "./src/pages/services.html",
+		filename: "services.html",
+		inject: "body",
+		title: "Услуги | Diez Tech",
+		head,
+		sectionHeader,
+		sectionFooter,
+		temp
+	})
 ];

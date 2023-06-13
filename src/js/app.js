@@ -2,12 +2,16 @@ import Swiper from "swiper";
 import sliderFactory from "./slider";
 import { Tabs } from "./tabs";
 import { Animate } from "./animate";
+import { Track } from "./track";
+import { Services } from "./services";
 
 class App {
 	constructor() {
 		this.createSliders();
 		this.initTabs();
 		this.initAnimate();
+		this.initTrack();
+		this.initServices()
 	}
 	
 	createSliders() {
@@ -59,6 +63,16 @@ class App {
 			item.querySelector("[data-slide]"),
 			sliderFactory(item)
 		);
+	}
+	
+	initTrack() {
+		const el = document.querySelectorAll("[data-scroll]");
+		el.forEach(item => new Track(item));
+	}
+	
+	initServices() {
+		const el = document.querySelectorAll("[data-service]");
+		el.forEach(item => new Services(item));
 	}
 	
 	initTabs() {

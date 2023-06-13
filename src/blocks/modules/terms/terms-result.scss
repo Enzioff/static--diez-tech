@@ -1,0 +1,48 @@
+.terms-result {
+  position: sticky;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 60px 40px;
+  background-color: #202020;
+  color: $light;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    margin-bottom: 34px;
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  &__icon {
+    display: flex;
+    width: 20px;
+    height: 28px;
+    fill: $light;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+    font-family: $font-second;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  &__about {
+    margin-bottom: 32px;
+    font-family: $font-second;
+    font-size: 16px;
+    line-height: 22px;
+    color: $gray;
+  }
+
+  &__button {
+    font-family: $font-main;
+    font-size: 28px;
+  }
+}

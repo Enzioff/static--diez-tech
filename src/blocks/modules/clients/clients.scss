@@ -10,12 +10,6 @@
     display: none;
   }
 
-  &:hover {
-    .clients__box {
-      animation-play-state: paused;
-    }
-  }
-
   &__track {
     position: relative;
     display: flex;
@@ -54,6 +48,17 @@
     user-select: none;
     img {
       pointer-events: none;
+    }
+  }
+
+  &--black {
+    .clients__picture {
+      filter: grayscale(100%);
+      transition: .2s linear;
+      user-select: none;
+      img {
+        pointer-events: none;
+      }
     }
   }
 }

@@ -223,6 +223,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./slider */ "./src/js/slider.js");
 /* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tabs */ "./src/js/tabs.js");
 /* harmony import */ var _animate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./animate */ "./src/js/animate.js");
+/* harmony import */ var _track__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./track */ "./src/js/track.js");
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./services */ "./src/js/services.js");
+
+
 
 
 
@@ -233,6 +237,8 @@ class App {
 		this.createSliders();
 		this.initTabs();
 		this.initAnimate();
+		this.initTrack();
+		this.initServices()
 	}
 	
 	createSliders() {
@@ -284,6 +290,16 @@ class App {
 			item.querySelector("[data-slide]"),
 			(0,_slider__WEBPACK_IMPORTED_MODULE_1__["default"])(item)
 		);
+	}
+	
+	initTrack() {
+		const el = document.querySelectorAll("[data-scroll]");
+		el.forEach(item => new _track__WEBPACK_IMPORTED_MODULE_4__.Track(item));
+	}
+	
+	initServices() {
+		const el = document.querySelectorAll("[data-service]");
+		el.forEach(item => new _services__WEBPACK_IMPORTED_MODULE_5__.Services(item));
 	}
 	
 	initTabs() {
@@ -459,6 +475,57 @@ const images = document.querySelector('[data-images]')
 
 /***/ }),
 
+/***/ "./src/js/config/reviewsSec.js":
+/*!*************************************!*\
+  !*** ./src/js/config/reviewsSec.js ***!
+  \*************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
+/* harmony export */ });
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+
+
+const images = document.querySelector('[data-images]')
+
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(el) {
+	const data = {
+		modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination],
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		freeMode: true,
+		slideVisibleClass: "slider__item-reviews--active",
+		breakpoints: {
+			1200: {
+				slidesPerView: 'auto',
+			}
+		},
+	};
+	
+	try {
+		if (el.querySelector("[data-nav]")) {
+			data.navigation = {
+				nextEl: el.querySelector("[data-button-next]"),
+				prevEl: el.querySelector("[data-button-prev]"),
+				disabledClass: "slider__button--disabled"
+			};
+			data.pagination = {
+				el: el.querySelector("[data-pagination]"),
+				type: "fraction"
+			};
+		}
+	} catch (e) {
+	}
+	
+	return data;
+}
+
+
+/***/ }),
+
 /***/ "./src/js/customTabs.js":
 /*!******************************!*\
   !*** ./src/js/customTabs.js ***!
@@ -467,42 +534,44 @@ const images = document.querySelector('[data-images]')
 
 const sliders = document.querySelectorAll("[data-current-slide]");
 
-sliders.forEach(slider => {
-	const sliderImagesBox = slider.querySelector("[data-image-box]");
-	const sliderTabsContainer = slider.querySelector("[data-tabs-container]");
-	const pictures = sliderImagesBox.querySelectorAll("[data-image-item]");
-	const tabs = sliderTabsContainer.querySelectorAll("[data-tabs-slider]");
-	
-	tabs.forEach((tabs, tabsId) => {
+if (sliders) {
+	sliders.forEach(slider => {
+		const sliderImagesBox = slider.querySelector("[data-image-box]");
+		const sliderTabsContainer = slider.querySelector("[data-tabs-container]");
+		const pictures = sliderImagesBox.querySelectorAll("[data-image-item]");
+		const tabs = sliderTabsContainer.querySelectorAll("[data-tabs-slider]");
 		
-		pictures.forEach((pictures, picturesId, picturesArray) => {
+		tabs.forEach((tabs, tabsId) => {
 			
-			if (tabsId === picturesId) {
-				const tabItem = tabs.querySelectorAll("li");
-				const pictureEl = pictures.querySelectorAll("picture");
-				tabItem.forEach((tabItem, tabItemId) => {
-					
-					pictureEl.forEach((picture, pictureId) => {
+			pictures.forEach((pictures, picturesId, picturesArray) => {
+				
+				if (tabsId === picturesId) {
+					const tabItem = tabs.querySelectorAll("li");
+					const pictureEl = pictures.querySelectorAll("picture");
+					tabItem.forEach((tabItem, tabItemId) => {
 						
-						tabItem.addEventListener("click", () => {
-							if (tabItemId === pictureId) {
-								picturesArray.forEach(oldPic => {
-									const newPic = oldPic.querySelectorAll("picture");
-									oldPic.classList.add("hidden");
-									newPic.forEach(pic => {
-										pic.classList.remove("slider-images__picture--active");
+						pictureEl.forEach((picture, pictureId) => {
+							
+							tabItem.addEventListener("click", () => {
+								if (tabItemId === pictureId) {
+									picturesArray.forEach(oldPic => {
+										const newPic = oldPic.querySelectorAll("picture");
+										oldPic.classList.add("hidden");
+										newPic.forEach(pic => {
+											pic.classList.remove("slider-images__picture--active");
+										});
 									});
-								});
-								picture.classList.add("slider-images__picture--active");
-								pictures.classList.remove("hidden");
-							}
+									picture.classList.add("slider-images__picture--active");
+									pictures.classList.remove("hidden");
+								}
+							});
 						});
 					});
-				});
-			}
+				}
+			});
 		});
 	});
-});
+}
 
 /***/ }),
 
@@ -517,15 +586,17 @@ const burger = document.querySelector('[data-burger]')
 const menu = document.querySelector('[data-menu]')
 const body = document.querySelector('body')
 
-window.addEventListener("scroll", () => {
-  if (window.pageYOffset >= 857) {
-    mainNav.classList.add("main-nav--fixed");
-  }
-
-  if (window.pageYOffset <= 873) {
-    mainNav.classList.remove("main-nav--fixed");
-  }
-});
+if (mainNav) {
+	window.addEventListener("scroll", () => {
+		if (window.pageYOffset >= 857) {
+			mainNav.classList.add("main-nav--fixed");
+		}
+		
+		if (window.pageYOffset <= 873) {
+			mainNav.classList.remove("main-nav--fixed");
+		}
+	});
+}
 
 function toggleMenu() {
 	menu.classList.toggle('header-menu--active')
@@ -534,6 +605,42 @@ function toggleMenu() {
 }
 
 burger.addEventListener('click', toggleMenu)
+
+
+/***/ }),
+
+/***/ "./src/js/services.js":
+/*!****************************!*\
+  !*** ./src/js/services.js ***!
+  \****************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Services: function() { return /* binding */ Services; }
+/* harmony export */ });
+class Services {
+	constructor(el) {
+		this.el = el;
+		this.list = this.el.querySelector("[data-list]");
+		this.allEls = document.querySelectorAll("[data-service]");
+		this.activeClass = "services__item--active";
+		
+		this.setListeners();
+	}
+	
+	setListeners() {
+		this.el.addEventListener("click", this.toggleTab.bind(this));
+	}
+	
+	toggleTab() {
+		this.allEls.forEach((el, elId) => el.classList.remove(this.activeClass));
+		this.el.classList.add(this.activeClass);
+	}
+}
+
+
 
 /***/ }),
 
@@ -551,6 +658,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _config_intro__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./config/intro */ "./src/js/config/intro.js");
 /* harmony import */ var _config_reviews__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./config/reviews */ "./src/js/config/reviews.js");
 /* harmony import */ var _config_blog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./config/blog */ "./src/js/config/blog.js");
+/* harmony import */ var _config_reviewsSec__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./config/reviewsSec */ "./src/js/config/reviewsSec.js");
+
 
 
 
@@ -560,6 +669,7 @@ __webpack_require__.r(__webpack_exports__);
   if (name === 'intro') return (0,_config_intro__WEBPACK_IMPORTED_MODULE_0__["default"])(el);
   if (name === 'reviews') return (0,_config_reviews__WEBPACK_IMPORTED_MODULE_1__["default"])(el);
   if (name === 'blog') return (0,_config_blog__WEBPACK_IMPORTED_MODULE_2__["default"])(el);
+  if (name === 'reviewsSec') return (0,_config_reviewsSec__WEBPACK_IMPORTED_MODULE_3__["default"])(el);
 
   console.error('Конфигурационный файл для слайдера не найден');
 }
@@ -695,102 +805,123 @@ class Tabs {
 /*!*************************!*\
   !*** ./src/js/track.js ***!
   \*************************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-const container = document.querySelector("[data-scroll]");
-const track = document.querySelector("[data-scroll-track]");
-const box = document.querySelector("[data-box]");
-const scrollStep = 1;
-let delay = 10;
-let interval;
-let clone;
-let isDragging = false;
-let dragStartPos = 0;
-let dragEndPos = 0;
-
-function cloneToEnd() {
-	clone = box.cloneNode(true);
-	track.appendChild(clone);
-}
-
-function cloneToStrat() {
-	clone = box.cloneNode(true);
-	track.prepend(clone);
-}
-
-function startScrolling() {
-	interval = setInterval(function() {
-		if (track.clientWidth < container.clientWidth + 300) {
-			cloneToEnd()
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Track: function() { return /* binding */ Track; }
+/* harmony export */ });
+class Track {
+	constructor(el) {
+		this.el = el;
+		this.track = this.el.querySelector("[data-scroll-track]");
+		this.box = this.el.querySelector("[data-box]");
+		this.scrollStep = 1;
+		this.delay = 10;
+		this.interval = null;
+		this.clone = null;
+		this.isDragging = false;
+		this.dragStartPos = 0;
+		this.dragEndPos = 0;
+		this.direction = this.el.dataset.direction;
+		
+		this.setListeners();
+		
+	}
+	
+	setListeners() {
+		this.startScrolling();
+		this.el.addEventListener("mousedown", this.handleMouseDown.bind(this));
+		this.el.addEventListener("mousemove", this.handleMouseMove.bind(this));
+		this.el.addEventListener("mouseup", this.handleMouseUp.bind(this));
+		this.el.addEventListener("mouseenter", this.stopScrolling.bind(this));
+		this.el.addEventListener("mouseleave", this.startScrolling.bind(this));
+	}
+	
+	cloneToEnd() {
+		this.clone = this.box.cloneNode(true);
+		this.track.appendChild(this.clone);
+	}
+	
+	cloneToStart() {
+		this.clone = this.box.cloneNode(true);
+		this.track.prepend(this.clone);
+	}
+	
+	startScrolling() {
+		this.interval = setInterval(() => {
+			if (this.track.clientWidth <= this.el.clientWidth) {
+				this.cloneToEnd();
+			}
+			if (!this.isDragging) {
+				if (this.direction === "right") {
+					this.el.scrollLeft -= this.scrollStep;
+				} else {
+					this.el.scrollLeft += this.scrollStep;
+				}
+				if (this.el.scrollLeft >= (this.el.scrollWidth - this.el.clientWidth)) {
+					this.addLastEl();
+				}
+				if (this.el.scrollLeft === 0) {
+					this.addFirstEl();
+				}
+			}
+		}, this.delay);
+	}
+	
+	stopScrolling() {
+		clearInterval(this.interval);
+	}
+	
+	handleMouseDown(e) {
+		this.isDragging = true;
+		this.dragStartPos = e.clientX;
+		this.el.style.cursor = "grabbing";
+		this.stopScrolling();
+	};
+	
+	addFirstEl() {
+		if (this.el.scrollLeft <= 0) {
+			this.track.removeChild(this.track.firstChild);
 		}
-		if (!isDragging) {
-			container.scrollLeft += scrollStep;
-			if (container.scrollLeft >= (container.scrollWidth - container.clientWidth)) {
-				addLastEl()
+		if (this.el.scrollLeft <= 0) {
+			this.cloneToStart();
+			this.el.scrollLeft += this.box.clientWidth + 20;
+		}
+	}
+	
+	addLastEl() {
+		if (this.el.scrollLeft >= (this.el.scrollWidth - this.el.clientWidth)) {
+			this.track.removeChild(this.track.lastChild);
+		}
+		if (this.el.scrollLeft >= (this.el.scrollWidth - this.el.clientWidth)) {
+			this.cloneToEnd();
+		}
+	}
+	
+	handleMouseMove(e) {
+		if (this.isDragging) {
+			this.dragEndPos = e.clientX;
+			this.el.scrollLeft -= this.dragEndPos - this.dragStartPos;
+			this.el.style.cursor = "grabbing";
+			this.dragStartPos = this.dragEndPos;
+			if (this.el.scrollLeft <= this.el.clientWidth) {
+				this.addFirstEl();
+			}
+			if (this.el.scrollLeft >= (this.el.scrollWidth - this.el.clientWidth)) {
+				this.addLastEl();
 			}
 		}
-	}, delay);
-}
-
-function stopScrolling() {
-	clearInterval(interval);
-}
-
-function handleMouseDown(e) {
-	isDragging = true;
-	dragStartPos = e.clientX;
-	container.style.cursor = "grabbing";
-	stopScrolling();
-}
-
-function addFirstEl() {
-	if (container.scrollLeft <= 5) {
-		track.removeChild(track.firstChild)
 	}
-	if (container.scrollLeft <= 5) {
-		container.scrollLeft += box.clientWidth;
-		cloneToStrat();
+	
+	handleMouseUp() {
+		this.isDragging = false;
+		this.el.style.cursor = "auto";
 	}
 }
 
-function addLastEl() {
-	if (container.scrollLeft >= (container.scrollWidth - container.clientWidth)) {
-		track.removeChild(track.lastChild)
-	}
-	if (container.scrollLeft >= (container.scrollWidth - container.clientWidth)) {
-		cloneToEnd();
-	}
-}
 
-function handleMouseMove(e) {
-	if (isDragging) {
-		dragEndPos = e.clientX;
-		container.scrollLeft -= dragEndPos - dragStartPos;
-		container.style.cursor = "grabbing";
-		dragStartPos = dragEndPos;
-		if (container.scrollLeft <= container.clientWidth) {
-			addFirstEl()
-		}
-		if (container.scrollLeft >= (container.scrollWidth - container.clientWidth)) {
-			addLastEl()
-		}
-	}
-}
-
-function handleMouseUp() {
-	isDragging = false;
-	container.style.cursor = "auto";
-}
-
-container.addEventListener("mousedown", handleMouseDown);
-container.addEventListener("mousemove", handleMouseMove);
-container.addEventListener("mouseup", handleMouseUp);
-container.addEventListener("mouseenter", stopScrolling);
-container.addEventListener("mouseleave", startScrolling);
-container.addEventListener("touchstart", stopScrolling);
-container.addEventListener("touchcancel", startScrolling);
-
-startScrolling();
 
 /***/ }),
 
@@ -11450,7 +11581,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _customTabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./customTabs */ "./src/js/customTabs.js");
 /* harmony import */ var _customTabs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_customTabs__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _track__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./track */ "./src/js/track.js");
-/* harmony import */ var _track__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_track__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../css/main.scss */ "./src/css/main.scss");
 /* harmony import */ var swiper_swiper_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! swiper/swiper.css */ "./node_modules/swiper/swiper.css");
 /* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app */ "./src/js/app.js");

@@ -13,6 +13,14 @@
     min-height: initial;
   }
 
+  &--dark {
+    background-color: $black;
+    .article-reviews__title,
+    .article-reviews__text {
+      color: $light;
+    }
+  }
+
   &__title {
     margin-bottom: 24px;
     font-weight: 700;

@@ -4,6 +4,15 @@
   }
 }
 
+.pr {
+  &-40 {
+    padding-right: rem(40);
+  }
+  &-105 {
+    padding-right: rem(105);
+  }
+}
+
 .ptm {
   &-1 {
     @include r(1200) {

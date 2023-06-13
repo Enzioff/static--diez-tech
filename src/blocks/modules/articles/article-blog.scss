@@ -50,4 +50,13 @@
     text-overflow: ellipsis;
     transition: .2s linear;
   }
+
+  &--light {
+    .article-blog__title {
+      color: $light;
+    }
+    .article-blog__date {
+      color: rgba($light, 50%);
+    }
+  }
 }

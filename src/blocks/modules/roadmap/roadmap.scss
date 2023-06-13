@@ -1,0 +1,38 @@
+.roadmap {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  font-family: $font-second;
+  border-bottom: 1px solid $bg-light;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 39px;
+  }
+
+  &__step {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__number {
+    color: $red;
+  }
+
+  &__text {
+    color: $gray;
+    text-transform: uppercase;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: $gray;
+  }
+}

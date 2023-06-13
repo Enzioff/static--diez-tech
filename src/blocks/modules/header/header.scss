@@ -8,4 +8,9 @@
   @include r(1200) {
     padding: 20px 0;
   }
+
+  &--page {
+    padding: 0;
+    height: 62px;
+  }
 }

@@ -1,0 +1,41 @@
+.intro-about {
+  display: flex;
+  flex-direction: column;
+
+  &__wrapper {
+    display: flex;
+    border: 1px solid $bg-light;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 50px;
+    width: 50%;
+
+    &:first-child {
+      border-right: 1px solid $bg-light;
+    }
+  }
+
+  &__title {
+    margin-bottom: 26px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 26px;
+    color: $red;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+  }
+
+  &__element {
+    font-family: $font-second;
+    font-size: 16px;
+    line-height: 22px;
+    color: $gray;
+  }
+}

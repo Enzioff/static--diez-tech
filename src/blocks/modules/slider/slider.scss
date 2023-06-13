@@ -164,16 +164,18 @@
     .title {
       display: none;
     }
+
     .icon-arrow {
       display: none;
     }
+
     @include r(1200) {
       .title {
         display: flex;
       }
       .icon-arrow {
-         display: block;
-       }
+        display: block;
+      }
       .slider-images {
         display: none;
       }
@@ -218,6 +220,21 @@
   &--blog {
     .swiper-slide {
       width: calc(100% / 3);
+    }
+  }
+
+  &--overflow {
+    .swiper-slide {
+      opacity: 0;
+      transition: .2s linear;
+    }
+    .swiper-slide-active {
+      opacity: 1;
+      transition: .2s linear;
+    }
+    .swiper-slide-next {
+      opacity: 1;
+      transition: .2s linear;
     }
   }
 }

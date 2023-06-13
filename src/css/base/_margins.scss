@@ -12,6 +12,12 @@
   }
 }
 
+.mr {
+  &-105 {
+    margin-right: rem(105);
+  }
+}
+
 .mbm {
   &-0 {
     @include r(1200) {

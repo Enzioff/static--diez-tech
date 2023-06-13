@@ -40,4 +40,12 @@
       color: $red;
     }
   }
+
+  &--dark {
+    color: $dark;
+    .input:hover,
+    .input:focus {
+      border-color: $dark;
+    }
+  }
 }

@@ -1,0 +1,136 @@
+.services {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 65px;
+
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    @include r(1200) {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 8px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 22px;
+    color: $gray-light;
+    transition: .2s linear;
+
+    @include r(1200) {
+      font-size: 26px;
+      line-height: 1;
+    }
+
+    span {
+      color: $red;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+    border-bottom: 1px solid $bg-light;
+    cursor: pointer;
+
+    &--active {
+      .services__title {
+        margin-bottom: 40px;
+        color: $red;
+      }
+
+      .services__list {
+        opacity: 1;
+        height: auto;
+        visibility: visible;
+      }
+
+      .services__picture {
+        display: flex;
+      }
+
+      @include r(1200) {
+        .services__picture {
+          display: none;
+        }
+      }
+    }
+
+    &:hover {
+      .services__title {
+        color: $red;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 32px;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s ease-in-out;
+
+    @include r(1200) {
+      grid-template-columns: 1fr;
+      gap: 17px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+    font-family: $font-second;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $dark;
+
+    &:hover {
+      opacity: .7;
+    }
+
+    &::before {
+      display: flex;
+      width: 12px;
+      height: 1px;
+      background-color: $gray-light;
+      content: '';
+    }
+
+    @include r(1200) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__picture {
+    position: absolute;
+    right: -32%;
+    bottom: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    max-width: 910px;
+    height: 571px;
+    transform: translateY(50%);
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

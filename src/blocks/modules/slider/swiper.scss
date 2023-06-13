@@ -12,6 +12,20 @@
   &-slide {
     transition: .2s linear;
     height: auto !important;
+
+    &-next {
+      transition: .2s linear;
+      .article-project {
+        transform: translateY(-27%) rotate(-10deg) skewX(-10deg) skewY(-10deg);
+      }
+    }
+
+    &-prev {
+      transition: .2s linear;
+      .article-project {
+        transform: translateY(27%) rotate(-10deg) skewX(-10deg) skewY(-10deg);
+      }
+    }
   }
 
   &-pagination-current {

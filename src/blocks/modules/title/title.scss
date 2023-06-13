@@ -1,6 +1,6 @@
 .title {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   column-gap: 14px;
   font-weight: 700;
   font-size: 94px;
@@ -14,6 +14,7 @@
 
   &__icon {
     display: flex;
+    margin-top: 12px;
     width: rem(48);
     height: rem(66);
     fill: $red;

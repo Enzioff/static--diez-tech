@@ -15,6 +15,9 @@
 
 @import "modules/clients/clients";
 
+@import "modules/breadcumbs/breadcrumbs";
+
+@import "modules/text/text";
 
 // UI
 @import "UI/button/button";
@@ -31,6 +34,7 @@
 @import "modules/articles/article-about";
 @import "modules/articles/article-reviewes";
 @import "modules/articles/article-blog";
+@import "modules/articles/article-project";
 
 // Header
 @import "modules/header/header";
@@ -42,8 +46,10 @@
 
 @import "modules/address/address";
 
+// Intro
 @import "modules/intro/intro";
 @import "modules/intro/intro-list";
+@import "modules/intro/intro-about";
 
 @import "modules/nav/main-nav";
 @import "modules/nav/nav-footer";
@@ -53,7 +59,18 @@
 
 @import "modules/list/list";
 
+@import "modules/services/services";
+
+// Terms
+@import "modules/terms/terms";
+@import "modules/terms/terms-result";
+@import "modules/terms/terms-table";
+
 @import "modules/copyright/copyright";
+
+@import "modules/roadmap/roadmap";
+
+@import "modules/technologies/technologies";
 
 // Slider
 @import "modules/slider/slider";
