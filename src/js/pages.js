@@ -38,5 +38,25 @@ module.exports = [
 		sectionHeader,
 		sectionFooter,
 		temp
-	})
+	}),
+	new HtmlWebpackPlugin({
+		template: "./src/pages/blog.html",
+		filename: "blog.html",
+		inject: "body",
+		title: "Блог | Diez Tech",
+		head,
+		sectionHeader,
+		sectionFooter,
+		temp
+	}),
+	new HtmlWebpackPlugin({
+		template: "./src/pages/blog-detail.html",
+		filename: "blog-detail.html",
+		inject: "body",
+		title: "Блог детальная | Diez Tech",
+		head,
+		sectionHeader,
+		sectionFooter,
+		temp
+	}),
 ];

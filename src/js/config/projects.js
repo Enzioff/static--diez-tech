@@ -1,21 +1,20 @@
-import { Navigation, Pagination } from "swiper";
+import { EffectCoverflow, Navigation, Pagination } from "swiper";
 
-const images = document.querySelector('[data-images]')
+const images = document.querySelector("[data-images]");
 
 export default function(el) {
 	const data = {
-		modules: [Navigation, Pagination],
-		slidesPerView: 1,
+		modules: [Navigation, Pagination, EffectCoverflow],
+		slidesPerView: 'auto',
 		spaceBetween: 20,
-		breakpoints: {
-			1200: {
-				slidesPerView: 'auto',
-				centeredSlides: true,
-			},
-			572: {
-				slidesPerView: 'auto',
-				centeredSlides: false,
-			},
+		effect: "coverflow",
+		centeredSlides: true,
+		coverflowEffect: {
+			rotate: 50,
+			stretch: 0,
+			depth: 100,
+			modifier: 1,
+			slideShadows: true,
 		}
 	};
 	

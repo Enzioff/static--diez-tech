@@ -1,13 +1,15 @@
 .services {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   column-gap: 65px;
+  height: 100%;
 
   &__tabs {
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
+    max-width: 575px;
 
     @include r(1200) {
       max-width: 100%;
@@ -54,7 +56,8 @@
       }
 
       .services__picture {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
       }
 
       @include r(1200) {
@@ -117,13 +120,16 @@
   &__picture {
     position: absolute;
     right: -32%;
-    bottom: 50%;
-    display: none;
+    top: 90px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 910px;
+    width: 910px;
     height: 571px;
-    transform: translateY(50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s linear;
+    cursor: auto;
 
     img {
       display: block;

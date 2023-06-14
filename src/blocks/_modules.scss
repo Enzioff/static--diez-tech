@@ -29,12 +29,16 @@
 
 // Grids
 @import "modules/grids/grid-about";
+@import "modules/grids/grid-blog";
+
+@import "modules/blog/blog";
 
 // Articles
 @import "modules/articles/article-about";
 @import "modules/articles/article-reviewes";
 @import "modules/articles/article-blog";
 @import "modules/articles/article-project";
+@import "modules/articles/article-list";
 
 // Header
 @import "modules/header/header";

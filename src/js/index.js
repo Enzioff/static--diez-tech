@@ -3,6 +3,7 @@ import "./sprite";
 import "./header";
 import './customTabs'
 import './track'
+import './observer'
 import "../css/main.scss";
 import 'swiper/swiper.css'
 

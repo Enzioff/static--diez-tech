@@ -1,15 +1,43 @@
 .roadmap {
   display: flex;
   justify-content: center;
-  padding: 24px;
+  padding: 0 24px;
+  margin-top: -1px;
+  height: 0;
+  max-height: 0;
   font-family: $font-second;
   border-bottom: 1px solid $bg-light;
+  transition: .3s linear;
+
+  @include r(1200) {
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  &--show {
+    margin-top: 0;
+    padding: 24px;
+    height: 73px;
+    max-height: 100%;
+
+    .roadmap__list {
+      overflow: visible;
+      opacity: 1;
+    }
+  }
 
   &__list {
     display: flex;
     align-items: center;
     justify-content: space-between;
     column-gap: 39px;
+    overflow: hidden;
+    opacity: 0;
+    transition: .3s linear;
+
+    @include r(1200) {
+      column-gap: 26px;
+    }
   }
 
   &__step {

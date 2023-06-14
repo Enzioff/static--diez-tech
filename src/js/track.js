@@ -54,6 +54,7 @@ class Track {
 				}
 			}
 		}, this.delay);
+		this.isDragging = false;
 	}
 	
 	stopScrolling() {

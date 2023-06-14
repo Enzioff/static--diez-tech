@@ -25,6 +25,12 @@
     font-size: 28px;
     line-height: 22px;
     color: $light;
+
+    @include r(1200) {
+      margin-bottom: 8px;
+      font-size: 26px;
+      line-height: 1;
+    }
   }
 
   &__type {
@@ -32,5 +38,10 @@
     font-size: 16px;
     line-height: 22px;
     color: $gray;
+
+    @include r(1200) {
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 }

@@ -72,16 +72,10 @@
       &::before {
         clip-path: circle(100%);
       }
-      .button__icon {
-        fill: $light;
-      }
     }
 
     &--light {
       color: $light;
-      .button__icon {
-        fill: $light;
-      }
     }
   }
 

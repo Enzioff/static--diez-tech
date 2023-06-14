@@ -42,5 +42,14 @@
         line-height: 26px;
       }
     }
+
+    @include r(1200) {
+      grid-template-columns: 1fr;
+      .grid-about__item {
+        &:nth-child(1) {
+          grid-column: auto;
+        }
+      }
+    }
   }
 }

@@ -31,11 +31,20 @@
     justify-content: space-between;
     padding: 0 0 18px 10px;
     border-bottom: 1px solid #202020;
+
+    @include r(1200) {
+      padding: 0 0 12px;
+    }
   }
 
   &__text {
     font-family: $font-second;
     font-size: 16px;
     line-height: 22px;
+
+    @include r(1200) {
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 }

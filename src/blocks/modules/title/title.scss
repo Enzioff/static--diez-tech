@@ -20,9 +20,14 @@
     fill: $red;
 
     @include r(1200) {
+      margin-top: 6px;
       width: 22px;
       height: 30px;
     }
+  }
+
+  &--medium {
+    font-size: 40px;
   }
 
   &--small {

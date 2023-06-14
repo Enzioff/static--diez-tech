@@ -7,6 +7,7 @@
   &::-webkit-scrollbar-thumb {
     display: none;
   }
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -16,10 +17,18 @@
     display: flex;
     column-gap: 20px;
     flex-shrink: 0;
+    @include r(1200) {
+      column-gap: 8px;
+    }
   }
+
   &__box {
     display: flex;
     column-gap: 20px;
+
+    @include r(1200) {
+      column-gap: 8px;
+    }
   }
 
   &__item {
@@ -32,6 +41,12 @@
     width: 376px;
     height: 260px;
     background-color: #202020;
+
+    @include r(1200) {
+      padding: 20px 29px;
+      width: 140px;
+      height: 144px;
+    }
 
     &:hover {
       .technologies__picture {
@@ -48,6 +63,11 @@
     transition: .2s linear;
     user-select: none;
 
+    @include r(1200) {
+      max-width: 82px;
+      max-height: 82px;
+    }
+
     img {
       pointer-events: none;
       user-select: none;
@@ -60,5 +80,10 @@
     font-size: 18px;
     line-height: 21px;
     color: $gray;
+
+    @include r(1200) {
+      font-size: 12px;
+      line-height: 14px;
+    }
   }
 }

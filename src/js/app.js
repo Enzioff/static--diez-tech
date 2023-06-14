@@ -61,7 +61,7 @@ class App {
 	initSlider(item) {
 		return new Swiper(
 			item.querySelector("[data-slide]"),
-			sliderFactory(item)
+			sliderFactory(item),
 		);
 	}
 	

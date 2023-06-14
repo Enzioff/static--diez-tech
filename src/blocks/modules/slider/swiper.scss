@@ -13,17 +13,39 @@
     transition: .2s linear;
     height: auto !important;
 
+    @include r(1200) {
+      width: 100%;
+    }
+
+    &--half {
+      width: auto !important;
+      max-width: 100%;
+    }
+
     &-next {
       transition: .2s linear;
+
       .article-project {
-        transform: translateY(-27%) rotate(-10deg) skewX(-10deg) skewY(-10deg);
+        //transform: translateY(-27%) rotate(-10deg) skewX(-10deg) skewY(-10deg);
+        @include r(1200) {
+          transform: none;
+        }
+      }
+    }
+
+    &-active {
+      .article-project {
       }
     }
 
     &-prev {
       transition: .2s linear;
+
       .article-project {
-        transform: translateY(27%) rotate(-10deg) skewX(-10deg) skewY(-10deg);
+        //transform: translateY(27%) rotate(-10deg) skewX(-10deg) skewY(-10deg);
+        @include r(1200) {
+          transform: none;
+        }
       }
     }
   }
