@@ -59,4 +59,14 @@ module.exports = [
 		sectionFooter,
 		temp
 	}),
+	new HtmlWebpackPlugin({
+		template: "./src/pages/contacts.html",
+		filename: "contacts.html",
+		inject: "body",
+		title: "Контакты | Diez Tech",
+		head,
+		sectionHeader,
+		sectionFooter,
+		temp
+	}),
 ];

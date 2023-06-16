@@ -1,0 +1,56 @@
+.address-contacts {
+  display: flex;
+  padding: 40px;
+  margin-right: 40px;
+  background-color: $dark;
+
+  @include r(1200) {
+    margin-right: 0;
+    padding: 50px 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    font-family: $font-second;
+
+    @include r(1200) {
+      row-gap: 30px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    font-size: 14px;
+    line-height: 16px;
+    color: $light;
+
+    @include r(1200) {
+      font-size: 12px;
+    }
+
+    a {
+      font-family: $font-main;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 22px;
+
+      @include r(1200) {
+        font-size: 24px;
+      }
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    column-gap: 67px;
+  }
+}
