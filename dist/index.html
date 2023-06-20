@@ -43,7 +43,7 @@
                     <li class="header-menu__item">
                         <a class="header-menu__link" href="#">
                             #мы
-                        <svg class="header-menu__icon">
+                            <svg class="header-menu__icon">
                                 <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
                             </svg>
                         </a>
@@ -51,7 +51,7 @@
                     <li class="header-menu__item">
                         <a class="header-menu__link" href="#">
                             Кейсы
-                        <svg class="header-menu__icon">
+                            <svg class="header-menu__icon">
                                 <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
                             </svg>
                         </a>
@@ -59,7 +59,7 @@
                     <li class="header-menu__item">
                         <a class="header-menu__link" href="#">
                             Блог
-                        <svg class="header-menu__icon">
+                            <svg class="header-menu__icon">
                                 <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
                             </svg>
                         </a>
@@ -67,7 +67,7 @@
                     <li class="header-menu__item">
                         <a class="header-menu__link" href="#">
                             Стать партнером
-                        <svg class="header-menu__icon">
+                            <svg class="header-menu__icon">
                                 <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
                             </svg>
                         </a>
@@ -75,7 +75,7 @@
                     <li class="header-menu__item">
                         <a class="header-menu__link" href="#">
                             Контакты
-                        <svg class="header-menu__icon">
+                            <svg class="header-menu__icon">
                                 <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
                             </svg>
                         </a>
@@ -213,13 +213,13 @@
         <div class="container container--full">
             <div class="section-header mb-60 mbm-26" data-tabs-container data-tabs-intro>
                 <div class="section-header__tabs" data-tabs>
-                    <h2 class="title tab-active" data-tab="0">
+                    <h2 class="title tab-active" data-tab data-tab-index="0">
                         <svg class="title__icon">
                             <use xlink:href="./assets/sprite/sprite.svg#icon-title-sharp"></use>
                         </svg>
                         Мы Умеем
                     </h2>
-                    <h2 class="title mob-hidden" data-tab="1">
+                    <h2 class="title mob-hidden" data-tab data-tab-index="1">
                         <svg class="title__icon">
                             <use xlink:href="./assets/sprite/sprite.svg#icon-title-sharp"></use>
                         </svg>
@@ -244,11 +244,11 @@
             <div class="slider mbm-80" data-current-slide="0">
                 <div class="slider__toolbox" data-slider="intro">
                     <div class="swiper" data-slide>
-                        <div class="swiper-wrapper mbm-40 mb-a" data-tabs-container>
+                        <div class="swiper-wrapper mbm-40 mb-a">
                             <div class="swiper-slide slider__item">
                                 <article class="article-list">
                                     <h3 class="slider-title">Разработка сайтов</h3>
-                                    <ul class="list mbm-50" data-tabs data-tabs-slider>
+                                    <ul class="list mbm-50">
                                         <li class="list__item tab-active" data-tab>Личный кабинет (B2B / B2C)</li>
                                         <li class="list__item" data-tab>B2B порталы</li>
                                         <li class="list__item" data-tab>Маркетплейс (E-COM)</li>
@@ -263,7 +263,7 @@
                             <div class="swiper-slide slider__item">
                                 <article class="article-list">
                                     <h3 class="slider-title">Мобильные приложения</h3>
-                                    <ul class="list" data-tabs data-tabs-slider>
+                                    <ul class="list">
                                         <li class="list__item" data-tab>Системы лояльности</li>
                                         <li class="list__item" data-tab>Приложения для торговли (E-COM)</li>
                                     </ul>
@@ -272,9 +272,10 @@
                             <div class="swiper-slide slider__item">
                                 <article class="article-list">
                                     <h3 class="slider-title">Bitrix24</h3>
-                                    <ul class="list" data-tabs data-tabs-slider>
+                                    <ul class="list">
                                         <li class="list__item" data-tab>Внутренние корпоративные порталы</li>
-                                        <li class="list__item" data-tab>Единое информационное пространство (Интранет)</li>
+                                        <li class="list__item" data-tab>Единое информационное пространство (Интранет)
+                                        </li>
                                         <li class="list__item" data-tab>CRM</li>
                                         <li class="list__item" data-tab>CRM маркетинг</li>
                                         <li class="list__item" data-tab>Автоматизация бизнес-процессов</li>
@@ -285,7 +286,7 @@
                             <div class="swiper-slide slider__item">
                                 <article class="article-list">
                                     <h3 class="slider-title">1С (услуги + продажа лицензий в рамках ИМ)</h3>
-                                    <ul class="list" data-tabs data-tabs-slider>
+                                    <ul class="list">
                                         <li class="list__item" data-tab>Автоматизация торгового учета</li>
                                         <li class="list__item" data-tab>Автоматизация розничного учета</li>
                                         <li class="list__item" data-tab>Автоматизация производственного учета</li>
@@ -300,7 +301,7 @@
                             <div class="swiper-slide slider__item">
                                 <article class="article-list">
                                     <h3 class="slider-title">Продажа лицензий</h3>
-                                    <ul class="list" data-tabs data-tabs-slider>
+                                    <ul class="list">
                                         <li class="list__item" data-tab>CRM (Битрикс24)</li>
                                         <li class="list__item" data-tab>CMS (БУС)</li>
                                     </ul>
@@ -309,7 +310,7 @@
                             <div class="swiper-slide slider__item">
                                 <article class="article-list">
                                     <h3 class="slider-title">Комплексный digital-marketing</h3>
-                                    <ul class="list" data-tabs data-tabs-slider>
+                                    <ul class="list">
                                         <li class="list__item" data-tab>Контекстная реклама</li>
                                         <li class="list__item" data-tab>Медийная реклама</li>
                                         <li class="list__item" data-tab>Таргетированная реклама</li>
@@ -339,8 +340,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slider-images mbm-40" data-image-box>
-                    <div class="slider-images__item" data-image-item>
+                <div class="slider-images mbm-40">
                         <picture class="slider-images__picture slider-images__picture--active">
                             <img src="./assets/images/slider-img.jpg" alt="">
                         </picture>
@@ -353,8 +353,6 @@
                         <picture class="slider-images__picture">
                             <img src="https://fakeimg.pl/1920x1080" alt="">
                         </picture>
-                    </div>
-                    <div class="slider-images__item hidden" data-image-item>
                         <picture class="slider-images__picture">
                             <img src="./assets/images/slider-img.jpg" alt="">
                         </picture>
@@ -367,8 +365,6 @@
                         <picture class="slider-images__picture">
                             <img src="https://fakeimg.pl/1920x1080" alt="">
                         </picture>
-                    </div>
-                    <div class="slider-images__item hidden" data-image-item>
                         <picture class="slider-images__picture">
                             <img src="./assets/images/slider-img.jpg" alt="">
                         </picture>
@@ -381,8 +377,6 @@
                         <picture class="slider-images__picture">
                             <img src="https://fakeimg.pl/1920x1080" alt="">
                         </picture>
-                    </div>
-                    <div class="slider-images__item hidden" data-image-item>
                         <picture class="slider-images__picture">
                             <img src="./assets/images/slider-img.jpg" alt="">
                         </picture>
@@ -395,8 +389,6 @@
                         <picture class="slider-images__picture">
                             <img src="https://fakeimg.pl/1920x1080" alt="">
                         </picture>
-                    </div>
-                    <div class="slider-images__item hidden" data-image-item>
                         <picture class="slider-images__picture">
                             <img src="./assets/images/slider-img.jpg" alt="">
                         </picture>
@@ -409,8 +401,6 @@
                         <picture class="slider-images__picture">
                             <img src="https://fakeimg.pl/1920x1080" alt="">
                         </picture>
-                    </div>
-                    <div class="slider-images__item hidden" data-image-item>
                         <picture class="slider-images__picture">
                             <img src="./assets/images/slider-img.jpg" alt="">
                         </picture>
@@ -423,7 +413,6 @@
                         <picture class="slider-images__picture">
                             <img src="https://fakeimg.pl/1920x1080" alt="">
                         </picture>
-                    </div>
                 </div>
                 <button class="slider__button-show button button--red button--radius">Показать</button>
             </div>
@@ -444,7 +433,7 @@
                                         <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
                                     </svg>
                                 </a>
-                                <ul class="list" data-tabs data-tabs-slider>
+                                <ul class="list">
                                     <li class="list__item tab-active" data-tab>Личный кабинет (B2B / B2C)</li>
                                     <li class="list__item" data-tab>B2B порталы</li>
                                     <li class="list__item" data-tab>Маркетплейс (E-COM)</li>
@@ -462,7 +451,7 @@
                                         <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
                                     </svg>
                                 </a>
-                                <ul class="list" data-tabs data-tabs-slider>
+                                <ul class="list">
                                     <li class="list__item" data-tab>Системы лояльности</li>
                                     <li class="list__item" data-tab>Приложения для торговли (E-COM)</li>
                                 </ul>
@@ -474,7 +463,7 @@
                                         <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
                                     </svg>
                                 </a>
-                                <ul class="list" data-tabs data-tabs-slider>
+                                <ul class="list">
                                     <li class="list__item" data-tab>Внутренние корпоративные порталы</li>
                                     <li class="list__item" data-tab>Единое информационное пространство (Интранет)</li>
                                     <li class="list__item" data-tab>CRM</li>
@@ -490,7 +479,7 @@
                                         <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
                                     </svg>
                                 </a>
-                                <ul class="list" data-tabs data-tabs-slider>
+                                <ul class="list">
                                     <li class="list__item" data-tab>Автоматизация торгового учета</li>
                                     <li class="list__item" data-tab>Автоматизация розничного учета</li>
                                     <li class="list__item" data-tab>Автоматизация производственного учета</li>
@@ -508,7 +497,7 @@
                                         <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
                                     </svg>
                                 </a>
-                                <ul class="list" data-tabs data-tabs-slider>
+                                <ul class="list">
                                     <li class="list__item" data-tab>CRM (Битрикс24)</li>
                                     <li class="list__item" data-tab>CMS (БУС)</li>
                                 </ul>
@@ -520,7 +509,7 @@
                                         <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
                                     </svg>
                                 </a>
-                                <ul class="list" data-tabs data-tabs-slider>
+                                <ul class="list">
                                     <li class="list__item" data-tab>Контекстная реклама</li>
                                     <li class="list__item" data-tab>Медийная реклама</li>
                                     <li class="list__item" data-tab>Таргетированная реклама</li>
@@ -537,7 +526,7 @@
                                         <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
                                     </svg>
                                 </a>
-                                <ul class="list" data-tabs data-tabs-slider>
+                                <ul class="list">
                                     <li class="list__item" data-tab>Контекстная реклама</li>
                                     <li class="list__item" data-tab>Медийная реклама</li>
                                     <li class="list__item" data-tab>Таргетированная реклама</li>
@@ -554,7 +543,7 @@
                                         <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
                                     </svg>
                                 </a>
-                                <ul class="list" data-tabs data-tabs-slider>
+                                <ul class="list">
                                     <li class="list__item" data-tab>Контекстная реклама</li>
                                     <li class="list__item" data-tab>Медийная реклама</li>
                                     <li class="list__item" data-tab>Таргетированная реклама</li>
@@ -583,91 +572,79 @@
                         </div>
                     </div>
                 </div>
-                <div class="slider-images" data-image-box>
-                    <div class="slider-images__item" data-image-item>
-                        <picture class="slider-images__picture slider-images__picture--active">
-                            <img src="https://s00.yaplakal.com/pics/pics_original/2/9/0/16138092.jpg" alt="">
-                        </picture>
-                        <picture class="slider-images__picture">
-                            <img src="https://fakeimg.pl/1920x1080" alt="">
-                        </picture>
-                        <picture class="slider-images__picture">
-                            <img src="./assets/images/slider-img.jpg" alt="">
-                        </picture>
-                        <picture class="slider-images__picture">
-                            <img src="https://fakeimg.pl/1920x1080" alt="">
-                        </picture>
-                    </div>
-                    <div class="slider-images__item hidden" data-image-item>
-                        <picture class="slider-images__picture">
-                            <img src="./assets/images/slider-img.jpg" alt="">
-                        </picture>
-                        <picture class="slider-images__picture">
-                            <img src="https://fakeimg.pl/1920x1080" alt="">
-                        </picture>
-                        <picture class="slider-images__picture">
-                            <img src="./assets/images/slider-img.jpg" alt="">
-                        </picture>
-                        <picture class="slider-images__picture">
-                            <img src="https://fakeimg.pl/1920x1080" alt="">
-                        </picture>
-                    </div>
-                    <div class="slider-images__item hidden" data-image-item>
-                        <picture class="slider-images__picture">
-                            <img src="./assets/images/slider-img.jpg" alt="">
-                        </picture>
-                        <picture class="slider-images__picture">
-                            <img src="https://fakeimg.pl/1920x1080" alt="">
-                        </picture>
-                        <picture class="slider-images__picture">
-                            <img src="./assets/images/slider-img.jpg" alt="">
-                        </picture>
-                        <picture class="slider-images__picture">
-                            <img src="https://fakeimg.pl/1920x1080" alt="">
-                        </picture>
-                    </div>
-                    <div class="slider-images__item hidden" data-image-item>
-                        <picture class="slider-images__picture">
-                            <img src="./assets/images/slider-img.jpg" alt="">
-                        </picture>
-                        <picture class="slider-images__picture">
-                            <img src="https://fakeimg.pl/1920x1080" alt="">
-                        </picture>
-                        <picture class="slider-images__picture">
-                            <img src="./assets/images/slider-img.jpg" alt="">
-                        </picture>
-                        <picture class="slider-images__picture">
-                            <img src="https://fakeimg.pl/1920x1080" alt="">
-                        </picture>
-                    </div>
-                    <div class="slider-images__item hidden" data-image-item>
-                        <picture class="slider-images__picture">
-                            <img src="./assets/images/slider-img.jpg" alt="">
-                        </picture>
-                        <picture class="slider-images__picture">
-                            <img src="https://fakeimg.pl/1920x1080" alt="">
-                        </picture>
-                        <picture class="slider-images__picture">
-                            <img src="./assets/images/slider-img.jpg" alt="">
-                        </picture>
-                        <picture class="slider-images__picture">
-                            <img src="https://fakeimg.pl/1920x1080" alt="">
-                        </picture>
-                    </div>
-                    <div class="slider-images__item hidden" data-image-item>
-                        <picture class="slider-images__picture">
-                            <img src="./assets/images/slider-img.jpg" alt="">
-                        </picture>
-                        <picture class="slider-images__picture">
-                            <img src="https://fakeimg.pl/1920x1080" alt="">
-                        </picture>
-                        <picture class="slider-images__picture">
-                            <img src="./assets/images/slider-img.jpg" alt="">
-                        </picture>
-                        <picture class="slider-images__picture">
-                            <img src="https://fakeimg.pl/1920x1080" alt="">
-                        </picture>
-                    </div>
+                <div class="slider-images">
+                    <picture class="slider-images__picture slider-images__picture--active">
+                        <img src="https://s00.yaplakal.com/pics/pics_original/2/9/0/16138092.jpg" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="https://fakeimg.pl/1920x1080" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="./assets/images/slider-img.jpg" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="https://fakeimg.pl/1920x1080" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="./assets/images/slider-img.jpg" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="https://fakeimg.pl/1920x1080" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="./assets/images/slider-img.jpg" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="https://fakeimg.pl/1920x1080" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="./assets/images/slider-img.jpg" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="https://fakeimg.pl/1920x1080" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="./assets/images/slider-img.jpg" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="https://fakeimg.pl/1920x1080" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="./assets/images/slider-img.jpg" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="https://fakeimg.pl/1920x1080" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="./assets/images/slider-img.jpg" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="https://fakeimg.pl/1920x1080" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="./assets/images/slider-img.jpg" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="https://fakeimg.pl/1920x1080" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="./assets/images/slider-img.jpg" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="https://fakeimg.pl/1920x1080" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="./assets/images/slider-img.jpg" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="https://fakeimg.pl/1920x1080" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="./assets/images/slider-img.jpg" alt="">
+                    </picture>
+                    <picture class="slider-images__picture">
+                        <img src="https://fakeimg.pl/1920x1080" alt="">
+                    </picture>
                 </div>
                 <button class="slider__button-show button button--red button--radius">Смотреть остальное</button>
             </div>
@@ -1110,6 +1087,7 @@
             .temp {
                 gap: 15px;
                 display: flex;
+                flex-wrap: wrap;
             }
 
             .temp__link {
@@ -1125,9 +1103,12 @@
         <div class="temp">
             <a href="./index.html" class="temp__link">Главная</a>
             <a href="./services.html" class="temp__link">Услуги</a>
+            <a href="./contacts.html" class="temp__link">Контакты</a>
             <a href="./services-detail.html" class="temp__link">Услуги - Детальная</a>
             <a href="./blog.html" class="temp__link">Блог</a>
             <a href="./blog-detail.html" class="temp__link">Блог - Детальная</a>
+            <a href="./case.html" class="temp__link">Кейс</a>
+            <a href="./case-detail.html" class="temp__link">Кейс - Детальная</a>
         </div>
     </div>
 </section>

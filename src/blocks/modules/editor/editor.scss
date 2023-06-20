@@ -6,10 +6,6 @@
     margin-bottom: 0;
   }
 
-  div {
-    margin-bottom: 80px;
-  }
-
   .split-images {
     margin: 0;
     display: grid;
@@ -68,7 +64,7 @@
   h2 {
     font-size: rem(44);
     @include r(1200) {
-      font-size: rem(36);
+      font-size: rem(28);
     }
   }
 
@@ -219,12 +215,22 @@
         font-weight: 400;
         color: $red;
       }
+
+      @include r(1200) {
+        font-size: 14px;
+        line-height: 24px;
+      }
     }
     ul {
       font-size: 16px;
       line-height: 22px;
       color: $gray;
       list-style: disc inside;
+
+      @include r(1200) {
+        font-size: 14px;
+        line-height: 20px;
+      }
     }
   }
 }

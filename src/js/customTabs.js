@@ -1,38 +1,18 @@
 const sliders = document.querySelectorAll("[data-current-slide]");
+const activeClass = "slider-images__picture--active";
 
 if (sliders) {
 	sliders.forEach(slider => {
-		const sliderImagesBox = slider.querySelector("[data-image-box]");
-		const sliderTabsContainer = slider.querySelector("[data-tabs-container]");
-		const pictures = sliderImagesBox.querySelectorAll("[data-image-item]");
-		const tabs = sliderTabsContainer.querySelectorAll("[data-tabs-slider]");
-		
-		tabs.forEach((tabs, tabsId) => {
-			
-			pictures.forEach((pictures, picturesId, picturesArray) => {
-				
-				if (tabsId === picturesId) {
-					const tabItem = tabs.querySelectorAll("li");
-					const pictureEl = pictures.querySelectorAll("picture");
-					tabItem.forEach((tabItem, tabItemId) => {
-						
-						pictureEl.forEach((picture, pictureId) => {
-							
-							tabItem.addEventListener("click", () => {
-								if (tabItemId === pictureId) {
-									picturesArray.forEach(oldPic => {
-										const newPic = oldPic.querySelectorAll("picture");
-										oldPic.classList.add("hidden");
-										newPic.forEach(pic => {
-											pic.classList.remove("slider-images__picture--active");
-										});
-									});
-									picture.classList.add("slider-images__picture--active");
-									pictures.classList.remove("hidden");
-								}
-							});
-						});
-					});
+		const pictures = slider.querySelectorAll("picture");
+		const tabs = slider.querySelectorAll("[data-tab]");
+		tabs.forEach((tab, tabId) => {
+			tab.addEventListener("click", () => {
+				try {
+					const currentPicture = pictures.item(tabId);
+					pictures.forEach(picture => picture.classList.remove(activeClass))
+					currentPicture.classList.add(activeClass);
+				} catch (e) {
+					console.log('Нет соответствующего изображения');
 				}
 			});
 		});

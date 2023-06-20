@@ -322,7 +322,7 @@ class App {
 	}
 	
 	initTabs() {
-		const el = document.querySelectorAll("[data-tabs-container]");
+		const el = document.querySelectorAll("[data-tab]");
 		el.forEach(item => new _tabs__WEBPACK_IMPORTED_MODULE_2__.Tabs(item));
 	}
 	
@@ -333,6 +333,25 @@ class App {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./src/js/cases.js":
+/*!*************************!*\
+  !*** ./src/js/cases.js ***!
+  \*************************/
+/***/ (function() {
+
+const listLinks = document.querySelectorAll("[data-link]");
+const cases = document.querySelector('[data-cases]');
+const activeLinkClass = 'nav__link--active';
+listLinks.forEach((link, idx, arr) => {
+	link.addEventListener('click', ()=> {
+		arr.forEach(el => el.classList.remove(activeLinkClass))
+		link.classList.add(activeLinkClass)
+	})
+})
+
 
 /***/ }),
 
@@ -608,45 +627,26 @@ const images = document.querySelector('[data-images]')
 /***/ (function() {
 
 const sliders = document.querySelectorAll("[data-current-slide]");
+const activeClass = "slider-images__picture--active";
 
 if (sliders) {
 	sliders.forEach(slider => {
-		const sliderImagesBox = slider.querySelector("[data-image-box]");
-		const sliderTabsContainer = slider.querySelector("[data-tabs-container]");
-		const pictures = sliderImagesBox.querySelectorAll("[data-image-item]");
-		const tabs = sliderTabsContainer.querySelectorAll("[data-tabs-slider]");
-		
-		tabs.forEach((tabs, tabsId) => {
-			
-			pictures.forEach((pictures, picturesId, picturesArray) => {
-				
-				if (tabsId === picturesId) {
-					const tabItem = tabs.querySelectorAll("li");
-					const pictureEl = pictures.querySelectorAll("picture");
-					tabItem.forEach((tabItem, tabItemId) => {
-						
-						pictureEl.forEach((picture, pictureId) => {
-							
-							tabItem.addEventListener("click", () => {
-								if (tabItemId === pictureId) {
-									picturesArray.forEach(oldPic => {
-										const newPic = oldPic.querySelectorAll("picture");
-										oldPic.classList.add("hidden");
-										newPic.forEach(pic => {
-											pic.classList.remove("slider-images__picture--active");
-										});
-									});
-									picture.classList.add("slider-images__picture--active");
-									pictures.classList.remove("hidden");
-								}
-							});
-						});
-					});
+		const pictures = slider.querySelectorAll("picture");
+		const tabs = slider.querySelectorAll("[data-tab]");
+		tabs.forEach((tab, tabId) => {
+			tab.addEventListener("click", () => {
+				try {
+					const currentPicture = pictures.item(tabId);
+					pictures.forEach(picture => picture.classList.remove(activeClass))
+					currentPicture.classList.add(activeClass);
+				} catch (e) {
+					console.log('Нет соответствующего изображения');
 				}
 			});
 		});
 	});
 }
+
 
 /***/ }),
 
@@ -836,12 +836,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 class Tabs {
 	constructor(el) {
-		
 		this.el = el;
 		this.sliders = document.querySelectorAll("[data-current-slide]");
-		this.tabsContainer = this.el.querySelectorAll("[data-tabs]");
-		this.tabs = null;
-		this.track = document.querySelector("[data-track]");
+		this.tabs = document.querySelectorAll("[data-tab]");
+		this.tabHeaders = document.querySelectorAll("[data-tab-index]");
 		this.setListeners();
 	}
 	
@@ -850,51 +848,36 @@ class Tabs {
 		if (window.innerWidth > 1200) {
 			this.hideSlider(1);
 		}
-		window.addEventListener('resize', ()=> {
+		window.addEventListener("resize", () => {
 			if (window.innerWidth < 1200) {
-				this.showSlider(1);
-				document.querySelector('.section-header__tabs').querySelectorAll('.title')[0].classList.add('tab-active');
-				document.querySelector('.section-header__tabs').querySelectorAll('.title')[1].classList.remove('tab-active');
-				this.sliders[0].classList.remove('hidden');
-			} else {
-				this.hideSlider(1);
+				this.tabHeaders[0].classList.add("tab-active");
+				this.tabHeaders[1].classList.remove("tab-active");
+				this.sliders[0].classList.remove("hidden");
 			}
-		})
+		});
 	}
 	
 	toggleTab() {
-		this.tabsContainer.forEach(tabs => {
-			this.tabs = tabs.querySelectorAll("[data-tab]");
-			this.tabs.forEach((tab, idx, arr) => {
-				tab.addEventListener("click", () => {
-					const currentSlide = this.sliders[idx];
-					arr.forEach(el => el.classList.remove("tab-active"));
-					tab.classList.add("tab-active");
-					
-					if (window.innerWidth >= 1200) {
-						if (tab.dataset.tab === "1") {
-							this.track.style.transform = `translate(0)`;
-							if (currentSlide.dataset.currentSlide === "1") {
-								this.sliders[0].classList.add("hidden");
-								this.sliders[1].classList.remove("hidden");
-							} else {
-								this.sliders[0].classList.remove("hidden");
-								this.sliders[1].classList.add("hidden");
-							}
-						}
-						if (tab.dataset.tab === "0") {
-							this.track.style.transform = `translate(-130px)`;
-							if (currentSlide.dataset.currentSlide === "0") {
-								this.hideSlider(1);
-								this.showSlider(0);
-							} else {
-								this.showSlider(1);
-								this.hideSlider(0);
-							}
-						}
+		this.el.addEventListener("click", () => {
+			if (this.el.dataset.tabIndex) {
+				this.tabHeaders.forEach(el => el.classList.remove("tab-active"));
+				this.el.classList.add("tab-active");
+				if (this.el.dataset.tabIndex === "1") {
+					this.hideSlider(0);
+					this.showSlider(1);
+				}
+				if (this.el.dataset.tabIndex === "0") {
+					this.hideSlider(1);
+					this.showSlider(0);
+				}
+			} else {
+				this.tabs.forEach(tab => {
+					if (!tab.dataset.tabIndex) {
+						tab.classList.remove("tab-active");
 					}
 				});
-			});
+				this.el.classList.add("tab-active");
+			}
 		});
 	}
 	
@@ -11694,9 +11677,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _track__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./track */ "./src/js/track.js");
 /* harmony import */ var _observer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./observer */ "./src/js/observer.js");
 /* harmony import */ var _observer__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_observer__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../css/main.scss */ "./src/css/main.scss");
-/* harmony import */ var swiper_swiper_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! swiper/swiper.css */ "./node_modules/swiper/swiper.css");
-/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app */ "./src/js/app.js");
+/* harmony import */ var _cases__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./cases */ "./src/js/cases.js");
+/* harmony import */ var _cases__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_cases__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../css/main.scss */ "./src/css/main.scss");
+/* harmony import */ var swiper_swiper_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! swiper/swiper.css */ "./node_modules/swiper/swiper.css");
+/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app */ "./src/js/app.js");
 
 
 
@@ -11708,7 +11693,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const app = new _app__WEBPACK_IMPORTED_MODULE_8__["default"]();
+
+const app = new _app__WEBPACK_IMPORTED_MODULE_9__["default"]();
 
 
 

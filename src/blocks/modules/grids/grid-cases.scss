@@ -1,0 +1,9 @@
+.grid-cases {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(rem(400), 1fr));
+  gap: rem(40) rem(20);
+
+  @include r(768) {
+    grid-template-columns: 1fr;
+  }
+}

@@ -59,4 +59,34 @@ module.exports = [
 		sectionFooter,
 		temp
 	}),
+	new HtmlWebpackPlugin({
+		template: "./src/pages/case.html",
+		filename: "case.html",
+		inject: "body",
+		title: "Кейс | Diez Tech",
+		head,
+		sectionHeader,
+		sectionFooter,
+		temp
+	}),
+	new HtmlWebpackPlugin({
+		template: "./src/pages/case-detail.html",
+		filename: "case-detail.html",
+		inject: "body",
+		title: "Кейс-Детальная | Diez Tech",
+		head,
+		sectionHeader,
+		sectionFooter,
+		temp
+	}),
+	new HtmlWebpackPlugin({
+		template: "./src/pages/contacts.html",
+		filename: "contacts.html",
+		inject: "body",
+		title: "Контакты | Diez Tech",
+		head,
+		sectionHeader,
+		sectionFooter,
+		temp
+	}),
 ];

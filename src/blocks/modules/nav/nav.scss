@@ -1,0 +1,39 @@
+.nav {
+  display: flex;
+  align-items: center;
+  @include r(1200) {
+    overflow-x: auto;
+    &::-webkit-scrollbar-thumb {
+      display: none;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 27px 20px;
+    flex-grow: 1;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    color: #0D0D0D;
+    background-color: $flash;
+    border-bottom: 1px solid #E1DCDC;
+    @include r(1200) {
+      flex-shrink: 0;
+    }
+    &--active {
+      background-color: #0D0D0D;
+      color: $light;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #0D0D0D;
+      color: $light;
+    }
+  }
+}

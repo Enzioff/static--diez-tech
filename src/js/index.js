@@ -4,6 +4,7 @@ import "./header";
 import './customTabs'
 import './track'
 import './observer'
+import './cases'
 import "../css/main.scss";
 import 'swiper/swiper.css'
 

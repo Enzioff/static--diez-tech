@@ -155,138 +155,97 @@
             </div>
         </div>
     </section>
-    <section class="section section--light pb-100 pbm-55">
+    <section class="section pt-60 pb-60">
         <div class="container">
-            <div class="section-header section-header--mob-column mb-92 mbm-40">
+            <div class="section-header section-header--mob-column mb-92">
                 <h2 class="title tab-active">
                     <svg class="title__icon">
                         <use xlink:href="./assets/sprite/sprite.svg#icon-title-sharp"></use>
                     </svg>
-                    Блог
+                    Контакты
                 </h2>
                 <p class="section-header__text text-right">
                     Лайфхаки, инструменты, инструкции для<br> самостоятельного продвижения. Пользуйтесь<br>
                     и не забудьте подписаться.
                 </p>
             </div>
-            <div class="grid-blog mb-80">
-                <div class="grid-blog__item grid-blog__item--full">
-                    <a href="#" class="article-blog">
-                        <div class="article-blog__picture">
-                            <img src="./assets/images/blog-1.png" alt="">
-                            <time class="article-blog__date" datetime="08.01.2023">8 января 2023</time>
-                        </div>
-                        <span class="article-blog__content">
-                            <p class="article-blog__author">автор: <cite>Евгений Иванов</cite></p>
-                            <h3 class="article-blog__title">
-                                Особенности публикации финтех-приложений в сторах.
-                            </h3>
-                        </span>
-                    </a>
+            <div class="columns mb-60">
+                <div class="columns__col columns__col--5 columns__col--mob-2 mbm-30">
+                    <div class="address-contacts">
+                        <ul class="address-contacts__list">
+                            <li class="address-contacts__item">
+                                <span>Телефон</span>
+                                <a href="tel:+74012751750">+7 (4012) 751 750</a>
+                            </li>
+                            <li class="address-contacts__item">
+                                <span>Email</span>
+                                <a href="mailto:info@example">info@example</a>
+                            </li>
+                            <li class="address-contacts__item">
+                                <span>Адрес</span>
+                                <a href="#">г. Калининград, Советский пр-т,14-16 (Мелиоратор), офис 309</a>
+                            </li>
+                            <li class="address-contacts__item">
+                                <span>Соц. сети</span>
+                                <div class="address-contacts__social">
+                                    <a href="#">Telegram</a>
+                                    <a href="#">Вконтакты</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="grid-blog__item grid-blog__item--big">
-                    <a href="#" class="article-blog article-blog--accent">
-                        <div class="article-blog__picture">
-                            <img src="./assets/images/blog-1.png" alt="">
-                            <time class="article-blog__date" datetime="08.01.2023">8 января 2023</time>
+                <div class="columns__col columns__col--7 columns__col--mob-2">
+                    <form class="feedback-form feedback-form--dark">
+                        <div class="feedback-form__info">
+                            <fieldset class="feedback-form__wrapper feedback-form__wrapper--grid">
+                                <label class="feedback-form__item">
+                                    <input class="input input--form" name="USER_TEXT" type="text"
+                                           placeholder="Текст" required>
+                                    <span class="feedback-form__text">Имя <sup>*</sup></span>
+                                </label>
+                                <label class="feedback-form__item">
+                                    <input class="input input--form" name="USER_EMAIL" type="email"
+                                           placeholder="Email" required>
+                                    <span class="feedback-form__text">Email <sup>*</sup></span>
+                                </label>
+                                <label class="feedback-form__item">
+                                    <input class="input input--form" name="USER_PHONE" type="tel"
+                                           placeholder="Телефон" required>
+                                    <span class="feedback-form__text">Телефон <sup>*</sup></span>
+                                </label>
+                                <label class="feedback-form__item">
+                                    <input class="input input--form" name="USER_COMPANY" type="text"
+                                           placeholder="Компания">
+                                    <span class="feedback-form__text">Компания</span>
+                                </label>
+                            </fieldset>
+                            <fieldset class="feedback-form__wrapper">
+                                <label class="feedback-form__item">
+                                    <textarea class="input input--area input--form" name="USER_MESSAGE"
+                                              placeholder="Сообщение" required></textarea>
+                                    <span class="feedback-form__text">Сообщение <sup>*</sup></span>
+                                </label>
+                            </fieldset>
                         </div>
-                        <span class="article-blog__content">
-                            <p class="article-blog__author">автор: <cite>Евгений Иванов</cite></p>
-                            <h3 class="article-blog__title">
-                                Структура идеальной ретроспективы.
-                            </h3>
-                        </span>
-                    </a>
-                </div>
-                <div class="grid-blog__item">
-                    <a href="#" class="article-blog">
-                        <div class="article-blog__picture">
-                            <img src="./assets/images/blog-1.png" alt="">
-                            <time class="article-blog__date" datetime="08.01.2023">8 января 2023</time>
-                        </div>
-                        <span class="article-blog__content">
-                            <p class="article-blog__author">автор: <cite>Евгений Иванов</cite></p>
-                            <h3 class="article-blog__title">
-                                Банки и страховые в одном смартфоне. Рецепт приготовления удобного финтех-приложения.
-                            </h3>
-                        </span>
-                    </a>
-                </div>
-                <div class="grid-blog__item">
-                    <a href="#" class="article-blog">
-                        <div class="article-blog__picture">
-                            <img src="./assets/images/blog-1.png" alt="">
-                            <time class="article-blog__date" datetime="08.01.2023">8 января 2023</time>
-                        </div>
-                        <span class="article-blog__content">
-                            <p class="article-blog__author">автор: <cite>Евгений Иванов</cite></p>
-                            <h3 class="article-blog__title">как мы тестировали первый в россии финансовый маркетплейс</h3>
-                        </span>
-                    </a>
-                </div>
-                <div class="grid-blog__item">
-                    <a href="#" class="article-blog">
-                        <div class="article-blog__picture">
-                            <img src="./assets/images/blog-1.png" alt="">
-                            <time class="article-blog__date" datetime="08.01.2023">8 января 2023</time>
-                        </div>
-                        <span class="article-blog__content">
-                            <p class="article-blog__author">автор: <cite>Евгений Иванов</cite></p>
-                            <h3 class="article-blog__title">Банки и страховые в одном смартфоне. Рецепт приготовления удобного финтех-приложения</h3>
-                        </span>
-                    </a>
-                </div>
-                <div class="grid-blog__item">
-                    <a href="#" class="article-blog">
-                        <div class="article-blog__picture">
-                            <img src="./assets/images/blog-1.png" alt="">
-                            <time class="article-blog__date" datetime="08.01.2023">8 января 2023</time>
-                        </div>
-                        <span class="article-blog__content">
-                            <p class="article-blog__author">автор: <cite>Евгений Иванов</cite></p>
-                            <h3 class="article-blog__title">тренды логотипов 2023 года</h3>
-                        </span>
-                    </a>
-                </div>
-                <div class="grid-blog__item">
-                    <a href="#" class="article-blog article-blog--accent">
-                        <div class="article-blog__picture">
-                            <img src="./assets/images/blog-1.png" alt="">
-                            <time class="article-blog__date" datetime="08.01.2023">8 января 2023</time>
-                        </div>
-                        <span class="article-blog__content">
-                            <p class="article-blog__author">автор: <cite>Евгений Иванов</cite></p>
-                            <h3 class="article-blog__title">Как проводить качественные исследования: интервью, UX-тестирование и фокус-группы.</h3>
-                        </span>
-                    </a>
-                </div>
-                <div class="grid-blog__item grid-blog__item--big">
-                    <a href="#" class="article-blog">
-                        <div class="article-blog__picture">
-                            <img src="./assets/images/blog-1.png" alt="">
-                            <time class="article-blog__date" datetime="08.01.2023">8 января 2023</time>
-                        </div>
-                        <span class="article-blog__content">
-                            <p class="article-blog__author">автор: <cite>Евгений Иванов</cite></p>
-                            <h3 class="article-blog__title">Защищаем данные на проекте: про плагин Calico и правила работы с ним</h3>
-                        </span>
-                    </a>
-                </div>
-                <div class="grid-blog__item grid-blog__item--full">
-                    <a href="#" class="article-blog">
-                        <div class="article-blog__picture">
-                            <img src="./assets/images/blog-1.png" alt="">
-                            <time class="article-blog__date" datetime="08.01.2023">8 января 2023</time>
-                        </div>
-                        <span class="article-blog__content">
-                            <p class="article-blog__author">автор: <cite>Евгений Иванов</cite></p>
-                            <h3 class="article-blog__title">Особенности публикации финтех-приложений в сторах</h3>
-                        </span>
-                    </a>
+                        <button class="button button--circle">
+                            <span>
+                                Отправить
+                            </span>
+                        </button>
+                    </form>
                 </div>
             </div>
-            <div class="loader center">
-                <img src="./assets/images/Loading.svg" alt="">
+            <div class="map">
+                <div style="position:relative;overflow:hidden;"><a
+                        href="https://yandex.ru/maps/org/diez_design/143377252181/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:0px;">Diez Design</a><a
+                        href="https://yandex.ru/maps/22/kaliningrad/category/design_studio/184108267/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:14px;">Студия дизайна в Калининграде</a>
+                    <iframe src="https://yandex.ru/map-widget/v1/?ll=20.438083%2C54.723096&mode=search&oid=143377252181&ol=biz&z=17.03"
+                            width="560" height="400" frameborder="1" allowfullscreen="true"
+                            style="position:relative;"></iframe>
+                </div>
             </div>
         </div>
     </section>

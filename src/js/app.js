@@ -76,7 +76,7 @@ class App {
 	}
 	
 	initTabs() {
-		const el = document.querySelectorAll("[data-tabs-container]");
+		const el = document.querySelectorAll("[data-tab]");
 		el.forEach(item => new Tabs(item));
 	}
 	

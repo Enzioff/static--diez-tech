@@ -30,6 +30,7 @@
 // Grids
 @import "modules/grids/grid-about";
 @import "modules/grids/grid-blog";
+@import "modules/grids/grid-cases";
 
 @import "modules/blog/blog";
 
@@ -39,6 +40,7 @@
 @import "modules/articles/article-blog";
 @import "modules/articles/article-project";
 @import "modules/articles/article-list";
+@import "modules/articles/article-case";
 
 // Header
 @import "modules/header/header";
@@ -49,12 +51,14 @@
 @import "modules/form/feedback-form";
 
 @import "modules/address/address";
+@import "modules/address/address-contacts";
 
 // Intro
 @import "modules/intro/intro";
 @import "modules/intro/intro-list";
 @import "modules/intro/intro-about";
 
+@import "modules/nav/nav";
 @import "modules/nav/main-nav";
 @import "modules/nav/nav-footer";
 @import "modules/nav/nav-dropdown";
@@ -73,8 +77,11 @@
 @import "modules/copyright/copyright";
 
 @import "modules/roadmap/roadmap";
+@import "modules/map/map";
 
 @import "modules/technologies/technologies";
+
+@import "modules/case/case";
 
 // Slider
 @import "modules/slider/slider";
