@@ -2520,6 +2520,29 @@ button {
   font-size: 26px;
 }
 
+.map {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 360px;
+}
+@media only screen and (max-width: 1200px) {
+  .map {
+    height: 200px;
+  }
+}
+.map div {
+  width: 100%;
+  height: 100%;
+}
+.map iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
 .button {
   position: relative;
   font-family: "Roboto", sans-serif;

@@ -60,6 +60,7 @@ module.exports = [
 		temp
 	}),
 	new HtmlWebpackPlugin({
+<<<<<<< HEAD
 		template: "./src/pages/case.html",
 		filename: "case.html",
 		inject: "body",
@@ -80,6 +81,8 @@ module.exports = [
 		temp
 	}),
 	new HtmlWebpackPlugin({
+=======
+>>>>>>> 281635ea2b509f37cc7dfbcfa5b08063a62fe38e
 		template: "./src/pages/contacts.html",
 		filename: "contacts.html",
 		inject: "body",
