@@ -3911,9 +3911,9 @@ button {
           transform: rotateY(90deg);
 }
 
-.cube--auto {
-  -webkit-animation: rotateCube 5s infinite ease-in-out;
-          animation: rotateCube 5s infinite ease-in-out;
+.cube.focused {
+  -webkit-animation: rotateCube 2s 1 ease-in-out;
+          animation: rotateCube 2s 1 ease-in-out;
 }
 
 @-webkit-keyframes rotateCube {
@@ -3921,21 +3921,13 @@ button {
     -webkit-transform: rotateY(0);
             transform: rotateY(0);
   }
-  25% {
+  50% {
     -webkit-transform: rotateY(90deg);
             transform: rotateY(90deg);
   }
-  50% {
+  100% {
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
-  }
-  75% {
-    -webkit-transform: rotateY(270deg);
-            transform: rotateY(270deg);
-  }
-  100% {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
   }
 }
 
@@ -3944,21 +3936,13 @@ button {
     -webkit-transform: rotateY(0);
             transform: rotateY(0);
   }
-  25% {
+  50% {
     -webkit-transform: rotateY(90deg);
             transform: rotateY(90deg);
   }
-  50% {
+  100% {
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
-  }
-  75% {
-    -webkit-transform: rotateY(270deg);
-            transform: rotateY(270deg);
-  }
-  100% {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
   }
 }
 .header {

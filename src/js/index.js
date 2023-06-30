@@ -6,6 +6,7 @@ import './track'
 import './observer'
 import './cases'
 import './picture'
+import './counter'
 import "../css/main.scss";
 import 'swiper/swiper.css'
 
