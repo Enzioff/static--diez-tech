@@ -5,8 +5,12 @@
 @import "modules/editor/editor";
 @import "modules/main/main";
 @import "modules/title/title";
+@import "modules/subtitle/subtitle";
 @import "modules/logo/logo";
 @import "modules/footer/footer";
+@import "modules/partners/partners";
+@import "modules/counter/counter";
+@import "modules/partnership/partnership";
 
 @import "modules/section/section";
 @import "modules/section/section-header";
@@ -16,6 +20,8 @@
 @import "modules/clients/clients";
 
 @import "modules/breadcumbs/breadcrumbs";
+
+@import "modules/cooperation/cooperation";
 
 @import "modules/text/text";
 
@@ -33,6 +39,7 @@
 @import "modules/grids/grid-about";
 @import "modules/grids/grid-blog";
 @import "modules/grids/grid-cases";
+@import "modules/grids/grid-features";
 
 @import "modules/blog/blog";
 
@@ -43,6 +50,7 @@
 @import "modules/articles/article-project";
 @import "modules/articles/article-list";
 @import "modules/articles/article-case";
+@import "modules/articles/article-features";
 
 // Header
 @import "modules/header/header";

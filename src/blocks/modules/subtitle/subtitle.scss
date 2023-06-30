@@ -1,0 +1,10 @@
+.subtitle {
+  color: $dark;
+  font-family: $font-second;
+  font-size: 20px;
+  line-height: 22px;
+
+  &--light {
+    color: $light;
+  }
+}

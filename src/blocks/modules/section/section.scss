@@ -1,10 +1,15 @@
 .section {
+  position: relative;
   &--light {
     background-color: $flash;
   }
 
   &--dark {
     background-color: $black;
+  }
+
+  &--bg {
+    overflow: hidden;
   }
 
   &--intro {
@@ -22,5 +27,9 @@
 
   &--animate {
     overflow: hidden;
+  }
+  
+  &--full {
+    min-height: 100vh;
   }
 }

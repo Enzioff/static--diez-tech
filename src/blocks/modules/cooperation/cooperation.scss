@@ -1,0 +1,41 @@
+.cooperation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 40px;
+  border-top: 1px solid $dark;
+
+  &__wrapper {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  &__title {
+    font-weight: 600;
+    font-size: 28px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 420px;
+    padding: 20px 30px;
+    background-color: $dark;
+  }
+  &__head {
+    display: flex;
+    color: $light;
+    font-family: $font-second;
+  }
+  
+  .button {
+    &:hover {
+      opacity: .7;
+    }
+  }
+}

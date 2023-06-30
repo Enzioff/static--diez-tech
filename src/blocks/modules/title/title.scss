@@ -12,6 +12,18 @@
     font-size: 40px;
   }
 
+  &--column {
+    flex-direction: column;
+  }
+  
+  span {
+    padding-left: 120px;
+  }
+
+  &--light {
+    color: $light;
+  }
+
   &__icon {
     display: flex;
     margin-top: 12px;

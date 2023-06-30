@@ -713,6 +713,26 @@ if (target) {
 
 /***/ }),
 
+/***/ "./src/js/picture.js":
+/*!***************************!*\
+  !*** ./src/js/picture.js ***!
+  \***************************/
+/***/ (function() {
+
+const head = document.querySelectorAll('[data-head]')
+const content = document.querySelectorAll('[data-content]')
+const ACTIVE_CLASS = 'partnership__head--active'
+head.forEach((headEl, headID, arr) => {
+	headEl.addEventListener('click', ()=> {
+		arr.forEach(el => el.classList.remove(ACTIVE_CLASS))
+		headEl.classList.add(ACTIVE_CLASS)
+		content.forEach(el => el.classList.remove('partnership__item--active'))
+		content[headID].classList.add('partnership__item--active')
+	})
+})
+
+/***/ }),
+
 /***/ "./src/js/services.js":
 /*!****************************!*\
   !*** ./src/js/services.js ***!
@@ -11679,9 +11699,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _observer__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_observer__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _cases__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./cases */ "./src/js/cases.js");
 /* harmony import */ var _cases__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_cases__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../css/main.scss */ "./src/css/main.scss");
-/* harmony import */ var swiper_swiper_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! swiper/swiper.css */ "./node_modules/swiper/swiper.css");
-/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app */ "./src/js/app.js");
+/* harmony import */ var _picture__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./picture */ "./src/js/picture.js");
+/* harmony import */ var _picture__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_picture__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../css/main.scss */ "./src/css/main.scss");
+/* harmony import */ var swiper_swiper_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! swiper/swiper.css */ "./node_modules/swiper/swiper.css");
+/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./app */ "./src/js/app.js");
 
 
 
@@ -11694,7 +11716,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const app = new _app__WEBPACK_IMPORTED_MODULE_9__["default"]();
+
+const app = new _app__WEBPACK_IMPORTED_MODULE_10__["default"]();
 
 
 

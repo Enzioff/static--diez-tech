@@ -88,5 +88,15 @@ module.exports = [
 		sectionHeader,
 		sectionFooter,
 		temp
+	}),
+	new HtmlWebpackPlugin({
+		template: "./src/pages/partner.html",
+		filename: "partner.html",
+		inject: "body",
+		title: "Стать партнёром | Diez Tech",
+		head,
+		sectionHeader,
+		sectionFooter,
+		temp
 	})
 ]

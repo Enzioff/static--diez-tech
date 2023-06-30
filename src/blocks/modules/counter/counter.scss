@@ -1,0 +1,30 @@
+.counter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 20px;
+  color: $light;
+  text-align: right;
+
+  &__title {
+    font-weight: 700;
+    font-size: 31px;
+
+    span {
+      color: $red;
+    }
+  }
+
+  &__count {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: underline;
+
+    span {
+      font-size: 56px;
+      color: $red;
+      font-weight: 800;
+    }
+  }
+}

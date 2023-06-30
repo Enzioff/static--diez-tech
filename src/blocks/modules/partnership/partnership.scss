@@ -1,0 +1,51 @@
+.partnership {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 30px;
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    flex-shrink: 0;
+    max-width: 300px;
+  }
+
+  &__head {
+    display: flex;
+    padding: 20px 20px;
+    background-color: $dark;
+    color: $light;
+    font-size: 24px;
+    transition: .2s linear;
+
+    &--active {
+      background-color: $red;
+    }
+  }
+  
+  &__item {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    font-family: $font-second;
+    transition: opacity .2s linear;
+
+    &--active {
+      opacity: 1;
+      visibility: visible;
+      height: auto;
+    }
+
+    h3 {
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: 3rem;
+    }
+    p {
+      font-weight: 300;
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+  }
+}
