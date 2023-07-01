@@ -1,9 +1,7 @@
 class Animate {
 	constructor(el) {
 		this.el = el;
-		this.animateElement = this.el.querySelector('.animate')
-		this.elementRect = this.el.getBoundingClientRect();
-		this.windowHeight = window.innerHeight
+		this.animateElement = this.el.querySelector('.animate');
 		this.setListeners();
 	}
 	
@@ -12,10 +10,10 @@ class Animate {
 	}
 	
 	scrollAnimation() {
-		window.addEventListener('scroll', (evt)=> {
-			const currentOffset = window.pageYOffset - this.el.offsetTop + 243
+		window.addEventListener('scroll', ()=> {
+			const currentOffset = window.scrollY - this.el.offsetTop + 243;
 			if (currentOffset <= 0) {
-				this.animateElement.style.transform = `translateX(${currentOffset}px)`
+				this.animateElement.style.transform = `translateX(${currentOffset}px)`;
 			}
 		})
 	}

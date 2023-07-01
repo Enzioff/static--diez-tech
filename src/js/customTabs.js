@@ -12,7 +12,7 @@ if (sliders) {
 					pictures.forEach(picture => picture.classList.remove(activeClass))
 					currentPicture.classList.add(activeClass);
 				} catch (e) {
-					console.log('Нет соответствующего изображения');
+					console.error('Нет соответствующего изображения');
 				}
 			});
 		});

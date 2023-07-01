@@ -5,7 +5,7 @@ if (targetEls) {
 			rootMargin: "-20%",
 			threshold: 0
 		};
-		const callback = function(entries, observer) {
+		const callback = function(entries) {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
 					target.classList.add("focused");
@@ -14,8 +14,6 @@ if (targetEls) {
 		};
 		
 		const observer = new IntersectionObserver(callback, options);
-		
-		
 		observer.observe(target);
 	});
 }

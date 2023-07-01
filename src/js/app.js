@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import sliderFactory from "./slider";
+import sliderFactory from "./sliderFactory";
 import { Tabs } from "./tabs";
 import { Animate } from "./animate";
 import { Track } from "./track";
@@ -30,7 +30,7 @@ class App {
 			};
 			
 			const updateSlider = () => {
-				if (typeof slider === "undefined") {
+				if (!slider) {
 					slider = this.initSlider(item);
 					slider.update();
 				}
@@ -38,7 +38,7 @@ class App {
 			
 			const changeStateOfSlider = (width) => {
 				if (width <= 1200) {
-					if (typeof slider !== "undefined") {
+					if (slider) {
 						slider.destroy(true, true);
 						slider = undefined;
 					}

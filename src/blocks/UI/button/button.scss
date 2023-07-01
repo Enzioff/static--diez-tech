@@ -1,28 +1,29 @@
 .button {
-  position: relative;
-  font-family: $font-second;
-  font-weight: 400;
-  font-size: rem(14);
   color: $dark;
   cursor: pointer;
+  font-weight: 400;
+  font-size: rem(14);
+  position: relative;
+  font-family: $font-second;
 
   &__icon {
-    position: absolute;
     top: 27%;
-    right: -11px;
-    display: flex;
     width: 8px;
     height: 8px;
     fill: $dark;
+    right: -11px;
+    display: flex;
+    position: absolute;
   }
 
   &--radius {
-    padding: rem(13) rem(24) rem(12);
-    text-transform: uppercase;
+    color: $light;
     font-weight: 700;
     border-radius: rem(50);
-    color: $light;
     background-color: $dark;
+    text-transform: uppercase;
+    padding: rem(13) rem(24) rem(12);
+    outline: 2px solid rgba(236, 0, 3, 0);
 
     @include r(1200) {
       font-size: rem(14);
@@ -31,50 +32,57 @@
     &:hover {
       background-color: $red;
     }
+
+    &:focus {
+      outline-color: $red;
+    }
   }
 
   &--circle {
-    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 130px;
-    height: 130px;
-    padding: 20px 10px;
-    border: 1px solid $gray-light;
-    border-radius: 50%;
+    width: rem(130);
+    height: rem(130);
     overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: rem(20) rem(10);
+    border: 1px solid $gray-light;
+    outline: 2px solid rgba(236, 0, 3, 0);
 
     @include r(1200) {
-      width: 92px;
-      height: 92px;
-      font-size: 12px;
+      width: rem(92);
+      height: rem(92);
+      font-size: rem(12);
     }
+
     &::before {
-      position: absolute;
-      content: '';
-      display: flex;
       width: 0;
       height: 0;
-      clip-path: circle(25% at 50% 50%);
-      background-color: $red;
+      opacity: 0;
+      content: '';
+      display: flex;
+      position: absolute;
       border-color: $red;
       border-radius: 50%;
-      opacity: 0;
+      background-color: $red;
       transition: .2s linear;
+      clip-path: circle(25% at 50% 50%);
     }
 
     span {
       position: relative;
     }
-    &:hover {
-      border-color: $red;
+
+    &:hover, &:focus-within {
       color: $light;
+      border-color: $red;
 
       &::before {
+        opacity: 1;
         width: 100%;
         height: 100%;
-        opacity: 1;
         clip-path: circle(100%);
       }
     }
@@ -85,10 +93,10 @@
   }
 
   &--square {
-    border-radius: 0;
-    padding: 14px 34px;
     color: $light;
-    font-size: 16px;
+    border-radius: 0;
+    font-size: rem(16);
+    padding: rem(14) rem(34);
   }
 
   &--red {
@@ -96,7 +104,6 @@
   }
 
   &--left {
-    margin-left: auto;
-    margin-right: 12px;
+    margin: auto rem(12);
   }
 }
