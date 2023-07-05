@@ -1,5 +1,6 @@
 .section {
   position: relative;
+
   &--light {
     background-color: $flash;
   }
@@ -14,22 +15,30 @@
 
   &--intro {
     display: flex;
+    min-height: 880px;
+    flex-direction: column;
+    justify-content: center;
     height: calc(100vh - 119px);
 
     @include r(1200) {
       height: auto;
+      min-height: 0;
     }
   }
   &--relative {
-    position: relative;
     z-index: 1;
+    position: relative;
   }
 
   &--animate {
     overflow: hidden;
   }
-  
+
   &--full {
-    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    min-height: 800px;
+    align-items: center;
+    justify-content: center;
   }
 }

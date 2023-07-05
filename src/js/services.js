@@ -13,7 +13,7 @@ class Services {
 	}
 	
 	toggleTab() {
-		this.allEls.forEach((el, elId) => el.classList.remove(this.activeClass));
+		this.allEls.forEach((el) => el.classList.remove(this.activeClass));
 		this.el.classList.add(this.activeClass);
 	}
 }

@@ -124,6 +124,16 @@
     align-items: center;
     justify-content: space-between;
 
+    @include r(1200) {
+      gap: 50px;
+      justify-content: flex-start;
+    }
+
+    @include r(580) {
+      gap: 15px;
+      justify-content: space-between;
+    }
+
     &--black {
       .swiper-pagination-current {
         color: $dark;

@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 // Includes
 const head = fs.readFileSync("src/includes/head.html");
-const sectionHeader = fs.readFileSync("src/includes/section-header.html");
+const sectionHeaderRegular = fs.readFileSync("src/includes/section-header-regular.html");
 const sectionFooter = fs.readFileSync("src/includes/section-footer.html");
 const temp = fs.readFileSync("src/includes/temp.html");
 
@@ -15,7 +15,7 @@ module.exports = [
         inject: "body",
         title: "Веб-студия DIEZ Tech Калининград.",
         head,
-        sectionHeader,
+		sectionHeaderRegular,
         sectionFooter,
         temp
     }),
@@ -25,7 +25,7 @@ module.exports = [
         inject: "body",
         title: "Интернет-магазин | Diez Tech",
         head,
-        sectionHeader,
+		sectionHeaderRegular,
         sectionFooter,
         temp
     }),
@@ -35,7 +35,7 @@ module.exports = [
 		inject: "body",
 		title: "Услуги | Diez Tech",
 		head,
-		sectionHeader,
+		sectionHeaderRegular,
 		sectionFooter,
 		temp
 	}),
@@ -45,7 +45,7 @@ module.exports = [
 		inject: "body",
 		title: "Блог | Diez Tech",
 		head,
-		sectionHeader,
+		sectionHeaderRegular,
 		sectionFooter,
 		temp
 	}),
@@ -55,7 +55,7 @@ module.exports = [
 		inject: "body",
 		title: "Блог детальная | Diez Tech",
 		head,
-		sectionHeader,
+		sectionHeaderRegular,
 		sectionFooter,
 		temp
 	}),
@@ -65,7 +65,7 @@ module.exports = [
 		inject: "body",
 		title: "Кейс | Diez Tech",
 		head,
-		sectionHeader,
+		sectionHeaderRegular,
 		sectionFooter,
 		temp
 	}),
@@ -75,7 +75,7 @@ module.exports = [
 		inject: "body",
 		title: "Кейс-Детальная | Diez Tech",
 		head,
-		sectionHeader,
+		sectionHeaderRegular,
 		sectionFooter,
 		temp
 	}),
@@ -85,7 +85,7 @@ module.exports = [
 		inject: "body",
 		title: "Контакты | Diez Tech",
 		head,
-		sectionHeader,
+		sectionHeaderRegular,
 		sectionFooter,
 		temp
 	}),
@@ -95,7 +95,7 @@ module.exports = [
 		inject: "body",
 		title: "Стать партнёром | Diez Tech",
 		head,
-		sectionHeader,
+		sectionHeaderRegular,
 		sectionFooter,
 		temp
 	})

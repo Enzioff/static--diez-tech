@@ -1,7 +1,7 @@
 .address {
+  color: $light;
   margin-top: 47px;
   font-family: $font-second;
-  color: $light;
 
   @include r(1200) {
     margin: 0;
@@ -43,11 +43,10 @@
   &__item {
     font-weight: 400;
     font-size: 18px;
-    line-height: 21px;
+    line-height: 1.5;
 
     @include r(1200) {
       font-size: 14px;
-      line-height: 16px;
     }
 
     .address__link {

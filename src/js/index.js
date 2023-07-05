@@ -11,7 +11,4 @@ import "../css/main.scss";
 import 'swiper/swiper.css'
 
 import App from "./app";
-
-const app = new App();
-
-export { app };
+new App();

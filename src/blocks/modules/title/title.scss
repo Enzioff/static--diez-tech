@@ -1,23 +1,33 @@
 .title {
-  display: flex;
-  align-items: flex-start;
-  column-gap: 14px;
-  font-weight: 700;
-  font-size: 94px;
   color: $red;
+  display: flex;
+  font-weight: 700;
+  font-size: rem(94);
+  column-gap: rem(14);
+  align-items: flex-start;
   text-transform: uppercase;
 
   @include r(1200) {
-    column-gap: 8px;
-    font-size: 40px;
+    column-gap: rem(8);
+    font-size: rem(40);
+  }
+
+  @at-root {
+    button#{&} {
+      outline: 2px solid rgba(236, 0, 3, 0);
+
+      &:focus {
+        outline-color: $red;
+      }
+    }
   }
 
   &--column {
     flex-direction: column;
   }
-  
+
   span {
-    padding-left: 120px;
+    padding-left: rem(120);
   }
 
   &--light {
@@ -25,16 +35,16 @@
   }
 
   &__icon {
+    fill: $red;
     display: flex;
-    margin-top: 12px;
     width: rem(48);
     height: rem(66);
-    fill: $red;
+    margin-top: rem(12);
 
     @include r(1200) {
-      margin-top: 6px;
-      width: 22px;
-      height: 30px;
+      width: rem(22);
+      height: rem(30);
+      margin-top: rem(6);
     }
   }
 
