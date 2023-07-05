@@ -6,6 +6,7 @@ import iconPlay from "../assets/sprite/icon-play.svg";
 import iconTitleSharp from "../assets/sprite/icon-title-sharp.svg";
 import vk from "../assets/sprite/icon-vk.svg";
 import tg from "../assets/sprite/icon-tg.svg";
+import close from "../assets/sprite/icon-close.svg";
 
 export default {
     logo,
@@ -15,5 +16,6 @@ export default {
     iconPlay,
     iconTitleSharp,
     vk,
-    tg
+    tg,
+	close
 };

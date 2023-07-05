@@ -98,5 +98,15 @@ module.exports = [
 		sectionHeaderRegular,
 		sectionFooter,
 		temp
+	}),
+	new HtmlWebpackPlugin({
+		template: "./src/pages/about.html",
+		filename: "about.html",
+		inject: "body",
+		title: "#МЫ | Diez Tech",
+		head,
+		sectionHeaderRegular,
+		sectionFooter,
+		temp
 	})
 ]

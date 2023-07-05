@@ -5,6 +5,7 @@ import './customTabs'
 import './track'
 import './observer'
 import './cases'
+import './about'
 import './picture'
 import './counter'
 import "../css/main.scss";

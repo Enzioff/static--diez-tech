@@ -1,0 +1,9 @@
+.story {
+  display: flex;
+  justify-content: space-between;
+
+  @include r(1200) {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

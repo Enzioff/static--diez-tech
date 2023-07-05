@@ -15,8 +15,7 @@
 
   &--intro {
     display: flex;
-    min-height: 880px;
-    flex-direction: column;
+    max-height: 880px;
     justify-content: center;
     height: calc(100vh - 119px);
 

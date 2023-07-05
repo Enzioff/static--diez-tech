@@ -10,6 +10,15 @@
     flex-direction: column;
   }
 
+  &--about {
+    position: absolute;
+    max-width: 1170px;
+    @include r(1200) {
+      position: static;
+      height: 100%;
+    }
+  }
+
   &__toolbox {
     padding: rem(63) rem(40) rem(40) rem(75);
     width: 100%;
@@ -89,10 +98,21 @@
 
     &--disabled {
       pointer-events: none;
+      opacity: 0.6;
 
       .slider__icon {
         fill: #6D6D6D;
       }
+    }
+
+    &--person {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background-color: $bg-light;
+      pointer-events: all;
     }
   }
 
@@ -103,6 +123,21 @@
 
     @include r(1200) {
       column-gap: 15px;
+    }
+
+    &--person {
+      position: absolute;
+      right: 0;
+      bottom: 50px;
+      z-index: 3;
+      gap: 12px;
+      @include r(1200) {
+        top: 30%;
+        bottom: initial;
+        width: 100%;
+        justify-content: space-between;
+        pointer-events: none;
+      }
     }
 
     &--invert {
@@ -238,10 +273,12 @@
       opacity: 0;
       transition: .2s linear;
     }
+
     .swiper-slide-active {
       opacity: 1;
       transition: .2s linear;
     }
+
     .swiper-slide-next {
       opacity: 1;
       transition: .2s linear;
@@ -291,3 +328,13 @@
     }
   }
 }
+
+.swiper-slide--person {
+  opacity: 0;
+  transition: .2s linear;
+
+  &--visible {
+    opacity: 1;
+  }
+}
+

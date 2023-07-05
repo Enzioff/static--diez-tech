@@ -1,0 +1,153 @@
+.about-more {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: $red;
+  background-image: url('../assets/images/about-bg.png');
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transition: .2s linear;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 5;
+  }
+
+  &__bottom {
+    margin-top: auto;
+    display: flex;
+    width: 100%;
+    height: 240px;
+    background-color: $flash;
+
+    @include r(1200) {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    padding: 50px;
+  }
+
+  &__header {
+    margin-bottom: 100px;
+    padding-top: 50px;
+
+    @include r(1200) {
+      padding-top: 31px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+  }
+
+  &__close {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    display: flex;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(#fff, 0.6);
+    cursor: pointer;
+
+    @include r(1200) {
+      top: 25px;
+      right: 12px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $light;
+
+    @include r(1200) {
+      display: none;
+    }
+  }
+
+  &__text {
+    margin-bottom: 60px;
+    font-family: $font-second;
+    font-size: 18px;
+    font-weight: 400;
+    color: $light;
+
+    @include r(1200) {
+      display: none;
+    }
+  }
+
+  &__info {
+    @include r(1200) {
+      position: absolute;
+      bottom: -5%;
+      left: 0;
+    }
+  }
+
+  &__quote-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 62px;
+    background-color: $light;
+    font-family: $font-second;
+    border-radius: 4px;
+
+    @include r(1200) {
+      padding: 30px 40px;
+    }
+
+    &::before {
+      position: absolute;
+      left: 0;
+      bottom: -15px;
+      content: '';
+      display: flex;
+      width: 35px;
+      height: 32px;
+      border-style: solid;
+      border-width: 15px 15px 15px 0;
+      border-radius: 4px;
+      border-color: transparent $light transparent transparent;
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__quote {
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: $gray-light;
+
+    @include r(1200) {
+      font-size: 14px;
+    }
+  }
+
+  &__mail {
+    font-size: 14px;
+    font-weight: 400;
+    color: $gray-light;
+
+    &:hover {
+      color: $red;
+    }
+  }
+}

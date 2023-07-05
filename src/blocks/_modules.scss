@@ -11,6 +11,12 @@
 @import "modules/partners/partners";
 @import "modules/counter/counter";
 @import "modules/partnership/partnership";
+@import "modules/about/about-more";
+@import "modules/toolbar/toolbar";
+
+@import "modules/story/story";
+@import "modules/story/story-list";
+@import "modules/story/story-tile";
 
 @import "modules/section/section";
 @import "modules/section/section-header";
@@ -34,12 +40,15 @@
 @import "UI/input/input";
 @import "UI/burger/burger";
 @import "UI/icons/icon-arrow";
+@import "UI/picture/picture";
 
 // Grids
 @import "modules/grids/grid-about";
 @import "modules/grids/grid-blog";
 @import "modules/grids/grid-cases";
 @import "modules/grids/grid-features";
+@import "modules/grids/grid-tiles";
+@import "modules/grids/grid-team";
 
 @import "modules/blog/blog";
 
@@ -51,6 +60,9 @@
 @import "modules/articles/article-list";
 @import "modules/articles/article-case";
 @import "modules/articles/article-features";
+@import "modules/articles/article-tile";
+@import "modules/articles/article-team";
+@import "modules/articles/article-person";
 
 // Header
 @import "modules/header/header";

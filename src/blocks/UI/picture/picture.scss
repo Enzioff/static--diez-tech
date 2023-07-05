@@ -1,0 +1,15 @@
+.picture {
+  display: flex;
+  width: 100%;
+
+  &--500 {
+    height: 500px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

@@ -50,6 +50,12 @@
 
   &--medium {
     font-size: 40px;
+
+    .title__icon {
+      width: 25px;
+      height: 34px;
+      margin-top: 3px;
+    }
   }
 
   &--small {

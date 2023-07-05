@@ -1,13 +1,15 @@
 .body {
-    color: $dark;
-    display: flex;
-    font-size: rem(16);
-    line-height: 1;
-    font-weight: 400;
-    min-height: 100vh;
-    overflow-x: hidden;
-    flex-direction: column;
-    font-family: $font-main;
-    justify-content: space-between;
-    @include r(1200) {}
+  color: $dark;
+  display: flex;
+  font-size: rem(16);
+  line-height: 1;
+  font-weight: 400;
+  min-height: 100vh;
+  min-width: 320px;
+  overflow-x: hidden;
+  flex-direction: column;
+  font-family: $font-main;
+  justify-content: space-between;
+  @include r(1200) {
+  }
 }
