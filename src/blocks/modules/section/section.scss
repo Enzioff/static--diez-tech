@@ -39,5 +39,10 @@
     min-height: 800px;
     align-items: center;
     justify-content: center;
+
+    @include r(1200) {
+      height: auto;
+      min-height: auto;
+    }
   }
 }

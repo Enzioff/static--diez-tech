@@ -2,4 +2,18 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
+
+  @include r(1200) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include r(768) {
+    grid-template-columns: 1fr;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

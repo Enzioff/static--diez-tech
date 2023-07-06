@@ -7,6 +7,10 @@
     position: relative;
     height: 500px;
 
+    @include r(1200) {
+      display: none;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -31,9 +35,28 @@
       z-index: 1;
     }
   }
-  
+
   .title {
     font-size: 120px;
+
+    @include r(1200) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      font-size: 78px;
+      span {
+        padding: 0;
+      }
+    }
+
+    @include r(768) {
+      font-size: 48px;
+    }
+  }
+
+  .subtitle {
+    @include r(768) {
+      font-size: 16px;
+    }
   }
 }
 

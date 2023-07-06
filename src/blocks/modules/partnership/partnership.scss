@@ -3,12 +3,23 @@
   flex-direction: row-reverse;
   gap: 30px;
 
+  @include r(1200) {
+    flex-direction: column;
+  }
+
   &__top {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
     flex-shrink: 0;
     max-width: 300px;
+
+    @include r(1200) {
+      max-width: 100%;
+      gap: 20px;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 
   &__head {
@@ -16,14 +27,19 @@
     padding: 20px 20px;
     background-color: $dark;
     color: $light;
+    font-weight: 600;
     font-size: 24px;
     transition: .2s linear;
+
+    @include r(1200) {
+      font-size: 18px;
+    }
 
     &--active {
       background-color: $red;
     }
   }
-  
+
   &__item {
     opacity: 0;
     visibility: hidden;
@@ -40,12 +56,19 @@
     h3 {
       margin-bottom: 30px;
       font-weight: 700;
-      font-size: 3rem;
+      font-size: 32px;
+
+      @include r(1200) {
+        font-size: 28px;
+      }
     }
     p {
       font-weight: 300;
-      font-size: 2rem;
-      line-height: 3rem;
+      font-size: 16px;
+      line-height: 24px;
+      @include r(1200) {
+        line-height: 18px;
+      }
     }
   }
 }

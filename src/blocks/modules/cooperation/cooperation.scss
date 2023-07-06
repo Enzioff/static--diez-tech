@@ -10,8 +10,12 @@
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(3, 1fr);
+
+    @include r(1200) {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
   }
-  
+
   &__title {
     font-weight: 600;
     font-size: 28px;
@@ -26,16 +30,54 @@
     min-height: 420px;
     padding: 20px 30px;
     background-color: $dark;
+    transition: .2s ease-in-out;
+    border-width: 4px;
+    border-style: solid;
+    border-color: $dark;
+    background-size: 0;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    &:hover {
+      background-size: 70%;
+    }
+    &:nth-child(1) {
+      background-image: url('../assets/images/illustration-code.svg');
+    }
+    &:nth-child(2) {
+      background-image: url('../assets/images/illustration-feedback.svg');
+    }
+    &:nth-child(3) {
+      background-image: url('../assets/images/illustration-rating.svg');
+    }
   }
   &__head {
     display: flex;
     color: $light;
     font-family: $font-second;
+    font-size: 28px;
   }
-  
+
   .button {
     &:hover {
       opacity: .7;
     }
+  }
+}
+
+#circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
   }
 }
