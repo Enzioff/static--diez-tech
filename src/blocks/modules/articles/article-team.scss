@@ -61,6 +61,7 @@
       opacity: 1;
     }
     .article-team__title {
+      font-family: $font-main;
       font-size: 240px;
       font-weight: 700;
       letter-spacing: 9.6px;
@@ -68,7 +69,6 @@
       color: $light;
     }
     .article-team__text {
-      font-family: $font-second;
       font-size: 18px;
       font-weight: 400;
       color: $light;

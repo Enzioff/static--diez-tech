@@ -329,12 +329,25 @@
   }
 }
 
+.swiper-slide-prev {
+  .article-person__picture {
+    transform: translateX(-400px);
+  }
+}
+
 .swiper-slide--person {
   opacity: 0;
   transition: .2s linear;
 
   &--visible {
     opacity: 1;
+    .article-person__picture {
+      transform: none;
+      opacity: 1;
+    }
+    .about-more__info {
+      opacity: 1;
+    }
   }
 }
 

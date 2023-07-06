@@ -39,6 +39,7 @@ class Track {
 		this.interval = setInterval(() => {
 			if (this.track.clientWidth <= this.el.clientWidth) {
 				this.cloneToEnd();
+				this.cloneToEnd();
 			}
 			if (!this.isDragging) {
 				if (this.direction === "right") {

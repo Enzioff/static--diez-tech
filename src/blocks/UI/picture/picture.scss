@@ -4,6 +4,10 @@
 
   &--500 {
     height: 500px;
+
+    @include r(1200) {
+      max-height: 250px;
+    }
   }
 
   img {

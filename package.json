@@ -48,6 +48,7 @@
     "webpack-dev-server": "^4.15.0"
   },
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
     "axios": "^1.4.0",
     "countup.js": "^2.7.0",
     "modern-css-reset": "^1.4.0",

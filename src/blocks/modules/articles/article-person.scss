@@ -12,6 +12,9 @@
     display: flex;
     width: 100%;
     min-width: 670px;
+    opacity: 0;
+    transform: translateX(400px);
+    transition: .4s ease-in-out;
 
     @include r(1200) {
       width: 100%;
