@@ -1,0 +1,101 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 30px;
+  color: $light;
+
+  &--modal {
+    .button {
+      width: 100%;
+      text-align: center;
+      font-family: $font-main;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .form__wrapper {
+      display: flex;
+      flex-direction: column;
+      row-gap: 40px;
+
+      @include r(1200) {
+        row-gap: 20px;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    width: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    &--grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 60px 20px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    input::file-selector-button {
+      display: none;
+    }
+    input:checked {
+      display: none;
+    }
+  }
+
+  &__file {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 27px;
+    color: $red;
+    text-decoration: underline;
+  }
+
+  &__text {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    opacity: 0;
+    font-family: $font-second;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $gray;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: .2s linear;
+
+    sup {
+      color: $red;
+    }
+  }
+
+  &__description {
+    font-family: $font-second;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #6D6D6D;
+
+    span {
+      color: $dark;
+    }
+  }
+
+  &--dark {
+    color: $dark;
+    .input:hover,
+    .input:focus {
+      border-color: $dark;
+    }
+  }
+}

@@ -62,6 +62,10 @@
     background-color: rgba(#fff, 0.6);
     cursor: pointer;
 
+    svg {
+      fill: $light;
+    }
+
     @include r(1200) {
       top: 25px;
       right: 12px;
