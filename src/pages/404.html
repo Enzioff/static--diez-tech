@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <%= htmlWebpackPlugin.options.head %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body class="body">
+<header class="section section--light">
+    <div class="container">
+        <%= htmlWebpackPlugin.options.sectionHeaderRegular %>
+    </div>
+</header>
+<main class="main">
+    <section class="section error-page">
+        <div class="plot">
+            <div class="character character--mario">
+                <div class="mario"></div>
+                <img src="../assets/images/question.png" alt="" class="mario__question">
+            </div>
+            <div class="character character--bowser">
+                <div class="bowser"></div>
+                <img src="../assets/images/question.png" alt="" class="bowser__question">
+            </div>
+            <div class="plot__text">
+                <h1 class="plot__title">
+                    4<i>#</i>4
+                </h1>
+                <div class="plot__subtitle">
+                    not found
+                </div>
+            </div>
+            <h2 class="plot__call">Перейти на уровень - <a href="/services.html">Услуги</a></h2>
+        </div>
+    </section>
+</main>
+<%= htmlWebpackPlugin.options.sectionFooter %>
+<%= htmlWebpackPlugin.options.temp %>
+</body>
+</html>

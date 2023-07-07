@@ -947,6 +947,12 @@ meter {
   font-weight: 100;
   font-style: normal;
 }
+@font-face {
+  font-family: "Super Mario Bros";
+  src: url("../assets/fonts/SuperMarioBros.woff2") format("woff2"), url("../assets/fonts/SuperMarioBros.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -2669,6 +2675,472 @@ a.logo:focus {
           justify-content: center;
 }
 
+.error-page {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 85vh;
+  background: url("../assets/images/404-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.error-page__picture {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.plot {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.plot__text {
+  position: absolute;
+  top: 480px;
+  left: 1150px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 20px;
+}
+.plot__title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Super Mario Bros", sans-serif;
+  font-size: 150px;
+  color: #EC0003;
+  opacity: 0;
+  -webkit-animation: dropTitle 1s 1 forwards linear;
+          animation: dropTitle 1s 1 forwards linear;
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
+}
+.plot__call {
+  position: absolute;
+  top: 260px;
+  left: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 32px;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  font-family: "Super Mario Bros", sans-serif;
+  color: #FFFFFF;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+  -webkit-animation: showText 1s 1 forwards linear;
+          animation: showText 1s 1 forwards linear;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+.plot__call a {
+  color: #EC0003;
+  text-decoration: underline;
+}
+.plot__call a:hover {
+  text-decoration: none;
+}
+.plot__subtitle {
+  font-family: "Super Mario Bros", sans-serif;
+  color: #EC0003;
+  font-size: 36px;
+  opacity: 0;
+  -webkit-animation: dropSubtitle 1s 1 forwards linear;
+          animation: dropSubtitle 1s 1 forwards linear;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+
+.character {
+  position: absolute;
+  bottom: 99px;
+  left: -100px;
+}
+.character--mario {
+  bottom: 102px;
+  -webkit-animation-name: MarioMove;
+          animation-name: MarioMove;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.character--bowser {
+  bottom: 102px;
+  left: -170px;
+  -webkit-animation-name: BowserMove;
+          animation-name: BowserMove;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+.mario {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 87px;
+  height: 107px;
+  background-image: url("../assets/images/mario-sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-animation-name: marioCharsMove, backwardAnim, forwardAnim, backwardAnim, forwardAnim;
+          animation-name: marioCharsMove, backwardAnim, forwardAnim, backwardAnim, forwardAnim;
+  -webkit-animation-duration: 0.3s, 0.1s, 0.1s, 0.1s, 0.1s;
+          animation-duration: 0.3s, 0.1s, 0.1s, 0.1s, 0.1s;
+  -webkit-animation-iteration-count: 7, 1, 1, 1, 1;
+          animation-iteration-count: 7, 1, 1, 1, 1;
+  -webkit-animation-timing-function: steps(2), linear, linear, linear, linear;
+          animation-timing-function: steps(2), linear, linear, linear, linear;
+  -webkit-animation-fill-mode: forwards, forwards, forwards, forwards, forwards;
+          animation-fill-mode: forwards, forwards, forwards, forwards, forwards;
+  -webkit-animation-delay: 0s, 2.5s, 3s, 3.5s, 5.5s;
+          animation-delay: 0s, 2.5s, 3s, 3.5s, 5.5s;
+}
+.mario__question {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+  -webkit-animation: showMarioQuestion 0.2s 1 linear forwards;
+          animation: showMarioQuestion 0.2s 1 linear forwards;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  z-index: 0;
+}
+
+.bowser {
+  width: 156px;
+  height: 156px;
+  background-image: url("../assets/images/bowser.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-animation-name: bowserCharsMove;
+          animation-name: bowserCharsMove;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+  -webkit-animation-timing-function: steps(2);
+          animation-timing-function: steps(2);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+.bowser__question {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+  -webkit-animation: showQuestion 0.2s 1 linear forwards;
+          animation: showQuestion 0.2s 1 linear forwards;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+  z-index: 0;
+}
+
+@-webkit-keyframes marioCharsMove {
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes marioCharsMove {
+  100% {
+    background-position: 100% 0;
+  }
+}
+@-webkit-keyframes bowserCharsMove {
+  100% {
+    background-position: 100% 0;
+  }
+}
+@keyframes bowserCharsMove {
+  100% {
+    background-position: 100% 0;
+  }
+}
+@-webkit-keyframes MarioMove {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(1050px, 0, 0);
+            transform: translate3d(1050px, 0, 0);
+  }
+}
+@keyframes MarioMove {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(1050px, 0, 0);
+            transform: translate3d(1050px, 0, 0);
+  }
+}
+@-webkit-keyframes BowserMove {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(300px, 0, 0);
+            transform: translate3d(300px, 0, 0);
+  }
+}
+@keyframes BowserMove {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(300px, 0, 0);
+            transform: translate3d(300px, 0, 0);
+  }
+}
+@-webkit-keyframes backwardAnim {
+  from {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  to {
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+  }
+}
+@keyframes backwardAnim {
+  from {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  to {
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+  }
+}
+@-webkit-keyframes forwardAnim {
+  from {
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+@keyframes forwardAnim {
+  from {
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+@-webkit-keyframes dropTitle {
+  0% {
+    -webkit-transform: translate3d(0, -300px, 0);
+            transform: translate3d(0, -300px, 0);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 75px, 0);
+            transform: translate3d(0, 75px, 0);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -40px, 0);
+            transform: translate3d(0, -40px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0px, 0);
+            transform: translate3d(0, 0px, 0);
+  }
+}
+@keyframes dropTitle {
+  0% {
+    -webkit-transform: translate3d(0, -300px, 0);
+            transform: translate3d(0, -300px, 0);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 75px, 0);
+            transform: translate3d(0, 75px, 0);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -40px, 0);
+            transform: translate3d(0, -40px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0px, 0);
+            transform: translate3d(0, 0px, 0);
+  }
+}
+@-webkit-keyframes dropSubtitle {
+  0% {
+    -webkit-transform: translate3d(0, -300px, 0);
+            transform: translate3d(0, -300px, 0);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 15px, 0);
+            transform: translate3d(0, 15px, 0);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -30px, 0);
+            transform: translate3d(0, -30px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0px, 0);
+            transform: translate3d(0, 0px, 0);
+  }
+}
+@keyframes dropSubtitle {
+  0% {
+    -webkit-transform: translate3d(0, -300px, 0);
+            transform: translate3d(0, -300px, 0);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 15px, 0);
+            transform: translate3d(0, 15px, 0);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -30px, 0);
+            transform: translate3d(0, -30px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0px, 0);
+            transform: translate3d(0, 0px, 0);
+  }
+}
+@-webkit-keyframes showQuestion {
+  from {
+    -webkit-transform: translateX(-50%) translateY(0);
+            transform: translateX(-50%) translateY(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-50%) translateY(-70px);
+            transform: translateX(-50%) translateY(-70px);
+  }
+}
+@keyframes showQuestion {
+  from {
+    -webkit-transform: translateX(-50%) translateY(0);
+            transform: translateX(-50%) translateY(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-50%) translateY(-70px);
+            transform: translateX(-50%) translateY(-70px);
+  }
+}
+@-webkit-keyframes showMarioQuestion {
+  from {
+    -webkit-transform: translateX(-50%) translateY(0);
+            transform: translateX(-50%) translateY(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-50%) translateY(-70px);
+            transform: translateX(-50%) translateY(-70px);
+  }
+}
+@keyframes showMarioQuestion {
+  from {
+    -webkit-transform: translateX(-50%) translateY(0);
+            transform: translateX(-50%) translateY(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-50%) translateY(-70px);
+            transform: translateX(-50%) translateY(-70px);
+  }
+}
+@-webkit-keyframes showText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes showText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .story {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3299,6 +3771,11 @@ a.logo:focus {
 }
 .cooperation__item:nth-child(3) {
   background-image: url("../assets/images/illustration-rating.svg");
+}
+@media only screen and (max-width: 1200px) {
+  .cooperation__item {
+    background-size: 70%;
+  }
 }
 .cooperation__head {
   display: -webkit-box;

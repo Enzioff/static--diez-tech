@@ -49,6 +49,10 @@
     &:nth-child(3) {
       background-image: url('../assets/images/illustration-rating.svg');
     }
+
+    @include r(1200) {
+      background-size: 70%;
+    }
   }
   &__head {
     display: flex;

@@ -108,5 +108,15 @@ module.exports = [
 		sectionHeaderRegular,
 		sectionFooter,
 		temp
+	}),
+	new HtmlWebpackPlugin({
+		template: "./src/pages/404.html",
+		filename: "404.html",
+		inject: "body",
+		title: "404 | Diez Tech",
+		head,
+		sectionHeaderRegular,
+		sectionFooter,
+		temp
 	})
 ]
