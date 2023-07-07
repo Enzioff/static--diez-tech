@@ -814,7 +814,7 @@ if (box) {
 			mushroom.classList.add('active');
 		}, 1000)
 		setTimeout(()=> {
-			mushroom.style.backgroundImage = 'url("../assets/images/easter-mushroom-surprised.png")'
+			mushroom.style.backgroundImage = 'url("./assets/images/easter-mushroom-surprised.png")'
 			mushroom.classList.add('blink')
 		}, 3000)
 		setTimeout(()=> {
