@@ -30,9 +30,61 @@
                 </div>
             </div>
             <h2 class="plot__call">Перейти на уровень - <a href="/services.html">Услуги</a></h2>
+            <div class="easter__box" data-easter-box>
+                <img src="../assets/images/easter-box.png" alt="">
+            </div>
+            <div class="easter__mushroom" data-easter-mushroom>
+                <div class="mushroom"></div>
+            </div>
+            <div class="easter__coin" data-easter-coin data-open>
+                <img src="../assets/images/easter-coin.png" alt="">
+            </div>
         </div>
     </section>
 </main>
+
+<div class="modal" data-toggle>
+    <div class="modal__container" data-container>
+        <h3 class="modal__title">Отправить свое резюме</h3>
+        <form class="form form--modal form--dark">
+            <fieldset class="form__wrapper">
+                <label class="form__item">
+                    <input class="input input--form" name="USER_NAME" type="text"
+                           placeholder="Имя" required>
+                    <span class="form__text">Имя <sup>*</sup></span>
+                </label>
+                <label class="form__item">
+                    <input class="input input--form" name="USER_CONTACTS" type="email"
+                           placeholder="Email/Телефон" required>
+                    <span class="form__text">Email/Телефон <sup>*</sup></span>
+                </label>
+                <label class="form__item">
+                    <input class="input input--form" name="USER_RESUME" type="tel"
+                           placeholder="Ссылка на резюме/портфолио/сайт">
+                    <span class="form__text">Ссылка на резюме/портфолио/сайт</span>
+                </label>
+            </fieldset>
+            <label class="form__item mb-35 mbm-10">
+                <span class="form__file">Прикрепить файл</span>
+                <input type="file">
+            </label>
+            <button class="button button--radius">
+                <span>
+                    Отправить
+                </span>
+            </button>
+            <p class="form__description">
+                Нажимая на кнопку, вы даете <span>согласие</span> на обработку персональных данных и соглашаетесь с политикой
+                конфиденциальности.
+            </p>
+        </form>
+        <div class="modal__close" data-close>
+            <svg class="modal__icon">
+                <use xlink:href="./assets/sprite/sprite.svg#icon-close"></use>
+            </svg>
+        </div>
+    </div>
+</div>
 <%= htmlWebpackPlugin.options.sectionFooter %>
 <%= htmlWebpackPlugin.options.temp %>
 </body>
