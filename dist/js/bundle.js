@@ -802,10 +802,9 @@ if (sliders) {
   \**************************/
 /***/ (function() {
 
-const boxes = document.querySelectorAll("[data-easter-box]");
-
-if (boxes) {
-	const coin = document.querySelector("[data-easter-coin]");
+const coin = document.querySelector("[data-easter-coin]");
+if (coin) {
+	const boxes = document.querySelectorAll("[data-easter-box]");
 	const mushroomContainer = document.querySelector("[data-easter-mushroom]");
 	const mushroom = mushroomContainer.querySelector('.mushroom')
 	boxes.forEach(box => {

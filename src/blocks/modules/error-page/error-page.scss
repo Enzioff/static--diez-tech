@@ -2,11 +2,12 @@
   display: flex;
   width: 100vw;
   height: calc(100vh - 233px);
-  background-color: #121212;
+  background-color: #0D0D0D;
   background-image: url('../assets/images/404-bg-brick.png'), url('../assets/images/404-bg-header.png'), url('../assets/images/404-bg-header-text.png');
   background-repeat: repeat-x, repeat-x, no-repeat;
   background-position: center bottom, center top 100px, center top 50px;
   min-height: 400px;
+  cursor: url("../assets/images/mario-cursor.png"), auto;
 
   @include r(1200) {
     background-size: 1280px, 1280px, 768px;
@@ -139,6 +140,7 @@
 
       &:hover {
         text-decoration: none;
+        cursor: url("../assets/images/mario-cursor-grab.png"), auto;
       }
     }
   }
@@ -404,7 +406,7 @@
   display: flex;
   width: 74px;
   height: 74px;
-  cursor: pointer;
+  cursor: url("../assets/images/mario-cursor-grab.png"), auto;
   opacity: 0;
   z-index: 1;
 
@@ -500,7 +502,7 @@
   z-index: 1;
   opacity: 0;
   pointer-events: none;
-  cursor: pointer;
+  cursor: url("../assets/images/mario-cursor-grab.png"), auto;
 
   &.active {
     animation-name: dropCoin;
