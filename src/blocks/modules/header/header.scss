@@ -9,6 +9,18 @@
     padding: 20px 0;
   }
 
+  &--intro {
+    .main-nav--fixed {
+      box-shadow: none;
+      background-color: $black;
+      .main-nav__item,
+      .main-nav__link {
+        background-color: $black;
+        color: $light;
+      }
+    }
+  }
+
   &--page {
     padding: 0;
     height: 62px;

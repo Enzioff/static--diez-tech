@@ -15,9 +15,8 @@
 
   &--intro {
     display: flex;
-    max-height: 880px;
     justify-content: center;
-    height: calc(100vh - 119px);
+    height: calc(100vh - 62px);
 
     @include r(1200) {
       height: auto;

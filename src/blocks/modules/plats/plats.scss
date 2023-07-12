@@ -1,0 +1,147 @@
+.plats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  height: 100%;
+
+  @include r(1200) {
+    grid-template-columns: 1fr;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 20px;
+    transition: .2s ease-in-out;
+    width: 100%;
+
+    @include r(1200) {
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 375px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      display: flex;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1;
+      opacity: 0;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid #ebebeb;
+    }
+
+    &:hover {
+      .plats__title {
+        color: $light;
+      }
+
+      .plats__num {
+        color: $light;
+      }
+
+      img {
+        opacity: 1;
+        right: -60%;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+
+      &:nth-child(1) {
+        background-color: $black;
+      }
+
+      &:nth-child(2) {
+        background-color: $black;
+      }
+
+      &:nth-child(3) {
+        background-color: $black;
+      }
+
+      &:nth-child(4) {
+        background-color: $black;
+      }
+
+      &:nth-child(5) {
+        background-color: $black;
+        img {
+          right: -10%;
+        }
+      }
+    }
+
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      z-index: 0;
+      opacity: 0;
+
+      @include r(1200) {
+        opacity: 1;
+        padding: 20px 20px 0 20px;
+        z-index: 2;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 40px;
+    width: 100%;
+    padding: 40px;
+    z-index: 2;
+
+    @include r(1200) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      z-index: 1;
+      background-color: $black;
+      .plats__num {
+        color: $light;
+      }
+    }
+  }
+
+  &__num {
+    font-weight: 700;
+    font-size: 48px;
+    transition: .4s ease-in-out;
+
+    @include r(1200) {
+      font-size: 28px;
+    }
+  }
+
+  &__title {
+    color: $red;
+    font-weight: 800;
+    font-size: 98px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    transition: .4s ease-in-out;
+
+    @include r(1200) {
+      writing-mode: unset;
+      text-orientation: unset;
+      transform: none;
+      font-size: 54px;
+    }
+  }
+}
