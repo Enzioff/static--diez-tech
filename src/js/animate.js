@@ -7,6 +7,7 @@ class Animate {
 	
 	setListeners() {
 		this.scrollAnimation();
+		this.showHeader();
 	}
 	
 	scrollAnimation() {
@@ -17,6 +18,7 @@ class Animate {
 			}
 		})
 	}
+
 }
 
 export { Animate }

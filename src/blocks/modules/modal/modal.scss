@@ -10,13 +10,22 @@
   background: rgba(0, 0, 0, 0.24);
   opacity: 0;
   visibility: hidden;
-  transition: .2s ease-in-out;
+  transition: .4s ease-in-out;
+  transform: translateY(20%);
   height: 100%;
+
+  &--about {
+    padding: 167px 0;
+    background-color: $light;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
   &.active {
     opacity: 1;
     visibility: visible;
     z-index: 3;
+    transform: translateY(0);
     .modal__container {
       opacity: 1;
       transform: none;

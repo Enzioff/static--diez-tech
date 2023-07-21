@@ -1,0 +1,56 @@
+.plates {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100vw;
+  height: calc(100vh - 62px);
+  cursor: none;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    &:not(:last-child) {
+      border-right: 1px solid $light;
+    }
+    &:hover {
+      background-color: $light;
+      cursor: none;
+      .plates__title {
+        color: $red;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 72px;
+    font-weight: 700;
+    color: $light;
+    transition: .2s ease-in-out;
+    span {
+      font-family: $font-second;
+      font-size: 18px;
+      font-weight: 100;
+    }
+  }
+
+  &.focused {
+    .plates__item {
+      animation: showPlates 1s 1 forwards ease-in-out;
+    }
+  }
+}
+
+@keyframes showPlates {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}

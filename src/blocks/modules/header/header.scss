@@ -4,12 +4,17 @@
   align-items: center;
   justify-content: space-between;
   padding: 40px 0;
+  z-index: 4;
 
   @include r(1200) {
     padding: 20px 0;
   }
 
   &--intro {
+    position: fixed;
+    transform: translateY(-100%);
+    width: 100%;
+    transition: transform 0.4s linear;
     .main-nav--fixed {
       box-shadow: none;
       background-color: $black;
@@ -18,6 +23,9 @@
         background-color: $black;
         color: $light;
       }
+    }
+    &.active {
+      transform: translateY(0);
     }
   }
 

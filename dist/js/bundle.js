@@ -227,35 +227,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/js/about.js":
-/*!*************************!*\
-  !*** ./src/js/about.js ***!
-  \*************************/
-/***/ (function() {
-
-const aboutMore = document.querySelector(".about-more");
-
-if (aboutMore) {
-	const open = document.querySelectorAll(".article-team");
-	const close = aboutMore.querySelector(".about-more__close");
-	
-	const body = document.querySelector("body");
-	open.forEach(el => {
-		el.addEventListener("click", () => {
-			aboutMore.classList.add("active");
-			body.style.overflowY = "hidden";
-		});
-	});
-	
-	close.addEventListener("click", () => {
-		aboutMore.classList.remove("active");
-		body.style.overflowY = "visible";
-	});
-}
-
-
-/***/ }),
-
 /***/ "./src/js/animate.js":
 /*!***************************!*\
   !*** ./src/js/animate.js ***!
@@ -276,6 +247,7 @@ class Animate {
 	
 	setListeners() {
 		this.scrollAnimation();
+		this.showHeader();
 	}
 	
 	scrollAnimation() {
@@ -286,6 +258,7 @@ class Animate {
 			}
 		})
 	}
+
 }
 
 
@@ -847,6 +820,7 @@ if (coin) {
 	const burger = document.querySelector('[data-burger]')
 	const menu = document.querySelector('[data-menu]')
 	const body = document.querySelector('body')
+	const indexHeader = document.querySelector('[data-header-index]');
 	
 	if (mainNav) {
 		window.addEventListener("scroll", () => {
@@ -867,9 +841,42 @@ if (coin) {
 	}
 	
 	burger.addEventListener('click', toggleMenu)
+	
+	setTimeout(()=> {
+		indexHeader.classList.add('active')
+	}, 4100)
 }());
 
 
+
+
+/***/ }),
+
+/***/ "./src/js/modal.js":
+/*!*************************!*\
+  !*** ./src/js/modal.js ***!
+  \*************************/
+/***/ (function() {
+
+const modal = document.querySelector("[data-modal]");
+
+if (modal) {
+	const open = document.querySelectorAll("[data-open]");
+	const close = modal.querySelector("[data-close]");
+	
+	const body = document.querySelector("body");
+	open.forEach(el => {
+		el.addEventListener("click", () => {
+			modal.classList.add("active");
+			body.style.overflowY = "hidden";
+		});
+	});
+	
+	close.addEventListener("click", () => {
+		modal.classList.remove("active");
+		body.style.overflowY = "visible";
+	});
+}
 
 
 /***/ }),
@@ -883,10 +890,16 @@ if (coin) {
 const targetEls = document.querySelectorAll("[data-area]");
 if (targetEls) {
 	targetEls.forEach(target => {
-		const options = {
+		let options = {
 			rootMargin: "-20%",
 			threshold: 0
 		};
+		if (target.dataset.area === '50') {
+			options = {
+				rootMargin: "-50%",
+				threshold: 0
+			};
+		}
 		const callback = function(entries) {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
@@ -920,6 +933,59 @@ head.forEach((headEl, headID, arr) => {
 		content[headID].classList.add('partnership__item--active')
 	})
 })
+
+
+/***/ }),
+
+/***/ "./src/js/scrollToSec.js":
+/*!*******************************!*\
+  !*** ./src/js/scrollToSec.js ***!
+  \*******************************/
+/***/ (function() {
+
+// Выберите секцию, в которой будет происходить прокрутка
+const section = document.querySelector("[data-wheel]");
+
+// Выберите секцию, к которой нужно прокрутить
+const targetSection = document.querySelector("[data-plates]");
+const targetSectionPos = document.querySelector("[data-plates]").offsetTop;
+
+// Функция, которая будет вызываться при событии wheel в секции
+function scrollToTargetSection(event) {
+	// Определите направление прокрутки колеса
+	const delta = Math.sign(event.deltaY);
+	
+	// Проверьте, находится ли событие wheel в секции
+	if (event.target === section) {
+		// Если прокрутка вниз, прокрутите до нужной секции
+		if (delta === 1) {
+			targetSection.scrollTop = targetSectionPos;
+		}
+	}
+}
+
+// Добавьте обработчик события wheel для секции
+section.addEventListener("wheel", scrollToTargetSection);
+
+const mouseCircle = document.querySelector('[data-circle]');
+const customMouseSection = document.querySelector('[data-custom-mouse]')
+
+customMouseSection.addEventListener('mousemove', moveCursor);
+window.addEventListener('scroll', moveCursor);
+
+let mouseX = 0;
+let mouseY = 0;
+
+function moveCursor(evt) {
+	mouseX = evt.clientX;
+	mouseY = evt.clientY;
+	mouseCircle.style.left = mouseX + 'px';
+	mouseCircle.style.top = mouseY + 'px';
+	mouseCircle.style.opacity = 1;
+}
+
+setInterval(()=> moveCursor, 60)
+
 
 
 /***/ }),
@@ -11931,14 +11997,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _toggle__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_toggle__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _easter__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./easter */ "./src/js/easter.js");
 /* harmony import */ var _easter__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_easter__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./about */ "./src/js/about.js");
-/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_about__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _picture__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./picture */ "./src/js/picture.js");
-/* harmony import */ var _picture__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_picture__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _counter__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./counter */ "./src/js/counter.js");
-/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../css/main.scss */ "./src/css/main.scss");
-/* harmony import */ var swiper_swiper_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! swiper/swiper.css */ "./node_modules/swiper/swiper.css");
-/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./app */ "./src/js/app.js");
+/* harmony import */ var _scrollToSec__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./scrollToSec */ "./src/js/scrollToSec.js");
+/* harmony import */ var _scrollToSec__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_scrollToSec__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modal */ "./src/js/modal.js");
+/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_modal__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _picture__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./picture */ "./src/js/picture.js");
+/* harmony import */ var _picture__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_picture__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _counter__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./counter */ "./src/js/counter.js");
+/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../css/main.scss */ "./src/css/main.scss");
+/* harmony import */ var swiper_swiper_css__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! swiper/swiper.css */ "./node_modules/swiper/swiper.css");
+/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./app */ "./src/js/app.js");
 
 
 
@@ -11955,7 +12023,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-new _app__WEBPACK_IMPORTED_MODULE_14__["default"]();
+
+new _app__WEBPACK_IMPORTED_MODULE_15__["default"]();
 
 }();
 /******/ })()

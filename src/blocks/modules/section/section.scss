@@ -9,6 +9,11 @@
     background-color: $black;
   }
 
+  &--fixed {
+    height: 100vh;
+    max-height: 1080px;
+  }
+
   &--bg {
     overflow: hidden;
   }

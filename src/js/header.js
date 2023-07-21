@@ -3,6 +3,7 @@
 	const burger = document.querySelector('[data-burger]')
 	const menu = document.querySelector('[data-menu]')
 	const body = document.querySelector('body')
+	const indexHeader = document.querySelector('[data-header-index]');
 	
 	if (mainNav) {
 		window.addEventListener("scroll", () => {
@@ -23,6 +24,10 @@
 	}
 	
 	burger.addEventListener('click', toggleMenu)
+	
+	setTimeout(()=> {
+		indexHeader.classList.add('active')
+	}, 4100)
 }());
 
 

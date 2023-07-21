@@ -7,7 +7,7 @@
 </head>
 
 <body class="body">
-<div class="header header--intro header--page">
+<div class="header header--intro header--page" data-header-index>
     <a href="/" class="logo">
         <img src="./assets/images/icon-logo.svg" alt="Логотип 'Diez-Tech'">
     </a>
@@ -56,7 +56,7 @@
                     </svg>
                 </a>
             </li>
-            <li class="header-menu__item">
+            <li class="header-menu__item" data-scroll-section>
                 <a class="header-menu__link" href="#">
                     Контакты
                     <svg class="header-menu__icon">
@@ -138,46 +138,49 @@
         </ul>
     </nav>
 </div>
-
+<div class="preloader">
+    <div class="preloader__list">
+        <li>Создаём</li>
+        <li>Оптимизируем</li>
+        <li>Сопровождаем</li>
+    </div>
+</div>
 <main class="main">
-    <section class="section section--intro section--light">
+    <section class="section section--fixed section--dark">
+        <div class="main-intro" data-wheel>
+            <div class="main-intro__info">
+                <h1 class="main-intro__title">
+                    DIEZTECH
+                </h1>
+                <p class="main-intro__subtitle">
+                    <span>#</span>Золотой партнёр 1с-битрикс
+                </p>
+            </div>
+            <div class="main-intro__timeline">
+                <p>технологичные сайты и сервисы для лидеров рынка</p>
+                <p>технологичные сайты и сервисы для лидеров рынка</p>
+            </div>
+        </div>
+    </section>
+    <section class="section section--dark" data-custom-mouse>
         <div class="container container--fullpage">
-            <div class="plats">
-                <a href="#" class="plats__item">
-                    <div class="plats__info">
-                        <p class="plats__num">01</p>
-                        <h2 class="plats__title">Web</h2>
-                    </div>
-                    <img src="./assets/images/m04-2.png" alt="">
-                </a>
-                <a href="#" class="plats__item">
-                    <div class="plats__info plats__info--black">
-                        <p class="plats__num">02</p>
-                        <h2 class="plats__title">Seo</h2>
-                    </div>
-                    <img src="./assets/images/m06.png" alt="">
-                </a>
-                <a href="#" class="plats__item">
-                    <div class="plats__info">
-                        <p class="plats__num">03</p>
-                        <h2 class="plats__title">Design</h2>
-                    </div>
-                    <img src="./assets/images/m05.png" alt="">
-                </a>
-                <a href="#" class="plats__item">
-                    <div class="plats__info">
-                        <p class="plats__num">04</p>
-                        <h2 class="plats__title">E-commerce</h2>
-                    </div>
-                    <img src="./assets/images/m01.png" alt="">
-                </a>
-                <a href="#" class="plats__item">
-                    <div class="plats__info">
-                        <p class="plats__num">05</p>
-                        <h2 class="plats__title">Branding</h2>
-                    </div>
-                    <img src="./assets/images/m03.png" alt="">
-                </a>
+            <div class="plates" data-area="50" data-plates>
+                <div class="plates__item" data-open>
+                    <h2 class="plates__title">
+                        <span>01</span>web
+                    </h2>
+                </div>
+                <div class="plates__item" data-open>
+                    <h2 class="plates__title">
+                        <span>02</span>E-Commerce
+                    </h2>
+                </div>
+                <div class="plates__item" data-open>
+                    <h2 class="plates__title">
+                        <span>03</span>Seo
+                    </h2>
+                </div>
+                <div class="moved-circle" data-circle></div>
             </div>
         </div>
     </section>
@@ -965,6 +968,70 @@
         </div>
     </section>
 </main>
+<div class="modal modal--about" data-modal>
+    <div class="container">
+        <div class="about-modal">
+            <div class="about-modal__col">
+                <div class="about-modal__head">
+                    <h2 class="about-modal__title">Web</h2>
+                    <h3 class="about-modal__subtitle">Разработка</h3>
+                </div>
+                <div class="editor">
+                    <p>
+                        Разрабатываем корпоративные сайты для B2B взаимодействия,
+                        яркие промо-решения для B2C,
+                        проектируем личные кабинеты,
+                        интегрируем программы лояльности.
+                    </p>
+                    <p>
+                        Все проекты в обязательном порядке проходят программу «мониторинга качества»
+                        Занимаемся сайтами 10 лет и многое повидали
+                        Беремся за проекты со сложной информационной архитектурой,
+                        интеграцией с CRM, ERP, внешними сервисами и базами данных.
+                    </p>
+                    <p>
+                        Мы используем CMS «1С-Битрикс» и
+                        ежегодно подтверждаем статус золотого сертифицированного партнера
+                    </p>
+                </div>
+            </div>
+            <div class="about-modal__col">
+                <ul class="about-modal__list">
+                    <li class="about-modal__item">
+                        <span>01</span>
+                        Придумали интернет
+                        специально для
+                        компании
+                    </li>
+                    <li class="about-modal__item">
+                        <span>02</span>
+                        В Галактике по
+                        разработке сайтов
+                    </li>
+                    <li class="about-modal__item">
+                        <span>03</span>
+                        Дали идею по
+                        разработке Google
+                    </li>
+                    <li class="about-modal__item">
+                        <span>04</span>
+                        Занимаемся на столько
+                        сложными сайтами,
+                        что сами не понимаем
+                    </li>
+                </ul>
+            </div>
+            <button class="about-modal__close" data-close>
+                <svg class="about-modal__icon">
+                    <use xlink:href="./assets/sprite/sprite.svg#icon-close"></use>
+                </svg>
+            </button>
+            <picture class="about-modal__spinner">
+                <img src="./assets/images/spinner.png" alt="">
+            </picture>
+        </div>
+    </div>
+</div>
 <%= htmlWebpackPlugin.options.sectionFooter %>
 <%= htmlWebpackPlugin.options.temp %>
 </body>

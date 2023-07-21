@@ -1,0 +1,73 @@
+.about-modal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  overflow: hidden;
+  &__head {
+    margin-bottom: 80px;
+  }
+  &__title {
+    font-size: 150px;
+    font-weight: 700;
+    color: $red;
+  }
+  &__subtitle {
+    font-size: 72px;
+    font-weight: 700;
+  }
+  .editor {
+    max-width: 700px;
+    p {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    max-width: 190px;
+    gap: 30px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-family: $font-second;
+    font-size: 18px;
+    span {
+      color: $red;
+      font-weight: 700;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 120px;
+    right: 90px;
+    cursor: pointer;
+  }
+
+  &__icon {
+    display: flex;
+    width: 50px;
+    height: 50px;
+  }
+
+  &__spinner {
+    position: absolute;
+    bottom: -15%;
+    left: -10%;
+    animation: rotate 30s infinite linear;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
