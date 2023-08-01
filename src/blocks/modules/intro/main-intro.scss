@@ -7,6 +7,7 @@
   height: 100vh;
   background-color: $light;
   z-index: 0;
+
   &::after {
     content: '';
     position: absolute;
@@ -19,7 +20,15 @@
     z-index: -1;
     clip-path: circle(0% at 50% 50%);
     animation: explode 1s 1 forwards;
-    animation-delay: 3.9s;
+    animation-delay: 0s;
+  }
+
+  &.animate {
+    &::after {
+      clip-path: circle(0% at 50% 50%);
+      animation: explode 1s 1 forwards;
+      animation-delay: 3.9s;
+    }
   }
 
   &__title {
@@ -29,7 +38,11 @@
     opacity: 0;
     transform: translateY(50px);
     animation: showText .4s 1 forwards ease-in-out;
-    animation-delay: 4s;
+    animation-delay: 0.1s;
+
+    &.animate {
+      animation-delay: 4s;
+    }
   }
 
   &__info {
@@ -43,11 +56,17 @@
     opacity: 0;
     transform: translateY(50px);
     animation: showText .4s 1 forwards ease-in-out;
-    animation-delay: 4.2s;
+    animation-delay: 0.2s;
+
+    &.animate {
+      animation-delay: 4.2s;
+    }
+
     span {
       color: $red;
     }
   }
+
   &__timeline {
     position: absolute;
     left: 0;
@@ -59,7 +78,11 @@
     display: flex;
     color: rgba($light, 0.3);
     animation: move 20s infinite linear;
-    animation-delay: 3.5s;
+    animation-delay: 0.1s;
+
+    &.animate {
+      animation-delay: 3.5s;
+    }
   }
 }
 

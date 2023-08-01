@@ -105,7 +105,6 @@
   &__call {
     position: absolute;
     top: 260px;
-    left: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,7 +114,6 @@
     font-family: $font-movie;
     color: $light;
     text-align: center;
-    transform: translateX(-50%);
     opacity: 0;
     animation: showText 1s 1 forwards linear;
     animation-delay: 6s;

@@ -4,6 +4,8 @@ import { Tabs } from "./tabs";
 import { Animate } from "./animate";
 import { Track } from "./track";
 import { Services } from "./services";
+import { CustomTabs } from "./customTabs";
+import { Preloader } from "./preloader";
 
 class App {
 	constructor() {
@@ -12,6 +14,8 @@ class App {
 		this.initAnimate();
 		this.initTrack();
 		this.initServices()
+		this.initCustomTabs();
+		this.initPreloader();
 	}
 	
 	createSliders() {
@@ -70,9 +74,19 @@ class App {
 		el.forEach(item => new Track(item));
 	}
 	
+	initPreloader() {
+		const el = document.querySelector("[data-preloader]");
+		new Preloader(el);
+	}
+	
 	initServices() {
 		const el = document.querySelectorAll("[data-service]");
 		el.forEach(item => new Services(item));
+	}
+	
+	initCustomTabs() {
+		const el = document.querySelectorAll("[data-current-slide]");
+		el.forEach(item => new CustomTabs(item));
 	}
 	
 	initTabs() {

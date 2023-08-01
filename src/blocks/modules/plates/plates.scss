@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100vw;
-  height: calc(100vh - 62px);
+  height: 100vh;
   cursor: none;
 
   &__item {
@@ -11,8 +11,6 @@
     align-items: center;
     cursor: pointer;
     transition: .2s ease-in-out;
-    opacity: 0;
-    visibility: hidden;
     &:not(:last-child) {
       border-right: 1px solid $light;
     }

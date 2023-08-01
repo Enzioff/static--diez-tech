@@ -14,23 +14,38 @@
     position: fixed;
     transform: translateY(-100%);
     width: 100%;
-    transition: transform 0.4s linear;
+    animation: showHeader 0.4s 1 forwards ease-in-out;
+    animation-delay: 0.2s;
+
     .main-nav--fixed {
       box-shadow: none;
       background-color: $black;
+
       .main-nav__item,
       .main-nav__link {
         background-color: $black;
         color: $light;
       }
     }
-    &.active {
-      transform: translateY(0);
+
+    &.animate {
+      animation: showHeader 0.4s 1 forwards ease-in-out;
+      animation-delay: 4.2s;
     }
   }
 
   &--page {
     padding: 0;
     height: 62px;
+  }
+}
+
+
+@keyframes showHeader {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
   }
 }
