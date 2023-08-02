@@ -1027,6 +1027,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	const html = document.querySelector("html");
 	const scrollContainer = document.querySelector(".oneScroll");
 	const sections = scrollContainer.querySelectorAll(".section");
+	const desktopWidthMediaQuery = window.matchMedia("(min-width: 1201px)");
 	
 	let height = sections[0].offsetHeight;
 	
@@ -1065,9 +1066,13 @@ window.addEventListener("DOMContentLoaded", () => {
 			}
 		});
 	};
-	
-	const observer = new IntersectionObserver(callback, options);
-	observer.observe(sections[1]);
+	let observer = null;
+	if (desktopWidthMediaQuery.matches) {
+		observer = new IntersectionObserver(callback, options);
+		observer.observe(sections[1]);
+	} else {
+		observer = null;
+	}
 	
 });
 
