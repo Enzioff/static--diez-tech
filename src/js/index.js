@@ -12,6 +12,7 @@ import './modal'
 import './picture'
 import './scrollToSec'
 import './counter'
+import './cursor'
 import "../css/main.scss";
 import 'swiper/swiper.css'
 

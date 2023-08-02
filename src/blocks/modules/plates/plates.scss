@@ -3,7 +3,6 @@
   grid-template-columns: repeat(3, 1fr);
   width: 100vw;
   height: 100vh;
-  cursor: none;
 
   @include r(1200) {
     display: flex;
@@ -15,7 +14,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
     transition: .2s ease-in-out;
     @include r(1200) {
       height: calc(100% / 3);
@@ -31,7 +29,6 @@
 
     &:hover {
       background-color: $light;
-      cursor: none;
 
       .plates__title {
         color: $red;

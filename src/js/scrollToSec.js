@@ -27,15 +27,15 @@ window.addEventListener("DOMContentLoaded", () => {
 	}, false);
 	
 	let options = {
-		rootMargin: "0px",
+		rootMargin: "-5px",
 		threshold: 0
 	};
 	const callback = function(entries) {
 		entries.forEach(entry => {
 			if (entry.isIntersecting) {
-				html.style.scrollBehavior = "unset";
+				window.addEventListener('scroll', evt => evt.preventDefault());
 				setTimeout(() => {
-					window.scrollTo(0, 0);
+					window.scrollTo(0, sections[1].offsetHeight);
 					console.log("true");
 				}, 0);
 			}

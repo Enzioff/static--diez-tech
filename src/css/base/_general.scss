@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  cursor: none !important;
+}
+
 a,
 svg,
 button {

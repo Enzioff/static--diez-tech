@@ -1,0 +1,40 @@
+#cursor, #aura {
+  position: absolute;
+  border-radius: 100%;
+  transition: .5s cubic-bezier(.75, -1.27, .3, 2.33) transform, .2s cubic-bezier(.75, -1.27, .3, 2.33) opacity;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+
+  &.cursor-hidden {
+    transform: scale(.001);
+  }
+}
+
+#cursor {
+  width: 8px;
+  height: 8px;
+  background-color: rgba($red, 0.7);
+  transform: scale(1);
+  &.cursor-active {
+    opacity: 0;
+    transform: scale(0.001);
+  }
+}
+
+#aura {
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba($red, 0.7);
+  background-color: rgba(#fff, .027);
+  transform: translate(5px, 5px);
+  &.cursor-active {
+    border: 1.2px solid rgba($red, 0.7);
+    transform: scale(1.5);
+  }
+}
+
+#cursor.cursor-hidden,
+#aura.cursor-hidden {
+  transform: scale(.001);
+}
