@@ -12,14 +12,14 @@ class Preloader {
 	}
 	
 	setListeners() {
-		if (!localStorage.getItem("visited")) {
-			localStorage.setItem("visited", "false");
+		if (!sessionStorage.getItem("visited")) {
+			sessionStorage.setItem("visited", "false");
 		}
 		this.checkFirstVisit();
 	}
 	
 	checkFirstVisit() {
-		if (localStorage.getItem("visited") === "false") {
+		if (sessionStorage.getItem("visited") === "false") {
 			this.preloader.classList.add("animate");
 			this.indexScreen.classList.add("animate");
 			this.title.classList.add("animate");
@@ -27,7 +27,7 @@ class Preloader {
 			this.indexHeader.classList.add("animate");
 			this.timeline.classList.add("animate");
 			this.body.style.overflowY = "hidden";
-			localStorage.setItem("visited", "true");
+			sessionStorage.setItem("visited", "true");
 		}
 		setTimeout(()=> {
 			this.body.style.overflowY = "auto";
