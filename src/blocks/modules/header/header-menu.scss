@@ -12,6 +12,10 @@
   transform: translateX(-100%);
   transition: .2s linear;
 
+  @include r(1200) {
+    height: 100vh;
+  }
+
   &--active {
     transform: translateX(0);
   }

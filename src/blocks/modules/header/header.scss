@@ -17,6 +17,10 @@
     animation: showHeader 0.4s 1 forwards ease-in-out;
     animation-delay: 0.2s;
 
+    @include r(1200) {
+      background-color: $light;
+    }
+
     .main-nav--fixed {
       box-shadow: none;
       background-color: $black;
@@ -37,6 +41,10 @@
   &--page {
     padding: 0;
     height: 62px;
+
+    @include r(1200) {
+      padding: 0 15px;
+    }
   }
 }
 

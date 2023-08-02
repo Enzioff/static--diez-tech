@@ -19,6 +19,10 @@
     background-color: $light;
     justify-content: flex-start;
     align-items: flex-start;
+
+    @include r(1200) {
+      padding: 62px 0;
+    }
   }
 
   &.active {

@@ -5,18 +5,34 @@
   height: 100vh;
   cursor: none;
 
+  @include r(1200) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 62px;
+  }
+
   &__item {
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     transition: .2s ease-in-out;
+    @include r(1200) {
+      height: calc(100% / 3);
+    }
+
     &:not(:last-child) {
       border-right: 1px solid $light;
+      @include r(1200) {
+        border-right: none;
+        border-bottom: 1px solid #FFFFFF;
+      }
     }
+
     &:hover {
       background-color: $light;
       cursor: none;
+
       .plates__title {
         color: $red;
       }
@@ -28,6 +44,7 @@
     font-weight: 700;
     color: $light;
     transition: .2s ease-in-out;
+
     span {
       font-family: $font-second;
       font-size: 18px;

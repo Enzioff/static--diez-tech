@@ -34,6 +34,10 @@
     font-size: 48px;
     text-align: center;
 
+    @include r(1200) {
+      width: 100%;
+    }
+
     li {
       position: absolute;
       left: 0;
@@ -42,6 +46,11 @@
       width: 100%;
       opacity: 0;
       animation: show 2s 1 ease-in-out;
+
+      @include r(1200) {
+        right: 0;
+        justify-content: center;
+      }
 
       &:nth-child(1) {
 
