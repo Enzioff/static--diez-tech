@@ -13,7 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	const cursor = document.getElementById("cursor"),
 		aura = document.getElementById("aura"),
 		links = document.getElementsByTagName("a"),
-		buttons = document.getElementsByTagName("button");
+		buttons = document.getElementsByTagName("button"),
+		listItems = document.querySelectorAll("[data-tab]"),
+		closeItems = document.querySelectorAll("[data-close]"),
+		openItems = document.querySelectorAll("[data-open]"),
+		labels = document.getElementsByTagName("label");
 	
 	let mouseX = 0, mouseY = 0, posX = 0, posY = 0;
 	
@@ -45,29 +49,25 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 	
+	activeCursor(links)
+	activeCursor(buttons)
+	activeCursor(listItems)
+	activeCursor(labels)
+	activeCursor(closeItems)
+	activeCursor(openItems)
 	
-	for (let i = 0; i < links.length; i++) {
-		links[i].addEventListener('mouseover', ()=> {
-			cursor.classList.add('cursor-active');
-			aura.classList.add('cursor-active');
-		})
-		
-		links[i].addEventListener('mouseout', ()=> {
-			cursor.classList.remove('cursor-active');
-			aura.classList.remove('cursor-active');
-		})
-	}
-	
-	for (let i = 0; i < buttons.length; i++) {
-		buttons[i].addEventListener('mouseover', ()=> {
-			cursor.classList.add('cursor-active');
-			aura.classList.add('cursor-active');
-		})
-		
-		buttons[i].addEventListener('mouseout', ()=> {
-			cursor.classList.remove('cursor-active');
-			aura.classList.remove('cursor-active');
-		})
+	function activeCursor(element) {
+		for (let i = 0; i < element.length; i++) {
+			element[i].addEventListener('mouseover', ()=> {
+				cursor.classList.add('cursor-active');
+				aura.classList.add('cursor-active');
+			})
+			
+			element[i].addEventListener('mouseout', ()=> {
+				cursor.classList.remove('cursor-active');
+				aura.classList.remove('cursor-active');
+			})
+		}
 	}
 	
 	body.addEventListener('mouseout', ()=> {
