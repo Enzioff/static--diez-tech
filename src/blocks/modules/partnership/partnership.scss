@@ -35,7 +35,7 @@
       font-size: 18px;
     }
 
-    &--active {
+    &.active {
       background-color: $red;
     }
   }
@@ -47,7 +47,7 @@
     font-family: $font-second;
     transition: opacity .2s linear;
 
-    &--active {
+    &.active {
       opacity: 1;
       visibility: visible;
       height: auto;

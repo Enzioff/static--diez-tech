@@ -2483,7 +2483,7 @@ a.logo:focus {
     font-size: 18px;
   }
 }
-.partnership__head--active {
+.partnership__head.active {
   background-color: #EC0003;
 }
 .partnership__item {
@@ -2494,7 +2494,7 @@ a.logo:focus {
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
-.partnership__item--active {
+.partnership__item.active {
   opacity: 1;
   visibility: visible;
   height: auto;
@@ -7720,7 +7720,7 @@ a.logo:focus {
             flex-shrink: 0;
   }
 }
-.nav__link--active {
+.nav__link.active {
   background-color: #0D0D0D;
   color: #FFFFFF;
 }

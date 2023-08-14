@@ -1,3 +1,5 @@
+import { values } from "./helpers/values";
+
 class Animate {
 	constructor(el) {
 		this.el = el;
@@ -7,12 +9,11 @@ class Animate {
 	
 	setListeners() {
 		this.scrollAnimation();
-		this.showHeader();
 	}
 	
 	scrollAnimation() {
 		window.addEventListener('scroll', ()=> {
-			const currentOffset = window.scrollY - this.el.offsetTop + 243;
+			const currentOffset = window.scrollY - this.el.offsetTop + values.animMargin;
 			if (currentOffset <= 0) {
 				this.animateElement.style.transform = `translateX(${currentOffset}px)`;
 			}

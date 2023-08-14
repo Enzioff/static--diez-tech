@@ -14,6 +14,7 @@ if (targetEls) {
 		const callback = function(entries) {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
+					console.log(target)
 					target.classList.add("focused");
 				}
 			});

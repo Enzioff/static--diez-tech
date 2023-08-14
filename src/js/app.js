@@ -6,6 +6,12 @@ import { Track } from "./track";
 import { Services } from "./services";
 import { CustomTabs } from "./customTabs";
 import { Preloader } from "./preloader";
+import ListLink from "./cases";
+import OneScroll from "./scrollToSec";
+import Counter from "./counter";
+import Easter from "./easter";
+import Modal from "./modal";
+import Toggle from "./toggle";
 
 class App {
 	constructor() {
@@ -16,6 +22,12 @@ class App {
 		this.initServices()
 		this.initCustomTabs();
 		this.initPreloader();
+		this.initListLinks();
+		this.initOneScroll();
+		this.initCounter();
+		this.initEaster();
+		this.initModal();
+		this.initToggle();
 	}
 	
 	createSliders() {
@@ -76,7 +88,9 @@ class App {
 	
 	initPreloader() {
 		const el = document.querySelector("[data-preloader]");
-		new Preloader(el);
+		if (el) {
+			new Preloader(el);
+		}
 	}
 	
 	initServices() {
@@ -89,6 +103,11 @@ class App {
 		el.forEach(item => new CustomTabs(item));
 	}
 	
+	initListLinks() {
+		const el = document.querySelectorAll("[data-link]");
+		el.forEach(item => new ListLink(item, el));
+	}
+	
 	initTabs() {
 		const el = document.querySelectorAll("[data-tab]");
 		el.forEach(item => new Tabs(item));
@@ -97,6 +116,41 @@ class App {
 	initAnimate() {
 		const el = document.querySelectorAll("[data-animation]");
 		el.forEach(item => new Animate(item));
+	}
+	
+	initOneScroll() {
+		const el = document.querySelector(".oneScroll");
+		if (el) {
+			new OneScroll(el)
+		}
+	}
+	
+	initCounter() {
+		const el = document.querySelector("[data-nums]");
+		if (el) {
+			new Counter(el)
+		}
+	}
+	
+	initEaster() {
+		const el = document.querySelector("[data-easter-coin]");
+		if (el) {
+			new Easter(el)
+		}
+	}
+	
+	initModal() {
+		const el = document.querySelector("[data-modal]");
+		if (el) {
+			new Modal(el)
+		}
+	}
+	
+	initToggle() {
+		const el = document.querySelector("[data-toggle]");
+		if (el) {
+			new Toggle(el)
+		}
 	}
 }
 

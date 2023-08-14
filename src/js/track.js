@@ -1,3 +1,5 @@
+import { values } from "./helpers/values";
+
 class Track {
 	constructor(el) {
 		this.el = el;
@@ -43,9 +45,13 @@ class Track {
 			}
 			if (!this.isDragging) {
 				if (this.direction === "right") {
-					this.el.scrollLeft -= this.scrollStep;
+					requestAnimationFrame(() => {
+						this.el.scrollLeft -= this.scrollStep;
+					})
 				} else {
-					this.el.scrollLeft += this.scrollStep;
+					requestAnimationFrame(() => {
+						this.el.scrollLeft += this.scrollStep;
+					})
 				}
 				if (this.el.scrollLeft >= (this.el.scrollWidth - this.el.clientWidth)) {
 					this.addLastEl();
@@ -75,7 +81,7 @@ class Track {
 		}
 		if (this.el.scrollLeft <= 0) {
 			this.cloneToStart();
-			this.el.scrollLeft += this.box.clientWidth + 20;
+			this.el.scrollLeft += this.box.clientWidth + values.trackFixValue;
 		}
 	}
 	

@@ -1,28 +1,30 @@
+import { values } from "./helpers/values";
+
 (function initHeader() {
 	const mainNav = document.querySelector("[data-main-nav]");
-	const burger = document.querySelector('[data-burger]')
-	const menu = document.querySelector('[data-menu]')
-	const body = document.querySelector('body')
+	const burger = document.querySelector("[data-burger]");
+	const menu = document.querySelector("[data-menu]");
+	const body = document.querySelector("body");
 	
 	if (mainNav) {
 		window.addEventListener("scroll", () => {
-			if (window.scrollY >= 857) {
+			if (window.scrollY >= values.menuTabletEnd) {
 				mainNav.classList.add("main-nav--fixed");
 			}
 			
-			if (window.scrollY <= 873) {
+			if (window.scrollY <= values.menuTabletStart) {
 				mainNav.classList.remove("main-nav--fixed");
 			}
 		});
 	}
 	
 	function toggleMenu() {
-		menu.classList.toggle('header-menu--active')
-		body.classList.toggle('fixed')
-		burger.classList.toggle('burger--active')
+		menu.classList.toggle("header-menu--active");
+		body.classList.toggle("fixed");
+		burger.classList.toggle("burger--active");
 	}
 	
-	burger.addEventListener('click', toggleMenu)
+	burger.addEventListener("click", toggleMenu);
 }());
 
 

@@ -1,3 +1,5 @@
+import { values } from "./helpers/values";
+
 class Tabs {
 	constructor(el) {
 		this.el = el;
@@ -9,11 +11,11 @@ class Tabs {
 	
 	setListeners() {
 		this.toggleTab();
-		if (window.innerWidth > 1200) {
+		if (window.innerWidth > values.desktopWidth) {
 			this.hideSlider(1);
 		}
 		window.addEventListener("resize", () => {
-			if (window.innerWidth < 1200) {
+			if (window.innerWidth < values.desktopWidth) {
 				this.tabHeaders[0].classList.add("tab-active");
 				this.tabHeaders[1].classList.remove("tab-active");
 				this.sliders[0].classList.remove("hidden");

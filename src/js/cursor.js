@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 document.addEventListener("DOMContentLoaded", () => {
 	
 	const body = document.querySelector("body");
+	const halfCursorSize = 24;
 	
 	body.addEventListener("mousemove", (evt) => {
 		mouseCoords(evt)
@@ -42,8 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			
 			gsap.set(aura, {
 				css: {
-					left: posX - 24,
-					top: posY - 24,
+					left: posX - halfCursorSize,
+					top: posY - halfCursorSize,
 				}
 			})
 		}

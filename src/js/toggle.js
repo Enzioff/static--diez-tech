@@ -1,21 +1,34 @@
-const toggleItem = document.querySelector("[data-toggle]");
-
-if (toggleItem) {
-	const openButton = document.querySelectorAll("[data-open]");
-	const closeButton = toggleItem.querySelector("[data-close]");
-	const body = document.querySelector("body");
-	const container = toggleItem.querySelector("[data-container]");
-	openButton.forEach(open => {
-		open.addEventListener("click", () => {
-			toggleItem.classList.add("active");
+class Toggle {
+	constructor(el) {
+		this.el = el;
+		this.openButton = document.querySelectorAll("[data-open]");
+		this.closeButton = this.el.querySelector("[data-close]");
+		this.body = document.querySelector("body");
+		this.container = this.el.querySelector("[data-container]");
+		
+		this.setListeners();
+	}
+	
+	setListeners() {
+		this.open()
+		this.el.addEventListener("click", () => this.el.classList.remove("active"));
+		this.container.addEventListener("click", (evt) => evt.stopPropagation());
+		this.close();
+	}
+	
+	open() {
+		this.openButton.forEach(open => {
+			open.addEventListener("click", () => {
+				this.el.classList.add("active");
+			});
 		});
-	});
+	}
 	
-	toggleItem.addEventListener("click", () => toggleItem.classList.remove("active"));
-	container.addEventListener("click", (evt) => evt.stopPropagation());
-	
-	closeButton.addEventListener("click", () => {
-		toggleItem.classList.remove("active");
-	});
-	
+	close() {
+		this.closeButton.addEventListener("click", () => {
+			this.el.classList.remove("active");
+		});
+	}
 }
+
+export default Toggle
